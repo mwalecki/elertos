@@ -1,0 +1,43 @@
+\hypertarget{group__FSMC__Interrupt__sources}{
+\section{FSMC\_\-Interrupt\_\-sources}
+\label{group__FSMC__Interrupt__sources}\index{FSMC\_\-Interrupt\_\-sources@{FSMC\_\-Interrupt\_\-sources}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FSMC__Interrupt__sources_gac483854bd6f90d8c7899a597a0c0ab1a}{
+\#define {\bfseries FSMC\_\-IT\_\-RisingEdge}~((uint32\_\-t)0x00000008)}
+\label{group__FSMC__Interrupt__sources_gac483854bd6f90d8c7899a597a0c0ab1a}
+
+\item 
+\hypertarget{group__FSMC__Interrupt__sources_ga59b5839854074008fb36fa86ec50a0c7}{
+\#define {\bfseries FSMC\_\-IT\_\-Level}~((uint32\_\-t)0x00000010)}
+\label{group__FSMC__Interrupt__sources_ga59b5839854074008fb36fa86ec50a0c7}
+
+\item 
+\hypertarget{group__FSMC__Interrupt__sources_ga8e4b9589c9981c900b5f2e84581a9693}{
+\#define {\bfseries FSMC\_\-IT\_\-FallingEdge}~((uint32\_\-t)0x00000020)}
+\label{group__FSMC__Interrupt__sources_ga8e4b9589c9981c900b5f2e84581a9693}
+
+\item 
+\hypertarget{group__FSMC__Interrupt__sources_ga40a38f097a75f27a700e626905fa9a38}{
+\#define {\bfseries IS\_\-FSMC\_\-IT}(IT)~((((IT) \& (uint32\_\-t)0xFFFFFFC7) == 0x00000000) \&\& ((IT) != 0x00000000))}
+\label{group__FSMC__Interrupt__sources_ga40a38f097a75f27a700e626905fa9a38}
+
+\item 
+\#define {\bfseries IS\_\-FSMC\_\-GET\_\-IT}(IT)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__FSMC__Interrupt__sources_gae2a57d0b15e025212489ec1421ff245d}{
+\index{FSMC\_\-Interrupt\_\-sources@{FSMC\_\-Interrupt\_\-sources}!IS\_\-FSMC\_\-GET\_\-IT@{IS\_\-FSMC\_\-GET\_\-IT}}
+\index{IS\_\-FSMC\_\-GET\_\-IT@{IS\_\-FSMC\_\-GET\_\-IT}!FSMC_Interrupt_sources@{FSMC\_\-Interrupt\_\-sources}}
+\subsubsection[{IS\_\-FSMC\_\-GET\_\-IT}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-FSMC\_\-GET\_\-IT(IT)}}
+\label{group__FSMC__Interrupt__sources_gae2a57d0b15e025212489ec1421ff245d}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((IT) == FSMC_IT_RisingEdge) || \
+                            ((IT) == FSMC_IT_Level) || \
+                            ((IT) == FSMC_IT_FallingEdge))
+\end{DoxyCode}

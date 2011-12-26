@@ -1,0 +1,44 @@
+\hypertarget{group__FLASH__Interrupts}{
+\section{FLASH\_\-Interrupts}
+\label{group__FLASH__Interrupts}\index{FLASH\_\-Interrupts@{FLASH\_\-Interrupts}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__FLASH__Interrupts_ga61c74493d4c1f36ddaf563719d446a7d}{FLASH\_\-IT\_\-ERROR}~((uint32\_\-t)0x00000400)
+\item 
+\#define \hyperlink{group__FLASH__Interrupts_gaea20e80e1806d58a7544cfe8659e7f11}{FLASH\_\-IT\_\-EOP}~((uint32\_\-t)0x00001000)
+\item 
+\#define \hyperlink{group__FLASH__Interrupts_ga808627239be1bf9c2d8bfed36ec4db19}{FLASH\_\-IT\_\-BANK1\_\-ERROR}~FLASH\_\-IT\_\-ERROR
+\item 
+\#define \hyperlink{group__FLASH__Interrupts_gac8825e2ce2c0e6ca63a40a347bd351a9}{FLASH\_\-IT\_\-BANK1\_\-EOP}~FLASH\_\-IT\_\-EOP
+\item 
+\hypertarget{group__FLASH__Interrupts_ga46ee77d0be1f3e0a14ded0651163ae11}{
+\#define {\bfseries IS\_\-FLASH\_\-IT}(IT)~((((IT) \& (uint32\_\-t)0xFFFFEBFF) == 0x00000000) \&\& (((IT) != 0x00000000)))}
+\label{group__FLASH__Interrupts_ga46ee77d0be1f3e0a14ded0651163ae11}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__FLASH__Interrupts_gac8825e2ce2c0e6ca63a40a347bd351a9}{
+\index{FLASH\_\-Interrupts@{FLASH\_\-Interrupts}!FLASH\_\-IT\_\-BANK1\_\-EOP@{FLASH\_\-IT\_\-BANK1\_\-EOP}}
+\index{FLASH\_\-IT\_\-BANK1\_\-EOP@{FLASH\_\-IT\_\-BANK1\_\-EOP}!FLASH_Interrupts@{FLASH\_\-Interrupts}}
+\subsubsection[{FLASH\_\-IT\_\-BANK1\_\-EOP}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-IT\_\-BANK1\_\-EOP~FLASH\_\-IT\_\-EOP}}
+\label{group__FLASH__Interrupts_gac8825e2ce2c0e6ca63a40a347bd351a9}
+End of FLASH BANK1 Operation Interrupt source \hypertarget{group__FLASH__Interrupts_ga808627239be1bf9c2d8bfed36ec4db19}{
+\index{FLASH\_\-Interrupts@{FLASH\_\-Interrupts}!FLASH\_\-IT\_\-BANK1\_\-ERROR@{FLASH\_\-IT\_\-BANK1\_\-ERROR}}
+\index{FLASH\_\-IT\_\-BANK1\_\-ERROR@{FLASH\_\-IT\_\-BANK1\_\-ERROR}!FLASH_Interrupts@{FLASH\_\-Interrupts}}
+\subsubsection[{FLASH\_\-IT\_\-BANK1\_\-ERROR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-IT\_\-BANK1\_\-ERROR~FLASH\_\-IT\_\-ERROR}}
+\label{group__FLASH__Interrupts_ga808627239be1bf9c2d8bfed36ec4db19}
+FPEC BANK1 error interrupt source \hypertarget{group__FLASH__Interrupts_gaea20e80e1806d58a7544cfe8659e7f11}{
+\index{FLASH\_\-Interrupts@{FLASH\_\-Interrupts}!FLASH\_\-IT\_\-EOP@{FLASH\_\-IT\_\-EOP}}
+\index{FLASH\_\-IT\_\-EOP@{FLASH\_\-IT\_\-EOP}!FLASH_Interrupts@{FLASH\_\-Interrupts}}
+\subsubsection[{FLASH\_\-IT\_\-EOP}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-IT\_\-EOP~((uint32\_\-t)0x00001000)}}
+\label{group__FLASH__Interrupts_gaea20e80e1806d58a7544cfe8659e7f11}
+End of FLASH Operation Interrupt source \hypertarget{group__FLASH__Interrupts_ga61c74493d4c1f36ddaf563719d446a7d}{
+\index{FLASH\_\-Interrupts@{FLASH\_\-Interrupts}!FLASH\_\-IT\_\-ERROR@{FLASH\_\-IT\_\-ERROR}}
+\index{FLASH\_\-IT\_\-ERROR@{FLASH\_\-IT\_\-ERROR}!FLASH_Interrupts@{FLASH\_\-Interrupts}}
+\subsubsection[{FLASH\_\-IT\_\-ERROR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-IT\_\-ERROR~((uint32\_\-t)0x00000400)}}
+\label{group__FLASH__Interrupts_ga61c74493d4c1f36ddaf563719d446a7d}
+FPEC error interrupt source 

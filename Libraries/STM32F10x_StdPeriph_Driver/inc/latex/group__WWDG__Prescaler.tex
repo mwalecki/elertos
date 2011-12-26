@@ -1,0 +1,54 @@
+\hypertarget{group__WWDG__Prescaler}{
+\section{WWDG\_\-Prescaler}
+\label{group__WWDG__Prescaler}\index{WWDG\_\-Prescaler@{WWDG\_\-Prescaler}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__WWDG__Prescaler_ga55780dcf60a252724f5aae2ca37d91c5}{
+\#define {\bfseries WWDG\_\-Prescaler\_\-1}~((uint32\_\-t)0x00000000)}
+\label{group__WWDG__Prescaler_ga55780dcf60a252724f5aae2ca37d91c5}
+
+\item 
+\hypertarget{group__WWDG__Prescaler_ga2ac67d0a7f8691b5ebf0d7d77d6b5f08}{
+\#define {\bfseries WWDG\_\-Prescaler\_\-2}~((uint32\_\-t)0x00000080)}
+\label{group__WWDG__Prescaler_ga2ac67d0a7f8691b5ebf0d7d77d6b5f08}
+
+\item 
+\hypertarget{group__WWDG__Prescaler_gab11714e1816967802a8421587e54a2eb}{
+\#define {\bfseries WWDG\_\-Prescaler\_\-4}~((uint32\_\-t)0x00000100)}
+\label{group__WWDG__Prescaler_gab11714e1816967802a8421587e54a2eb}
+
+\item 
+\hypertarget{group__WWDG__Prescaler_ga7a4933366603869726bd5ea547d99f02}{
+\#define {\bfseries WWDG\_\-Prescaler\_\-8}~((uint32\_\-t)0x00000180)}
+\label{group__WWDG__Prescaler_ga7a4933366603869726bd5ea547d99f02}
+
+\item 
+\#define {\bfseries IS\_\-WWDG\_\-PRESCALER}(PRESCALER)
+\item 
+\hypertarget{group__WWDG__Prescaler_gab6ea714a2380b7d6547ba97363887868}{
+\#define {\bfseries IS\_\-WWDG\_\-WINDOW\_\-VALUE}(VALUE)~((VALUE) $<$= 0x7F)}
+\label{group__WWDG__Prescaler_gab6ea714a2380b7d6547ba97363887868}
+
+\item 
+\hypertarget{group__WWDG__Prescaler_ga4728877128cd60494692d8f14389112e}{
+\#define {\bfseries IS\_\-WWDG\_\-COUNTER}(COUNTER)~(((COUNTER) $>$= 0x40) \&\& ((COUNTER) $<$= 0x7F))}
+\label{group__WWDG__Prescaler_ga4728877128cd60494692d8f14389112e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__WWDG__Prescaler_ga39070de0722a70f99a6fcfe8720b2dfd}{
+\index{WWDG\_\-Prescaler@{WWDG\_\-Prescaler}!IS\_\-WWDG\_\-PRESCALER@{IS\_\-WWDG\_\-PRESCALER}}
+\index{IS\_\-WWDG\_\-PRESCALER@{IS\_\-WWDG\_\-PRESCALER}!WWDG_Prescaler@{WWDG\_\-Prescaler}}
+\subsubsection[{IS\_\-WWDG\_\-PRESCALER}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-WWDG\_\-PRESCALER(PRESCALER)}}
+\label{group__WWDG__Prescaler_ga39070de0722a70f99a6fcfe8720b2dfd}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((PRESCALER) == WWDG_Prescaler_1) || \
+                                      ((PRESCALER) == WWDG_Prescaler_2) || \
+                                      ((PRESCALER) == WWDG_Prescaler_4) || \
+                                      ((PRESCALER) == WWDG_Prescaler_8))
+\end{DoxyCode}

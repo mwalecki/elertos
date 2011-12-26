@@ -1,0 +1,37 @@
+\hypertarget{group__CEC__BitTiming__Mode}{
+\section{CEC\_\-BitTiming\_\-Mode}
+\label{group__CEC__BitTiming__Mode}\index{CEC\_\-BitTiming\_\-Mode@{CEC\_\-BitTiming\_\-Mode}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__CEC__BitTiming__Mode_gaf6866e5087bb01c1ea4e20a207a1f691}{CEC\_\-BitTimingStdMode}~((uint16\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CEC__BitTiming__Mode_ga4fd44675c774985d1f6cd8976b18c947}{CEC\_\-BitTimingErrFreeMode}~CEC\_\-CFGR\_\-BTEM
+\item 
+\#define {\bfseries IS\_\-CEC\_\-BIT\_\-TIMING\_\-ERROR\_\-MODE}(MODE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__CEC__BitTiming__Mode_ga4fd44675c774985d1f6cd8976b18c947}{
+\index{CEC\_\-BitTiming\_\-Mode@{CEC\_\-BitTiming\_\-Mode}!CEC\_\-BitTimingErrFreeMode@{CEC\_\-BitTimingErrFreeMode}}
+\index{CEC\_\-BitTimingErrFreeMode@{CEC\_\-BitTimingErrFreeMode}!CEC_BitTiming_Mode@{CEC\_\-BitTiming\_\-Mode}}
+\subsubsection[{CEC\_\-BitTimingErrFreeMode}]{\setlength{\rightskip}{0pt plus 5cm}\#define CEC\_\-BitTimingErrFreeMode~CEC\_\-CFGR\_\-BTEM}}
+\label{group__CEC__BitTiming__Mode_ga4fd44675c774985d1f6cd8976b18c947}
+Bit timing error Free Mode \hypertarget{group__CEC__BitTiming__Mode_gaf6866e5087bb01c1ea4e20a207a1f691}{
+\index{CEC\_\-BitTiming\_\-Mode@{CEC\_\-BitTiming\_\-Mode}!CEC\_\-BitTimingStdMode@{CEC\_\-BitTimingStdMode}}
+\index{CEC\_\-BitTimingStdMode@{CEC\_\-BitTimingStdMode}!CEC_BitTiming_Mode@{CEC\_\-BitTiming\_\-Mode}}
+\subsubsection[{CEC\_\-BitTimingStdMode}]{\setlength{\rightskip}{0pt plus 5cm}\#define CEC\_\-BitTimingStdMode~((uint16\_\-t)0x00)}}
+\label{group__CEC__BitTiming__Mode_gaf6866e5087bb01c1ea4e20a207a1f691}
+Bit timing error Standard Mode \hypertarget{group__CEC__BitTiming__Mode_ga55494269b2c9c55c11130a429f418a8d}{
+\index{CEC\_\-BitTiming\_\-Mode@{CEC\_\-BitTiming\_\-Mode}!IS\_\-CEC\_\-BIT\_\-TIMING\_\-ERROR\_\-MODE@{IS\_\-CEC\_\-BIT\_\-TIMING\_\-ERROR\_\-MODE}}
+\index{IS\_\-CEC\_\-BIT\_\-TIMING\_\-ERROR\_\-MODE@{IS\_\-CEC\_\-BIT\_\-TIMING\_\-ERROR\_\-MODE}!CEC_BitTiming_Mode@{CEC\_\-BitTiming\_\-Mode}}
+\subsubsection[{IS\_\-CEC\_\-BIT\_\-TIMING\_\-ERROR\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-CEC\_\-BIT\_\-TIMING\_\-ERROR\_\-MODE(MODE)}}
+\label{group__CEC__BitTiming__Mode_ga55494269b2c9c55c11130a429f418a8d}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((MODE) == CEC_BitTimingStdMode) || \
+                                            ((MODE) == CEC_BitTimingErrFreeMode))
+      
+\end{DoxyCode}

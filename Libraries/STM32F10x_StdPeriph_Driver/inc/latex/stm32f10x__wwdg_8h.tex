@@ -1,0 +1,106 @@
+\hypertarget{stm32f10x__wwdg_8h}{
+\section{stm32f10x\_\-wwdg.h File Reference}
+\label{stm32f10x__wwdg_8h}\index{stm32f10x\_\-wwdg.h@{stm32f10x\_\-wwdg.h}}
+}
+
+
+This file contains all the functions prototypes for the WWDG firmware library.  
+
+
+{\ttfamily \#include \char`\"{}stm32f10x.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__WWDG__Prescaler_ga55780dcf60a252724f5aae2ca37d91c5}{
+\#define {\bfseries WWDG\_\-Prescaler\_\-1}~((uint32\_\-t)0x00000000)}
+\label{group__WWDG__Prescaler_ga55780dcf60a252724f5aae2ca37d91c5}
+
+\item 
+\hypertarget{group__WWDG__Prescaler_ga2ac67d0a7f8691b5ebf0d7d77d6b5f08}{
+\#define {\bfseries WWDG\_\-Prescaler\_\-2}~((uint32\_\-t)0x00000080)}
+\label{group__WWDG__Prescaler_ga2ac67d0a7f8691b5ebf0d7d77d6b5f08}
+
+\item 
+\hypertarget{group__WWDG__Prescaler_gab11714e1816967802a8421587e54a2eb}{
+\#define {\bfseries WWDG\_\-Prescaler\_\-4}~((uint32\_\-t)0x00000100)}
+\label{group__WWDG__Prescaler_gab11714e1816967802a8421587e54a2eb}
+
+\item 
+\hypertarget{group__WWDG__Prescaler_ga7a4933366603869726bd5ea547d99f02}{
+\#define {\bfseries WWDG\_\-Prescaler\_\-8}~((uint32\_\-t)0x00000180)}
+\label{group__WWDG__Prescaler_ga7a4933366603869726bd5ea547d99f02}
+
+\item 
+\#define {\bfseries IS\_\-WWDG\_\-PRESCALER}(PRESCALER)
+\item 
+\hypertarget{group__WWDG__Prescaler_gab6ea714a2380b7d6547ba97363887868}{
+\#define {\bfseries IS\_\-WWDG\_\-WINDOW\_\-VALUE}(VALUE)~((VALUE) $<$= 0x7F)}
+\label{group__WWDG__Prescaler_gab6ea714a2380b7d6547ba97363887868}
+
+\item 
+\hypertarget{group__WWDG__Prescaler_ga4728877128cd60494692d8f14389112e}{
+\#define {\bfseries IS\_\-WWDG\_\-COUNTER}(COUNTER)~(((COUNTER) $>$= 0x40) \&\& ((COUNTER) $<$= 0x7F))}
+\label{group__WWDG__Prescaler_ga4728877128cd60494692d8f14389112e}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__WWDG__Exported__Functions_ga7130f4dc861b9234b62e73f9f57f89a1}{
+void {\bfseries WWDG\_\-DeInit} (void)}
+\label{group__WWDG__Exported__Functions_ga7130f4dc861b9234b62e73f9f57f89a1}
+
+\item 
+\hypertarget{group__WWDG__Exported__Functions_gafeaa2b52c31ba7baca7eb61d2d42e07b}{
+void {\bfseries WWDG\_\-SetPrescaler} (uint32\_\-t WWDG\_\-Prescaler)}
+\label{group__WWDG__Exported__Functions_gafeaa2b52c31ba7baca7eb61d2d42e07b}
+
+\item 
+\hypertarget{group__WWDG__Exported__Functions_gaf44a7bf8bf6b11b41cd89ff521fdd5a5}{
+void {\bfseries WWDG\_\-SetWindowValue} (uint8\_\-t WindowValue)}
+\label{group__WWDG__Exported__Functions_gaf44a7bf8bf6b11b41cd89ff521fdd5a5}
+
+\item 
+\hypertarget{group__WWDG__Exported__Functions_gac8af66ea5254d3d78b60b9b7c7f29521}{
+void {\bfseries WWDG\_\-EnableIT} (void)}
+\label{group__WWDG__Exported__Functions_gac8af66ea5254d3d78b60b9b7c7f29521}
+
+\item 
+\hypertarget{group__WWDG__Exported__Functions_ga6e44cc35f133b28b9ad861f459bf8d76}{
+void {\bfseries WWDG\_\-SetCounter} (uint8\_\-t Counter)}
+\label{group__WWDG__Exported__Functions_ga6e44cc35f133b28b9ad861f459bf8d76}
+
+\item 
+\hypertarget{group__WWDG__Exported__Functions_ga10dc2554d0b504b5472e3ecf0f02a9e6}{
+void {\bfseries WWDG\_\-Enable} (uint8\_\-t Counter)}
+\label{group__WWDG__Exported__Functions_ga10dc2554d0b504b5472e3ecf0f02a9e6}
+
+\item 
+\hypertarget{group__WWDG__Exported__Functions_ga7df4882d45918b9b8249dfca1e44fabc}{
+FlagStatus {\bfseries WWDG\_\-GetFlagStatus} (void)}
+\label{group__WWDG__Exported__Functions_ga7df4882d45918b9b8249dfca1e44fabc}
+
+\item 
+\hypertarget{group__WWDG__Exported__Functions_gabd2b5a6317c2e1a3ab0795838ce59dd2}{
+void {\bfseries WWDG\_\-ClearFlag} (void)}
+\label{group__WWDG__Exported__Functions_gabd2b5a6317c2e1a3ab0795838ce59dd2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the functions prototypes for the WWDG firmware library. \begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V3.5.0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11-\/March-\/2011 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+
+\subsubsection*{\begin{center}\copyright COPYRIGHT 2011 STMicroelectronics\end{center} }

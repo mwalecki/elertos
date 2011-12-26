@@ -1,0 +1,52 @@
+\hypertarget{group__TIM__Input__Capture__Polarity}{
+\section{TIM\_\-Input\_\-Capture\_\-Polarity}
+\label{group__TIM__Input__Capture__Polarity}\index{TIM\_\-Input\_\-Capture\_\-Polarity@{TIM\_\-Input\_\-Capture\_\-Polarity}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__TIM__Input__Capture__Polarity_gabe598596b7dbcac446a4918105fa95a6}{
+\#define {\bfseries TIM\_\-ICPolarity\_\-Rising}~((uint16\_\-t)0x0000)}
+\label{group__TIM__Input__Capture__Polarity_gabe598596b7dbcac446a4918105fa95a6}
+
+\item 
+\hypertarget{group__TIM__Input__Capture__Polarity_ga70c6f5ed30a236bac4c690928e742243}{
+\#define {\bfseries TIM\_\-ICPolarity\_\-Falling}~((uint16\_\-t)0x0002)}
+\label{group__TIM__Input__Capture__Polarity_ga70c6f5ed30a236bac4c690928e742243}
+
+\item 
+\hypertarget{group__TIM__Input__Capture__Polarity_ga4632a6425d407c0d28b610b2d31cccc8}{
+\#define {\bfseries TIM\_\-ICPolarity\_\-BothEdge}~((uint16\_\-t)0x000A)}
+\label{group__TIM__Input__Capture__Polarity_ga4632a6425d407c0d28b610b2d31cccc8}
+
+\item 
+\#define {\bfseries IS\_\-TIM\_\-IC\_\-POLARITY}(POLARITY)
+\item 
+\#define {\bfseries IS\_\-TIM\_\-IC\_\-POLARITY\_\-LITE}(POLARITY)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__TIM__Input__Capture__Polarity_ga6aff2fe442fd9662a0bb8731134cda89}{
+\index{TIM\_\-Input\_\-Capture\_\-Polarity@{TIM\_\-Input\_\-Capture\_\-Polarity}!IS\_\-TIM\_\-IC\_\-POLARITY@{IS\_\-TIM\_\-IC\_\-POLARITY}}
+\index{IS\_\-TIM\_\-IC\_\-POLARITY@{IS\_\-TIM\_\-IC\_\-POLARITY}!TIM_Input_Capture_Polarity@{TIM\_\-Input\_\-Capture\_\-Polarity}}
+\subsubsection[{IS\_\-TIM\_\-IC\_\-POLARITY}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-TIM\_\-IC\_\-POLARITY(POLARITY)}}
+\label{group__TIM__Input__Capture__Polarity_ga6aff2fe442fd9662a0bb8731134cda89}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((POLARITY) == TIM_ICPolarity_Rising) || \
+                                      ((POLARITY) == TIM_ICPolarity_Falling))
+\end{DoxyCode}
+\hypertarget{group__TIM__Input__Capture__Polarity_gaaae722dd6c33a224df267c703824b94c}{
+\index{TIM\_\-Input\_\-Capture\_\-Polarity@{TIM\_\-Input\_\-Capture\_\-Polarity}!IS\_\-TIM\_\-IC\_\-POLARITY\_\-LITE@{IS\_\-TIM\_\-IC\_\-POLARITY\_\-LITE}}
+\index{IS\_\-TIM\_\-IC\_\-POLARITY\_\-LITE@{IS\_\-TIM\_\-IC\_\-POLARITY\_\-LITE}!TIM_Input_Capture_Polarity@{TIM\_\-Input\_\-Capture\_\-Polarity}}
+\subsubsection[{IS\_\-TIM\_\-IC\_\-POLARITY\_\-LITE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-TIM\_\-IC\_\-POLARITY\_\-LITE(POLARITY)}}
+\label{group__TIM__Input__Capture__Polarity_gaaae722dd6c33a224df267c703824b94c}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((POLARITY) == TIM_ICPolarity_Rising) || \
+                                           ((POLARITY) == TIM_ICPolarity_Falling)
+      || \
+                                           ((POLARITY) == TIM_ICPolarity_BothEdge
+      ))
+\end{DoxyCode}

@@ -1,0 +1,44 @@
+\hypertarget{group__DMA__priority__level}{
+\section{DMA\_\-priority\_\-level}
+\label{group__DMA__priority__level}\index{DMA\_\-priority\_\-level@{DMA\_\-priority\_\-level}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__DMA__priority__level_gadccd2f8b2ac24ba4fd485dd5b9b48671}{
+\#define {\bfseries DMA\_\-Priority\_\-VeryHigh}~((uint32\_\-t)0x00003000)}
+\label{group__DMA__priority__level_gadccd2f8b2ac24ba4fd485dd5b9b48671}
+
+\item 
+\hypertarget{group__DMA__priority__level_gae2441c0b4d4ba9945a6f4f7d08045a8e}{
+\#define {\bfseries DMA\_\-Priority\_\-High}~((uint32\_\-t)0x00002000)}
+\label{group__DMA__priority__level_gae2441c0b4d4ba9945a6f4f7d08045a8e}
+
+\item 
+\hypertarget{group__DMA__priority__level_ga8e0d4a958f4288c6c759945789490f38}{
+\#define {\bfseries DMA\_\-Priority\_\-Medium}~((uint32\_\-t)0x00001000)}
+\label{group__DMA__priority__level_ga8e0d4a958f4288c6c759945789490f38}
+
+\item 
+\hypertarget{group__DMA__priority__level_gaf414e0aa8dd42aee6f83f88ab6175179}{
+\#define {\bfseries DMA\_\-Priority\_\-Low}~((uint32\_\-t)0x00000000)}
+\label{group__DMA__priority__level_gaf414e0aa8dd42aee6f83f88ab6175179}
+
+\item 
+\#define {\bfseries IS\_\-DMA\_\-PRIORITY}(PRIORITY)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__DMA__priority__level_gaa1cae2ab458948511596467c87cd02b6}{
+\index{DMA\_\-priority\_\-level@{DMA\_\-priority\_\-level}!IS\_\-DMA\_\-PRIORITY@{IS\_\-DMA\_\-PRIORITY}}
+\index{IS\_\-DMA\_\-PRIORITY@{IS\_\-DMA\_\-PRIORITY}!DMA_priority_level@{DMA\_\-priority\_\-level}}
+\subsubsection[{IS\_\-DMA\_\-PRIORITY}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-DMA\_\-PRIORITY(PRIORITY)}}
+\label{group__DMA__priority__level_gaa1cae2ab458948511596467c87cd02b6}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((PRIORITY) == DMA_Priority_VeryHigh) || \
+                                   ((PRIORITY) == DMA_Priority_High) || \
+                                   ((PRIORITY) == DMA_Priority_Medium) || \
+                                   ((PRIORITY) == DMA_Priority_Low))
+\end{DoxyCode}

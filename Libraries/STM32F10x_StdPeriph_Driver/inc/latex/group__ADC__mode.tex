@@ -1,0 +1,80 @@
+\hypertarget{group__ADC__mode}{
+\section{ADC\_\-mode}
+\label{group__ADC__mode}\index{ADC\_\-mode@{ADC\_\-mode}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__ADC__mode_ga2754d3a35559dc10e3d6a7d920e83432}{
+\#define {\bfseries ADC\_\-Mode\_\-Independent}~((uint32\_\-t)0x00000000)}
+\label{group__ADC__mode_ga2754d3a35559dc10e3d6a7d920e83432}
+
+\item 
+\hypertarget{group__ADC__mode_ga487d5f0c506291c5d37b53198396fd1c}{
+\#define {\bfseries ADC\_\-Mode\_\-RegInjecSimult}~((uint32\_\-t)0x00010000)}
+\label{group__ADC__mode_ga487d5f0c506291c5d37b53198396fd1c}
+
+\item 
+\hypertarget{group__ADC__mode_gae3d5fbf93f60d75534364bf9db78f632}{
+\#define {\bfseries ADC\_\-Mode\_\-RegSimult\_\-AlterTrig}~((uint32\_\-t)0x00020000)}
+\label{group__ADC__mode_gae3d5fbf93f60d75534364bf9db78f632}
+
+\item 
+\hypertarget{group__ADC__mode_ga2fc8a737f7b2375309bccbcb7fdbbfeb}{
+\#define {\bfseries ADC\_\-Mode\_\-InjecSimult\_\-FastInterl}~((uint32\_\-t)0x00030000)}
+\label{group__ADC__mode_ga2fc8a737f7b2375309bccbcb7fdbbfeb}
+
+\item 
+\hypertarget{group__ADC__mode_gacb72230cb48a577907729d426be69c22}{
+\#define {\bfseries ADC\_\-Mode\_\-InjecSimult\_\-SlowInterl}~((uint32\_\-t)0x00040000)}
+\label{group__ADC__mode_gacb72230cb48a577907729d426be69c22}
+
+\item 
+\hypertarget{group__ADC__mode_ga2339cc471aaf2db02daa4aeb49e9f0d9}{
+\#define {\bfseries ADC\_\-Mode\_\-InjecSimult}~((uint32\_\-t)0x00050000)}
+\label{group__ADC__mode_ga2339cc471aaf2db02daa4aeb49e9f0d9}
+
+\item 
+\hypertarget{group__ADC__mode_ga71298f7453c2b4392a9c622328b3c93d}{
+\#define {\bfseries ADC\_\-Mode\_\-RegSimult}~((uint32\_\-t)0x00060000)}
+\label{group__ADC__mode_ga71298f7453c2b4392a9c622328b3c93d}
+
+\item 
+\hypertarget{group__ADC__mode_ga843ecdd53625e2088e91819e43106a7a}{
+\#define {\bfseries ADC\_\-Mode\_\-FastInterl}~((uint32\_\-t)0x00070000)}
+\label{group__ADC__mode_ga843ecdd53625e2088e91819e43106a7a}
+
+\item 
+\hypertarget{group__ADC__mode_ga8b81e27e98dbc3d1e31452dbad167cd5}{
+\#define {\bfseries ADC\_\-Mode\_\-SlowInterl}~((uint32\_\-t)0x00080000)}
+\label{group__ADC__mode_ga8b81e27e98dbc3d1e31452dbad167cd5}
+
+\item 
+\hypertarget{group__ADC__mode_ga5595f12dc485e301ba3bad0e165586c1}{
+\#define {\bfseries ADC\_\-Mode\_\-AlterTrig}~((uint32\_\-t)0x00090000)}
+\label{group__ADC__mode_ga5595f12dc485e301ba3bad0e165586c1}
+
+\item 
+\#define {\bfseries IS\_\-ADC\_\-MODE}(MODE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__ADC__mode_ga4abf4c7de28a42d7b124c9e403a6e537}{
+\index{ADC\_\-mode@{ADC\_\-mode}!IS\_\-ADC\_\-MODE@{IS\_\-ADC\_\-MODE}}
+\index{IS\_\-ADC\_\-MODE@{IS\_\-ADC\_\-MODE}!ADC_mode@{ADC\_\-mode}}
+\subsubsection[{IS\_\-ADC\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-ADC\_\-MODE(MODE)}}
+\label{group__ADC__mode_ga4abf4c7de28a42d7b124c9e403a6e537}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((MODE) == ADC_Mode_Independent) || \
+                           ((MODE) == ADC_Mode_RegInjecSimult) || \
+                           ((MODE) == ADC_Mode_RegSimult_AlterTrig) || \
+                           ((MODE) == ADC_Mode_InjecSimult_FastInterl) || \
+                           ((MODE) == ADC_Mode_InjecSimult_SlowInterl) || \
+                           ((MODE) == ADC_Mode_InjecSimult) || \
+                           ((MODE) == ADC_Mode_RegSimult) || \
+                           ((MODE) == ADC_Mode_FastInterl) || \
+                           ((MODE) == ADC_Mode_SlowInterl) || \
+                           ((MODE) == ADC_Mode_AlterTrig))
+\end{DoxyCode}

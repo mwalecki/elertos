@@ -1,0 +1,90 @@
+\hypertarget{group__RCC__Flag}{
+\section{RCC\_\-Flag}
+\label{group__RCC__Flag}\index{RCC\_\-Flag@{RCC\_\-Flag}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__RCC__Flag_ga827d986723e7ce652fa733bb8184d216}{
+\#define {\bfseries RCC\_\-FLAG\_\-HSIRDY}~((uint8\_\-t)0x21)}
+\label{group__RCC__Flag_ga827d986723e7ce652fa733bb8184d216}
+
+\item 
+\hypertarget{group__RCC__Flag_ga173edf47bec93cf269a0e8d0fec9997c}{
+\#define {\bfseries RCC\_\-FLAG\_\-HSERDY}~((uint8\_\-t)0x31)}
+\label{group__RCC__Flag_ga173edf47bec93cf269a0e8d0fec9997c}
+
+\item 
+\hypertarget{group__RCC__Flag_gaf82d8afb18d9df75db1d6c08b9c50046}{
+\#define {\bfseries RCC\_\-FLAG\_\-PLLRDY}~((uint8\_\-t)0x39)}
+\label{group__RCC__Flag_gaf82d8afb18d9df75db1d6c08b9c50046}
+
+\item 
+\hypertarget{group__RCC__Flag_gac9fb963db446c16e46a18908f7fe1927}{
+\#define {\bfseries RCC\_\-FLAG\_\-LSERDY}~((uint8\_\-t)0x41)}
+\label{group__RCC__Flag_gac9fb963db446c16e46a18908f7fe1927}
+
+\item 
+\hypertarget{group__RCC__Flag_ga8c5e4992314d347597621bfe7ab10d72}{
+\#define {\bfseries RCC\_\-FLAG\_\-LSIRDY}~((uint8\_\-t)0x61)}
+\label{group__RCC__Flag_ga8c5e4992314d347597621bfe7ab10d72}
+
+\item 
+\hypertarget{group__RCC__Flag_gabfc3ab5d4a8a94ec1c9f38794ce37ad6}{
+\#define {\bfseries RCC\_\-FLAG\_\-PINRST}~((uint8\_\-t)0x7A)}
+\label{group__RCC__Flag_gabfc3ab5d4a8a94ec1c9f38794ce37ad6}
+
+\item 
+\hypertarget{group__RCC__Flag_ga39ad309070f416720207eece5da7dc2c}{
+\#define {\bfseries RCC\_\-FLAG\_\-PORRST}~((uint8\_\-t)0x7B)}
+\label{group__RCC__Flag_ga39ad309070f416720207eece5da7dc2c}
+
+\item 
+\hypertarget{group__RCC__Flag_gaf7852615e9b19f0b2dbc8d08c7594b52}{
+\#define {\bfseries RCC\_\-FLAG\_\-SFTRST}~((uint8\_\-t)0x7C)}
+\label{group__RCC__Flag_gaf7852615e9b19f0b2dbc8d08c7594b52}
+
+\item 
+\hypertarget{group__RCC__Flag_gaac46bac8a97cf16635ff7ffc1e6c657f}{
+\#define {\bfseries RCC\_\-FLAG\_\-IWDGRST}~((uint8\_\-t)0x7D)}
+\label{group__RCC__Flag_gaac46bac8a97cf16635ff7ffc1e6c657f}
+
+\item 
+\hypertarget{group__RCC__Flag_gaa80b60b2d497ccd7b7de1075009999a7}{
+\#define {\bfseries RCC\_\-FLAG\_\-WWDGRST}~((uint8\_\-t)0x7E)}
+\label{group__RCC__Flag_gaa80b60b2d497ccd7b7de1075009999a7}
+
+\item 
+\hypertarget{group__RCC__Flag_ga67049531354aed7546971163d02c9920}{
+\#define {\bfseries RCC\_\-FLAG\_\-LPWRRST}~((uint8\_\-t)0x7F)}
+\label{group__RCC__Flag_ga67049531354aed7546971163d02c9920}
+
+\item 
+\#define {\bfseries IS\_\-RCC\_\-FLAG}(FLAG)
+\item 
+\hypertarget{group__RCC__Flag_gafda50a08dc048f7c272bf04ec9c2c2b7}{
+\#define {\bfseries IS\_\-RCC\_\-CALIBRATION\_\-VALUE}(VALUE)~((VALUE) $<$= 0x1F)}
+\label{group__RCC__Flag_gafda50a08dc048f7c272bf04ec9c2c2b7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__RCC__Flag_gaa27dea5bb62b26d0881e649770252158}{
+\index{RCC\_\-Flag@{RCC\_\-Flag}!IS\_\-RCC\_\-FLAG@{IS\_\-RCC\_\-FLAG}}
+\index{IS\_\-RCC\_\-FLAG@{IS\_\-RCC\_\-FLAG}!RCC_Flag@{RCC\_\-Flag}}
+\subsubsection[{IS\_\-RCC\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-RCC\_\-FLAG(FLAG)}}
+\label{group__RCC__Flag_gaa27dea5bb62b26d0881e649770252158}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((FLAG) == RCC_FLAG_HSIRDY) || ((FLAG) == RCC_FLAG_HSERDY) || \
+                            ((FLAG) == RCC_FLAG_PLLRDY) || ((FLAG) == RCC_FLAG_LS
+      ERDY) || \
+                            ((FLAG) == RCC_FLAG_LSIRDY) || ((FLAG) == RCC_FLAG_PI
+      NRST) || \
+                            ((FLAG) == RCC_FLAG_PORRST) || ((FLAG) == RCC_FLAG_SF
+      TRST) || \
+                            ((FLAG) == RCC_FLAG_IWDGRST)|| ((FLAG) == RCC_FLAG_WW
+      DGRST)|| \
+                            ((FLAG) == RCC_FLAG_LPWRRST))
+\end{DoxyCode}

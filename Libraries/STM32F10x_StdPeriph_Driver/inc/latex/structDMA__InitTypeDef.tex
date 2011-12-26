@@ -1,0 +1,107 @@
+\hypertarget{structDMA__InitTypeDef}{
+\section{DMA\_\-InitTypeDef Struct Reference}
+\label{structDMA__InitTypeDef}\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}}
+}
+
+
+DMA Init structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f10x\_\-dma.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_a232af556de7c2eec9a82d448730bd86d}{DMA\_\-PeripheralBaseAddr}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_a41e7d463f0cfbcedf3170d7d27d088df}{DMA\_\-MemoryBaseAddr}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_a91b47435ccf4a40efa97bbbe631789e1}{DMA\_\-DIR}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_a999df57215b28b3b1b3b6836c4952ca5}{DMA\_\-BufferSize}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_ad4d427790f9a089ca0257a358fc263c2}{DMA\_\-PeripheralInc}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_aaf69c680a297ec01a2ed613289e691a1}{DMA\_\-MemoryInc}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_afb46aaadfb80a7e19277c868bd252554}{DMA\_\-PeripheralDataSize}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_a74bb71921c4d198d6cf1979c120f694f}{DMA\_\-MemoryDataSize}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_a8adbe6f3e46471d109afaa3111dce220}{DMA\_\-Mode}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_ab9a17bd51778478cbd728c868206dca0}{DMA\_\-Priority}
+\item 
+uint32\_\-t \hyperlink{structDMA__InitTypeDef_a57944cc447e6fcde4e9aa6229d3b4c5d}{DMA\_\-M2M}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+DMA Init structure definition. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structDMA__InitTypeDef_a999df57215b28b3b1b3b6836c4952ca5}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-BufferSize@{DMA\_\-BufferSize}}
+\index{DMA\_\-BufferSize@{DMA\_\-BufferSize}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-BufferSize}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-BufferSize}}}
+\label{structDMA__InitTypeDef_a999df57215b28b3b1b3b6836c4952ca5}
+Specifies the buffer size, in data unit, of the specified Channel. The data unit is equal to the configuration set in DMA\_\-PeripheralDataSize or DMA\_\-MemoryDataSize members depending in the transfer direction. \hypertarget{structDMA__InitTypeDef_a91b47435ccf4a40efa97bbbe631789e1}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-DIR@{DMA\_\-DIR}}
+\index{DMA\_\-DIR@{DMA\_\-DIR}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-DIR}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-DIR}}}
+\label{structDMA__InitTypeDef_a91b47435ccf4a40efa97bbbe631789e1}
+Specifies if the peripheral is the source or destination. This parameter can be a value of \hyperlink{group__DMA__data__transfer__direction}{DMA\_\-data\_\-transfer\_\-direction} \hypertarget{structDMA__InitTypeDef_a57944cc447e6fcde4e9aa6229d3b4c5d}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-M2M@{DMA\_\-M2M}}
+\index{DMA\_\-M2M@{DMA\_\-M2M}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-M2M}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-M2M}}}
+\label{structDMA__InitTypeDef_a57944cc447e6fcde4e9aa6229d3b4c5d}
+Specifies if the DMAy Channelx will be used in memory-\/to-\/memory transfer. This parameter can be a value of \hyperlink{group__DMA__memory__to__memory}{DMA\_\-memory\_\-to\_\-memory} \hypertarget{structDMA__InitTypeDef_a41e7d463f0cfbcedf3170d7d27d088df}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-MemoryBaseAddr@{DMA\_\-MemoryBaseAddr}}
+\index{DMA\_\-MemoryBaseAddr@{DMA\_\-MemoryBaseAddr}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-MemoryBaseAddr}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-MemoryBaseAddr}}}
+\label{structDMA__InitTypeDef_a41e7d463f0cfbcedf3170d7d27d088df}
+Specifies the memory base address for DMAy Channelx. \hypertarget{structDMA__InitTypeDef_a74bb71921c4d198d6cf1979c120f694f}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-MemoryDataSize@{DMA\_\-MemoryDataSize}}
+\index{DMA\_\-MemoryDataSize@{DMA\_\-MemoryDataSize}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-MemoryDataSize}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-MemoryDataSize}}}
+\label{structDMA__InitTypeDef_a74bb71921c4d198d6cf1979c120f694f}
+Specifies the Memory data width. This parameter can be a value of \hyperlink{group__DMA__memory__data__size}{DMA\_\-memory\_\-data\_\-size} \hypertarget{structDMA__InitTypeDef_aaf69c680a297ec01a2ed613289e691a1}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-MemoryInc@{DMA\_\-MemoryInc}}
+\index{DMA\_\-MemoryInc@{DMA\_\-MemoryInc}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-MemoryInc}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-MemoryInc}}}
+\label{structDMA__InitTypeDef_aaf69c680a297ec01a2ed613289e691a1}
+Specifies whether the memory address register is incremented or not. This parameter can be a value of \hyperlink{group__DMA__memory__incremented__mode}{DMA\_\-memory\_\-incremented\_\-mode} \hypertarget{structDMA__InitTypeDef_a8adbe6f3e46471d109afaa3111dce220}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-Mode@{DMA\_\-Mode}}
+\index{DMA\_\-Mode@{DMA\_\-Mode}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-Mode}}}
+\label{structDMA__InitTypeDef_a8adbe6f3e46471d109afaa3111dce220}
+Specifies the operation mode of the DMAy Channelx. This parameter can be a value of \hyperlink{group__DMA__circular__normal__mode}{DMA\_\-circular\_\-normal\_\-mode}. \begin{DoxyNote}{Note}
+: The circular buffer mode cannot be used if the memory-\/to-\/memory data transfer is configured on the selected Channel 
+\end{DoxyNote}
+\hypertarget{structDMA__InitTypeDef_a232af556de7c2eec9a82d448730bd86d}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-PeripheralBaseAddr@{DMA\_\-PeripheralBaseAddr}}
+\index{DMA\_\-PeripheralBaseAddr@{DMA\_\-PeripheralBaseAddr}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-PeripheralBaseAddr}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-PeripheralBaseAddr}}}
+\label{structDMA__InitTypeDef_a232af556de7c2eec9a82d448730bd86d}
+Specifies the peripheral base address for DMAy Channelx. \hypertarget{structDMA__InitTypeDef_afb46aaadfb80a7e19277c868bd252554}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-PeripheralDataSize@{DMA\_\-PeripheralDataSize}}
+\index{DMA\_\-PeripheralDataSize@{DMA\_\-PeripheralDataSize}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-PeripheralDataSize}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-PeripheralDataSize}}}
+\label{structDMA__InitTypeDef_afb46aaadfb80a7e19277c868bd252554}
+Specifies the Peripheral data width. This parameter can be a value of \hyperlink{group__DMA__peripheral__data__size}{DMA\_\-peripheral\_\-data\_\-size} \hypertarget{structDMA__InitTypeDef_ad4d427790f9a089ca0257a358fc263c2}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-PeripheralInc@{DMA\_\-PeripheralInc}}
+\index{DMA\_\-PeripheralInc@{DMA\_\-PeripheralInc}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-PeripheralInc}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-PeripheralInc}}}
+\label{structDMA__InitTypeDef_ad4d427790f9a089ca0257a358fc263c2}
+Specifies whether the Peripheral address register is incremented or not. This parameter can be a value of \hyperlink{group__DMA__peripheral__incremented__mode}{DMA\_\-peripheral\_\-incremented\_\-mode} \hypertarget{structDMA__InitTypeDef_ab9a17bd51778478cbd728c868206dca0}{
+\index{DMA\_\-InitTypeDef@{DMA\_\-InitTypeDef}!DMA\_\-Priority@{DMA\_\-Priority}}
+\index{DMA\_\-Priority@{DMA\_\-Priority}!DMA_InitTypeDef@{DMA\_\-InitTypeDef}}
+\subsubsection[{DMA\_\-Priority}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf DMA\_\-InitTypeDef::DMA\_\-Priority}}}
+\label{structDMA__InitTypeDef_ab9a17bd51778478cbd728c868206dca0}
+Specifies the software priority for the DMAy Channelx. This parameter can be a value of \hyperlink{group__DMA__priority__level}{DMA\_\-priority\_\-level} 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stm32f10x__dma_8h}{stm32f10x\_\-dma.h}\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{group__TIM__Internal__Trigger__Selection}{
+\section{TIM\_\-Internal\_\-Trigger\_\-Selection}
+\label{group__TIM__Internal__Trigger__Selection}\index{TIM\_\-Internal\_\-Trigger\_\-Selection@{TIM\_\-Internal\_\-Trigger\_\-Selection}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__TIM__Internal__Trigger__Selection_gab7cf2b7db3956d4fd1e5a5d84f4891e7}{
+\#define {\bfseries TIM\_\-TS\_\-ITR0}~((uint16\_\-t)0x0000)}
+\label{group__TIM__Internal__Trigger__Selection_gab7cf2b7db3956d4fd1e5a5d84f4891e7}
+
+\item 
+\hypertarget{group__TIM__Internal__Trigger__Selection_gad90fbca297153ca9c0112a67ea2c6cb3}{
+\#define {\bfseries TIM\_\-TS\_\-ITR1}~((uint16\_\-t)0x0010)}
+\label{group__TIM__Internal__Trigger__Selection_gad90fbca297153ca9c0112a67ea2c6cb3}
+
+\item 
+\hypertarget{group__TIM__Internal__Trigger__Selection_ga8599ba58a5f911d648503c7ac55d4320}{
+\#define {\bfseries TIM\_\-TS\_\-ITR2}~((uint16\_\-t)0x0020)}
+\label{group__TIM__Internal__Trigger__Selection_ga8599ba58a5f911d648503c7ac55d4320}
+
+\item 
+\hypertarget{group__TIM__Internal__Trigger__Selection_ga63183e611b91c5847040172c0069514d}{
+\#define {\bfseries TIM\_\-TS\_\-ITR3}~((uint16\_\-t)0x0030)}
+\label{group__TIM__Internal__Trigger__Selection_ga63183e611b91c5847040172c0069514d}
+
+\item 
+\hypertarget{group__TIM__Internal__Trigger__Selection_ga8c89554efc693e679c94b5a749af123c}{
+\#define {\bfseries TIM\_\-TS\_\-TI1F\_\-ED}~((uint16\_\-t)0x0040)}
+\label{group__TIM__Internal__Trigger__Selection_ga8c89554efc693e679c94b5a749af123c}
+
+\item 
+\hypertarget{group__TIM__Internal__Trigger__Selection_ga38d3514d54bcdb0ea8ac8bd91c5832b5}{
+\#define {\bfseries TIM\_\-TS\_\-TI1FP1}~((uint16\_\-t)0x0050)}
+\label{group__TIM__Internal__Trigger__Selection_ga38d3514d54bcdb0ea8ac8bd91c5832b5}
+
+\item 
+\hypertarget{group__TIM__Internal__Trigger__Selection_ga0ed58a269bccd3f22d19cc9a2ba3123f}{
+\#define {\bfseries TIM\_\-TS\_\-TI2FP2}~((uint16\_\-t)0x0060)}
+\label{group__TIM__Internal__Trigger__Selection_ga0ed58a269bccd3f22d19cc9a2ba3123f}
+
+\item 
+\hypertarget{group__TIM__Internal__Trigger__Selection_gaece08e02e056613a882aa7ff0a6ccc2d}{
+\#define {\bfseries TIM\_\-TS\_\-ETRF}~((uint16\_\-t)0x0070)}
+\label{group__TIM__Internal__Trigger__Selection_gaece08e02e056613a882aa7ff0a6ccc2d}
+
+\item 
+\#define {\bfseries IS\_\-TIM\_\-TRIGGER\_\-SELECTION}(SELECTION)
+\item 
+\#define {\bfseries IS\_\-TIM\_\-INTERNAL\_\-TRIGGER\_\-SELECTION}(SELECTION)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__TIM__Internal__Trigger__Selection_ga1ce6c387021e2fdaf3fa3d7cd3eae962}{
+\index{TIM\_\-Internal\_\-Trigger\_\-Selection@{TIM\_\-Internal\_\-Trigger\_\-Selection}!IS\_\-TIM\_\-INTERNAL\_\-TRIGGER\_\-SELECTION@{IS\_\-TIM\_\-INTERNAL\_\-TRIGGER\_\-SELECTION}}
+\index{IS\_\-TIM\_\-INTERNAL\_\-TRIGGER\_\-SELECTION@{IS\_\-TIM\_\-INTERNAL\_\-TRIGGER\_\-SELECTION}!TIM_Internal_Trigger_Selection@{TIM\_\-Internal\_\-Trigger\_\-Selection}}
+\subsubsection[{IS\_\-TIM\_\-INTERNAL\_\-TRIGGER\_\-SELECTION}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-TIM\_\-INTERNAL\_\-TRIGGER\_\-SELECTION(SELECTION)}}
+\label{group__TIM__Internal__Trigger__Selection_ga1ce6c387021e2fdaf3fa3d7cd3eae962}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((SELECTION) == TIM_TS_ITR0) || \
+                                                      ((SELECTION) == TIM_TS_ITR1
+      ) || \
+                                                      ((SELECTION) == TIM_TS_ITR2
+      ) || \
+                                                      ((SELECTION) == TIM_TS_ITR3
+      ))
+\end{DoxyCode}
+\hypertarget{group__TIM__Internal__Trigger__Selection_ga36e47cf625c695a368a68280e950dfbc}{
+\index{TIM\_\-Internal\_\-Trigger\_\-Selection@{TIM\_\-Internal\_\-Trigger\_\-Selection}!IS\_\-TIM\_\-TRIGGER\_\-SELECTION@{IS\_\-TIM\_\-TRIGGER\_\-SELECTION}}
+\index{IS\_\-TIM\_\-TRIGGER\_\-SELECTION@{IS\_\-TIM\_\-TRIGGER\_\-SELECTION}!TIM_Internal_Trigger_Selection@{TIM\_\-Internal\_\-Trigger\_\-Selection}}
+\subsubsection[{IS\_\-TIM\_\-TRIGGER\_\-SELECTION}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-TIM\_\-TRIGGER\_\-SELECTION(SELECTION)}}
+\label{group__TIM__Internal__Trigger__Selection_ga36e47cf625c695a368a68280e950dfbc}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((SELECTION) == TIM_TS_ITR0) || \
+                                             ((SELECTION) == TIM_TS_ITR1) || \
+                                             ((SELECTION) == TIM_TS_ITR2) || \
+                                             ((SELECTION) == TIM_TS_ITR3) || \
+                                             ((SELECTION) == TIM_TS_TI1F_ED) || \
+      
+                                             ((SELECTION) == TIM_TS_TI1FP1) || \
+                                             ((SELECTION) == TIM_TS_TI2FP2) || \
+                                             ((SELECTION) == TIM_TS_ETRF))
+\end{DoxyCode}

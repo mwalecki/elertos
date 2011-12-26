@@ -1,0 +1,39 @@
+\hypertarget{group__DMA__memory__data__size}{
+\section{DMA\_\-memory\_\-data\_\-size}
+\label{group__DMA__memory__data__size}\index{DMA\_\-memory\_\-data\_\-size@{DMA\_\-memory\_\-data\_\-size}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__DMA__memory__data__size_gad6093bccb60ff9adf81e21c73c58ba17}{
+\#define {\bfseries DMA\_\-MemoryDataSize\_\-Byte}~((uint32\_\-t)0x00000000)}
+\label{group__DMA__memory__data__size_gad6093bccb60ff9adf81e21c73c58ba17}
+
+\item 
+\hypertarget{group__DMA__memory__data__size_ga74c9b4e547f5eaaf35d4fd3d01ed5741}{
+\#define {\bfseries DMA\_\-MemoryDataSize\_\-HalfWord}~((uint32\_\-t)0x00000400)}
+\label{group__DMA__memory__data__size_ga74c9b4e547f5eaaf35d4fd3d01ed5741}
+
+\item 
+\hypertarget{group__DMA__memory__data__size_gaff403722a6f82d4b34c9ef306507bb98}{
+\#define {\bfseries DMA\_\-MemoryDataSize\_\-Word}~((uint32\_\-t)0x00000800)}
+\label{group__DMA__memory__data__size_gaff403722a6f82d4b34c9ef306507bb98}
+
+\item 
+\#define {\bfseries IS\_\-DMA\_\-MEMORY\_\-DATA\_\-SIZE}(SIZE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__DMA__memory__data__size_gac9e3748cebcb16d4ae4206d562bc804c}{
+\index{DMA\_\-memory\_\-data\_\-size@{DMA\_\-memory\_\-data\_\-size}!IS\_\-DMA\_\-MEMORY\_\-DATA\_\-SIZE@{IS\_\-DMA\_\-MEMORY\_\-DATA\_\-SIZE}}
+\index{IS\_\-DMA\_\-MEMORY\_\-DATA\_\-SIZE@{IS\_\-DMA\_\-MEMORY\_\-DATA\_\-SIZE}!DMA_memory_data_size@{DMA\_\-memory\_\-data\_\-size}}
+\subsubsection[{IS\_\-DMA\_\-MEMORY\_\-DATA\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-DMA\_\-MEMORY\_\-DATA\_\-SIZE(SIZE)}}
+\label{group__DMA__memory__data__size_gac9e3748cebcb16d4ae4206d562bc804c}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((SIZE) == DMA_MemoryDataSize_Byte) || \
+                                       ((SIZE) == DMA_MemoryDataSize_HalfWord) ||
+       \
+                                       ((SIZE) == DMA_MemoryDataSize_Word))
+\end{DoxyCode}

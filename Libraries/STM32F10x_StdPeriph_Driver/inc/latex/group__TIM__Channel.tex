@@ -1,0 +1,69 @@
+\hypertarget{group__TIM__Channel}{
+\section{TIM\_\-Channel}
+\label{group__TIM__Channel}\index{TIM\_\-Channel@{TIM\_\-Channel}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__TIM__Channel_ga69ea7f558f02c63dd1082d784d2449bd}{
+\#define {\bfseries TIM\_\-Channel\_\-1}~((uint16\_\-t)0x0000)}
+\label{group__TIM__Channel_ga69ea7f558f02c63dd1082d784d2449bd}
+
+\item 
+\hypertarget{group__TIM__Channel_ga03d7da8269a87a560f68985b4bd80931}{
+\#define {\bfseries TIM\_\-Channel\_\-2}~((uint16\_\-t)0x0004)}
+\label{group__TIM__Channel_ga03d7da8269a87a560f68985b4bd80931}
+
+\item 
+\hypertarget{group__TIM__Channel_ga012711b19e8c91f6f352801a3dc0bcc9}{
+\#define {\bfseries TIM\_\-Channel\_\-3}~((uint16\_\-t)0x0008)}
+\label{group__TIM__Channel_ga012711b19e8c91f6f352801a3dc0bcc9}
+
+\item 
+\hypertarget{group__TIM__Channel_ga7414888c40d066af235bc1f80b99bd9d}{
+\#define {\bfseries TIM\_\-Channel\_\-4}~((uint16\_\-t)0x000C)}
+\label{group__TIM__Channel_ga7414888c40d066af235bc1f80b99bd9d}
+
+\item 
+\#define {\bfseries IS\_\-TIM\_\-CHANNEL}(CHANNEL)
+\item 
+\#define {\bfseries IS\_\-TIM\_\-PWMI\_\-CHANNEL}(CHANNEL)
+\item 
+\#define {\bfseries IS\_\-TIM\_\-COMPLEMENTARY\_\-CHANNEL}(CHANNEL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__TIM__Channel_gae9721e3731e5fd983c83a9c1d32ef03d}{
+\index{TIM\_\-Channel@{TIM\_\-Channel}!IS\_\-TIM\_\-CHANNEL@{IS\_\-TIM\_\-CHANNEL}}
+\index{IS\_\-TIM\_\-CHANNEL@{IS\_\-TIM\_\-CHANNEL}!TIM_Channel@{TIM\_\-Channel}}
+\subsubsection[{IS\_\-TIM\_\-CHANNEL}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-TIM\_\-CHANNEL(CHANNEL)}}
+\label{group__TIM__Channel_gae9721e3731e5fd983c83a9c1d32ef03d}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((CHANNEL) == TIM_Channel_1) || \
+                                 ((CHANNEL) == TIM_Channel_2) || \
+                                 ((CHANNEL) == TIM_Channel_3) || \
+                                 ((CHANNEL) == TIM_Channel_4))
+\end{DoxyCode}
+\hypertarget{group__TIM__Channel_ga6f44459b7dfc4138bbc2c3795311c48c}{
+\index{TIM\_\-Channel@{TIM\_\-Channel}!IS\_\-TIM\_\-COMPLEMENTARY\_\-CHANNEL@{IS\_\-TIM\_\-COMPLEMENTARY\_\-CHANNEL}}
+\index{IS\_\-TIM\_\-COMPLEMENTARY\_\-CHANNEL@{IS\_\-TIM\_\-COMPLEMENTARY\_\-CHANNEL}!TIM_Channel@{TIM\_\-Channel}}
+\subsubsection[{IS\_\-TIM\_\-COMPLEMENTARY\_\-CHANNEL}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-TIM\_\-COMPLEMENTARY\_\-CHANNEL(CHANNEL)}}
+\label{group__TIM__Channel_ga6f44459b7dfc4138bbc2c3795311c48c}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((CHANNEL) == TIM_Channel_1) || \
+                                               ((CHANNEL) == TIM_Channel_2) || \
+                                               ((CHANNEL) == TIM_Channel_3))
+\end{DoxyCode}
+\hypertarget{group__TIM__Channel_gacbf272b7a14f63b38bdbf18577835dce}{
+\index{TIM\_\-Channel@{TIM\_\-Channel}!IS\_\-TIM\_\-PWMI\_\-CHANNEL@{IS\_\-TIM\_\-PWMI\_\-CHANNEL}}
+\index{IS\_\-TIM\_\-PWMI\_\-CHANNEL@{IS\_\-TIM\_\-PWMI\_\-CHANNEL}!TIM_Channel@{TIM\_\-Channel}}
+\subsubsection[{IS\_\-TIM\_\-PWMI\_\-CHANNEL}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-TIM\_\-PWMI\_\-CHANNEL(CHANNEL)}}
+\label{group__TIM__Channel_gacbf272b7a14f63b38bdbf18577835dce}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((CHANNEL) == TIM_Channel_1) || \
+                                      ((CHANNEL) == TIM_Channel_2))
+\end{DoxyCode}

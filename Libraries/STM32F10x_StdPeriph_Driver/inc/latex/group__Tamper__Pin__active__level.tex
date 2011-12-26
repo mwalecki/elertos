@@ -1,0 +1,32 @@
+\hypertarget{group__Tamper__Pin__active__level}{
+\section{Tamper\_\-Pin\_\-active\_\-level}
+\label{group__Tamper__Pin__active__level}\index{Tamper\_\-Pin\_\-active\_\-level@{Tamper\_\-Pin\_\-active\_\-level}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__Tamper__Pin__active__level_gae7203c3c0202cd68d201278c8be2b967}{
+\#define {\bfseries BKP\_\-TamperPinLevel\_\-High}~((uint16\_\-t)0x0000)}
+\label{group__Tamper__Pin__active__level_gae7203c3c0202cd68d201278c8be2b967}
+
+\item 
+\hypertarget{group__Tamper__Pin__active__level_gade9fc51f494eddcc4d88679c80fe39ce}{
+\#define {\bfseries BKP\_\-TamperPinLevel\_\-Low}~((uint16\_\-t)0x0001)}
+\label{group__Tamper__Pin__active__level_gade9fc51f494eddcc4d88679c80fe39ce}
+
+\item 
+\#define {\bfseries IS\_\-BKP\_\-TAMPER\_\-PIN\_\-LEVEL}(LEVEL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__Tamper__Pin__active__level_gae7cd3bd314605f7752062c814b850c23}{
+\index{Tamper\_\-Pin\_\-active\_\-level@{Tamper\_\-Pin\_\-active\_\-level}!IS\_\-BKP\_\-TAMPER\_\-PIN\_\-LEVEL@{IS\_\-BKP\_\-TAMPER\_\-PIN\_\-LEVEL}}
+\index{IS\_\-BKP\_\-TAMPER\_\-PIN\_\-LEVEL@{IS\_\-BKP\_\-TAMPER\_\-PIN\_\-LEVEL}!Tamper_Pin_active_level@{Tamper\_\-Pin\_\-active\_\-level}}
+\subsubsection[{IS\_\-BKP\_\-TAMPER\_\-PIN\_\-LEVEL}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-BKP\_\-TAMPER\_\-PIN\_\-LEVEL(LEVEL)}}
+\label{group__Tamper__Pin__active__level_gae7cd3bd314605f7752062c814b850c23}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((LEVEL) == BKP_TamperPinLevel_High) || \
+                                        ((LEVEL) == BKP_TamperPinLevel_Low))
+\end{DoxyCode}

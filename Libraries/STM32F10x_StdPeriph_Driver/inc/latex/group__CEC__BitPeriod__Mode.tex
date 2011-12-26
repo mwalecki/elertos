@@ -1,0 +1,37 @@
+\hypertarget{group__CEC__BitPeriod__Mode}{
+\section{CEC\_\-BitPeriod\_\-Mode}
+\label{group__CEC__BitPeriod__Mode}\index{CEC\_\-BitPeriod\_\-Mode@{CEC\_\-BitPeriod\_\-Mode}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__CEC__BitPeriod__Mode_ga746ce0a831dfd76a47add310662c7f07}{CEC\_\-BitPeriodStdMode}~((uint16\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CEC__BitPeriod__Mode_ga5bf4c1b257b837770d4d59c93cca6902}{CEC\_\-BitPeriodFlexibleMode}~CEC\_\-CFGR\_\-BPEM
+\item 
+\#define {\bfseries IS\_\-CEC\_\-BIT\_\-PERIOD\_\-ERROR\_\-MODE}(MODE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__CEC__BitPeriod__Mode_ga5bf4c1b257b837770d4d59c93cca6902}{
+\index{CEC\_\-BitPeriod\_\-Mode@{CEC\_\-BitPeriod\_\-Mode}!CEC\_\-BitPeriodFlexibleMode@{CEC\_\-BitPeriodFlexibleMode}}
+\index{CEC\_\-BitPeriodFlexibleMode@{CEC\_\-BitPeriodFlexibleMode}!CEC_BitPeriod_Mode@{CEC\_\-BitPeriod\_\-Mode}}
+\subsubsection[{CEC\_\-BitPeriodFlexibleMode}]{\setlength{\rightskip}{0pt plus 5cm}\#define CEC\_\-BitPeriodFlexibleMode~CEC\_\-CFGR\_\-BPEM}}
+\label{group__CEC__BitPeriod__Mode_ga5bf4c1b257b837770d4d59c93cca6902}
+Bit period error Flexible Mode \hypertarget{group__CEC__BitPeriod__Mode_ga746ce0a831dfd76a47add310662c7f07}{
+\index{CEC\_\-BitPeriod\_\-Mode@{CEC\_\-BitPeriod\_\-Mode}!CEC\_\-BitPeriodStdMode@{CEC\_\-BitPeriodStdMode}}
+\index{CEC\_\-BitPeriodStdMode@{CEC\_\-BitPeriodStdMode}!CEC_BitPeriod_Mode@{CEC\_\-BitPeriod\_\-Mode}}
+\subsubsection[{CEC\_\-BitPeriodStdMode}]{\setlength{\rightskip}{0pt plus 5cm}\#define CEC\_\-BitPeriodStdMode~((uint16\_\-t)0x00)}}
+\label{group__CEC__BitPeriod__Mode_ga746ce0a831dfd76a47add310662c7f07}
+Bit period error Standard Mode \hypertarget{group__CEC__BitPeriod__Mode_ga3414347854a83bf70748624ec5b8dd49}{
+\index{CEC\_\-BitPeriod\_\-Mode@{CEC\_\-BitPeriod\_\-Mode}!IS\_\-CEC\_\-BIT\_\-PERIOD\_\-ERROR\_\-MODE@{IS\_\-CEC\_\-BIT\_\-PERIOD\_\-ERROR\_\-MODE}}
+\index{IS\_\-CEC\_\-BIT\_\-PERIOD\_\-ERROR\_\-MODE@{IS\_\-CEC\_\-BIT\_\-PERIOD\_\-ERROR\_\-MODE}!CEC_BitPeriod_Mode@{CEC\_\-BitPeriod\_\-Mode}}
+\subsubsection[{IS\_\-CEC\_\-BIT\_\-PERIOD\_\-ERROR\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-CEC\_\-BIT\_\-PERIOD\_\-ERROR\_\-MODE(MODE)}}
+\label{group__CEC__BitPeriod__Mode_ga3414347854a83bf70748624ec5b8dd49}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((MODE) == CEC_BitPeriodStdMode) || \
+                                            ((MODE) == CEC_BitPeriodFlexibleMode)
+      )
+\end{DoxyCode}

@@ -1,0 +1,73 @@
+\hypertarget{group__TIM__interrupt__sources}{
+\section{TIM\_\-interrupt\_\-sources}
+\label{group__TIM__interrupt__sources}\index{TIM\_\-interrupt\_\-sources@{TIM\_\-interrupt\_\-sources}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__TIM__interrupt__sources_ga8fb63577fec9a3e7c7f5f3eb775ee624}{
+\#define {\bfseries TIM\_\-IT\_\-Update}~((uint16\_\-t)0x0001)}
+\label{group__TIM__interrupt__sources_ga8fb63577fec9a3e7c7f5f3eb775ee624}
+
+\item 
+\hypertarget{group__TIM__interrupt__sources_ga02267a938ab4722c5013fffa447cf5a6}{
+\#define {\bfseries TIM\_\-IT\_\-CC1}~((uint16\_\-t)0x0002)}
+\label{group__TIM__interrupt__sources_ga02267a938ab4722c5013fffa447cf5a6}
+
+\item 
+\hypertarget{group__TIM__interrupt__sources_ga60f6b6c424b62ca58d3fafd8f5955e4f}{
+\#define {\bfseries TIM\_\-IT\_\-CC2}~((uint16\_\-t)0x0004)}
+\label{group__TIM__interrupt__sources_ga60f6b6c424b62ca58d3fafd8f5955e4f}
+
+\item 
+\hypertarget{group__TIM__interrupt__sources_ga6aef020aebafd9e585283fbbaf8b841f}{
+\#define {\bfseries TIM\_\-IT\_\-CC3}~((uint16\_\-t)0x0008)}
+\label{group__TIM__interrupt__sources_ga6aef020aebafd9e585283fbbaf8b841f}
+
+\item 
+\hypertarget{group__TIM__interrupt__sources_ga1dce7f1bc32a258f2964cb7c05f413a6}{
+\#define {\bfseries TIM\_\-IT\_\-CC4}~((uint16\_\-t)0x0010)}
+\label{group__TIM__interrupt__sources_ga1dce7f1bc32a258f2964cb7c05f413a6}
+
+\item 
+\hypertarget{group__TIM__interrupt__sources_gaeb7eff6c39922814e7ee47c0820c3d9f}{
+\#define {\bfseries TIM\_\-IT\_\-COM}~((uint16\_\-t)0x0020)}
+\label{group__TIM__interrupt__sources_gaeb7eff6c39922814e7ee47c0820c3d9f}
+
+\item 
+\hypertarget{group__TIM__interrupt__sources_ga339629d21f2490729b28905f5c04bad1}{
+\#define {\bfseries TIM\_\-IT\_\-Trigger}~((uint16\_\-t)0x0040)}
+\label{group__TIM__interrupt__sources_ga339629d21f2490729b28905f5c04bad1}
+
+\item 
+\hypertarget{group__TIM__interrupt__sources_gad16adab3ac1a4a552a86da069702f24b}{
+\#define {\bfseries TIM\_\-IT\_\-Break}~((uint16\_\-t)0x0080)}
+\label{group__TIM__interrupt__sources_gad16adab3ac1a4a552a86da069702f24b}
+
+\item 
+\hypertarget{group__TIM__interrupt__sources_ga14fce0f8dbe0925e45b415b34bd162c9}{
+\#define {\bfseries IS\_\-TIM\_\-IT}(IT)~((((IT) \& (uint16\_\-t)0xFF00) == 0x0000) \&\& ((IT) != 0x0000))}
+\label{group__TIM__interrupt__sources_ga14fce0f8dbe0925e45b415b34bd162c9}
+
+\item 
+\#define {\bfseries IS\_\-TIM\_\-GET\_\-IT}(IT)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__TIM__interrupt__sources_ga38e9d740c8d4ed8fcaced73816c124e6}{
+\index{TIM\_\-interrupt\_\-sources@{TIM\_\-interrupt\_\-sources}!IS\_\-TIM\_\-GET\_\-IT@{IS\_\-TIM\_\-GET\_\-IT}}
+\index{IS\_\-TIM\_\-GET\_\-IT@{IS\_\-TIM\_\-GET\_\-IT}!TIM_interrupt_sources@{TIM\_\-interrupt\_\-sources}}
+\subsubsection[{IS\_\-TIM\_\-GET\_\-IT}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-TIM\_\-GET\_\-IT(IT)}}
+\label{group__TIM__interrupt__sources_ga38e9d740c8d4ed8fcaced73816c124e6}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((IT) == TIM_IT_Update) || \
+                           ((IT) == TIM_IT_CC1) || \
+                           ((IT) == TIM_IT_CC2) || \
+                           ((IT) == TIM_IT_CC3) || \
+                           ((IT) == TIM_IT_CC4) || \
+                           ((IT) == TIM_IT_COM) || \
+                           ((IT) == TIM_IT_Trigger) || \
+                           ((IT) == TIM_IT_Break))
+\end{DoxyCode}

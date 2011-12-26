@@ -1,0 +1,170 @@
+\hypertarget{stm32f10x__pwr_8h}{
+\section{stm32f10x\_\-pwr.h File Reference}
+\label{stm32f10x__pwr_8h}\index{stm32f10x\_\-pwr.h@{stm32f10x\_\-pwr.h}}
+}
+
+
+This file contains all the functions prototypes for the PWR firmware library.  
+
+
+{\ttfamily \#include \char`\"{}stm32f10x.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__PVD__detection__level_ga5cf8b09ed099c7412fcee6ccec2ec20b}{
+\#define {\bfseries PWR\_\-PVDLevel\_\-2V2}~((uint32\_\-t)0x00000000)}
+\label{group__PVD__detection__level_ga5cf8b09ed099c7412fcee6ccec2ec20b}
+
+\item 
+\hypertarget{group__PVD__detection__level_ga561e543dedb4c2cb126ec8d9d604260c}{
+\#define {\bfseries PWR\_\-PVDLevel\_\-2V3}~((uint32\_\-t)0x00000020)}
+\label{group__PVD__detection__level_ga561e543dedb4c2cb126ec8d9d604260c}
+
+\item 
+\hypertarget{group__PVD__detection__level_ga5b585e7e6eda29e8b119e16779ba7a8b}{
+\#define {\bfseries PWR\_\-PVDLevel\_\-2V4}~((uint32\_\-t)0x00000040)}
+\label{group__PVD__detection__level_ga5b585e7e6eda29e8b119e16779ba7a8b}
+
+\item 
+\hypertarget{group__PVD__detection__level_gad91e74c3034a5baccca70250815e680e}{
+\#define {\bfseries PWR\_\-PVDLevel\_\-2V5}~((uint32\_\-t)0x00000060)}
+\label{group__PVD__detection__level_gad91e74c3034a5baccca70250815e680e}
+
+\item 
+\hypertarget{group__PVD__detection__level_ga46174e5288082b59473068a3ca8e8ea6}{
+\#define {\bfseries PWR\_\-PVDLevel\_\-2V6}~((uint32\_\-t)0x00000080)}
+\label{group__PVD__detection__level_ga46174e5288082b59473068a3ca8e8ea6}
+
+\item 
+\hypertarget{group__PVD__detection__level_ga72d22a858d8289ef02fff45f4810b916}{
+\#define {\bfseries PWR\_\-PVDLevel\_\-2V7}~((uint32\_\-t)0x000000A0)}
+\label{group__PVD__detection__level_ga72d22a858d8289ef02fff45f4810b916}
+
+\item 
+\hypertarget{group__PVD__detection__level_ga5f38835a95c026b1db16dbebf81b45a2}{
+\#define {\bfseries PWR\_\-PVDLevel\_\-2V8}~((uint32\_\-t)0x000000C0)}
+\label{group__PVD__detection__level_ga5f38835a95c026b1db16dbebf81b45a2}
+
+\item 
+\hypertarget{group__PVD__detection__level_ga9c156a7155f9946c0d3a73794f51a1ce}{
+\#define {\bfseries PWR\_\-PVDLevel\_\-2V9}~((uint32\_\-t)0x000000E0)}
+\label{group__PVD__detection__level_ga9c156a7155f9946c0d3a73794f51a1ce}
+
+\item 
+\#define {\bfseries IS\_\-PWR\_\-PVD\_\-LEVEL}(LEVEL)
+\item 
+\hypertarget{group__Regulator__state__is__STOP__mode_gabf58b999bff6b4bf0fb5b97d74a75683}{
+\#define {\bfseries PWR\_\-Regulator\_\-ON}~((uint32\_\-t)0x00000000)}
+\label{group__Regulator__state__is__STOP__mode_gabf58b999bff6b4bf0fb5b97d74a75683}
+
+\item 
+\hypertarget{group__Regulator__state__is__STOP__mode_ga13745136d094661358d373b67ebf1ac7}{
+\#define {\bfseries PWR\_\-Regulator\_\-LowPower}~((uint32\_\-t)0x00000001)}
+\label{group__Regulator__state__is__STOP__mode_ga13745136d094661358d373b67ebf1ac7}
+
+\item 
+\#define {\bfseries IS\_\-PWR\_\-REGULATOR}(REGULATOR)
+\item 
+\hypertarget{group__STOP__mode__entry_gaa1e1362f3d0b93e8f5f674e18cfc96c4}{
+\#define {\bfseries PWR\_\-STOPEntry\_\-WFI}~((uint8\_\-t)0x01)}
+\label{group__STOP__mode__entry_gaa1e1362f3d0b93e8f5f674e18cfc96c4}
+
+\item 
+\hypertarget{group__STOP__mode__entry_gaac98ac55fb8764121d4168d99c9b369e}{
+\#define {\bfseries PWR\_\-STOPEntry\_\-WFE}~((uint8\_\-t)0x02)}
+\label{group__STOP__mode__entry_gaac98ac55fb8764121d4168d99c9b369e}
+
+\item 
+\hypertarget{group__STOP__mode__entry_ga4a94eb1f400dec6e486fbc229cbea8a0}{
+\#define {\bfseries IS\_\-PWR\_\-STOP\_\-ENTRY}(ENTRY)~(((ENTRY) == PWR\_\-STOPEntry\_\-WFI) $|$$|$ ((ENTRY) == PWR\_\-STOPEntry\_\-WFE))}
+\label{group__STOP__mode__entry_ga4a94eb1f400dec6e486fbc229cbea8a0}
+
+\item 
+\hypertarget{group__PWR__Flag_ga2d06760a5769e729b06d41e37036d58e}{
+\#define {\bfseries PWR\_\-FLAG\_\-WU}~((uint32\_\-t)0x00000001)}
+\label{group__PWR__Flag_ga2d06760a5769e729b06d41e37036d58e}
+
+\item 
+\hypertarget{group__PWR__Flag_ga9e55f0b5dec2346d5c8dee3ab3c0c2df}{
+\#define {\bfseries PWR\_\-FLAG\_\-SB}~((uint32\_\-t)0x00000002)}
+\label{group__PWR__Flag_ga9e55f0b5dec2346d5c8dee3ab3c0c2df}
+
+\item 
+\hypertarget{group__PWR__Flag_gaefd05d58cc050eeef83a1b5c520b2c2a}{
+\#define {\bfseries PWR\_\-FLAG\_\-PVDO}~((uint32\_\-t)0x00000004)}
+\label{group__PWR__Flag_gaefd05d58cc050eeef83a1b5c520b2c2a}
+
+\item 
+\#define {\bfseries IS\_\-PWR\_\-GET\_\-FLAG}(FLAG)
+\item 
+\hypertarget{group__PWR__Flag_ga36d35a770e683e4a0baf3aac350fcb5a}{
+\#define {\bfseries IS\_\-PWR\_\-CLEAR\_\-FLAG}(FLAG)~(((FLAG) == PWR\_\-FLAG\_\-WU) $|$$|$ ((FLAG) == PWR\_\-FLAG\_\-SB))}
+\label{group__PWR__Flag_ga36d35a770e683e4a0baf3aac350fcb5a}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__PWR__Exported__Functions_gad03a0aac7bc3bc3a9fd012f3769a6990}{
+void {\bfseries PWR\_\-DeInit} (void)}
+\label{group__PWR__Exported__Functions_gad03a0aac7bc3bc3a9fd012f3769a6990}
+
+\item 
+\hypertarget{group__PWR__Exported__Functions_ga0741aea35572b1a75f82b74de12df800}{
+void {\bfseries PWR\_\-BackupAccessCmd} (FunctionalState NewState)}
+\label{group__PWR__Exported__Functions_ga0741aea35572b1a75f82b74de12df800}
+
+\item 
+\hypertarget{group__PWR__Exported__Functions_ga42cad476b816e0a33594a933b3ed1acd}{
+void {\bfseries PWR\_\-PVDCmd} (FunctionalState NewState)}
+\label{group__PWR__Exported__Functions_ga42cad476b816e0a33594a933b3ed1acd}
+
+\item 
+\hypertarget{group__PWR__Exported__Functions_ga237c143ef6aa55abb8049fa7bf24ab8f}{
+void {\bfseries PWR\_\-PVDLevelConfig} (uint32\_\-t PWR\_\-PVDLevel)}
+\label{group__PWR__Exported__Functions_ga237c143ef6aa55abb8049fa7bf24ab8f}
+
+\item 
+\hypertarget{group__PWR__Exported__Functions_gae5fd6f9336ef8c60d5483651cb0d1a00}{
+void {\bfseries PWR\_\-WakeUpPinCmd} (FunctionalState NewState)}
+\label{group__PWR__Exported__Functions_gae5fd6f9336ef8c60d5483651cb0d1a00}
+
+\item 
+\hypertarget{group__PWR__Exported__Functions_ga694676ac06a9baf50eae45adae0118ab}{
+void {\bfseries PWR\_\-EnterSTOPMode} (uint32\_\-t PWR\_\-Regulator, uint8\_\-t PWR\_\-STOPEntry)}
+\label{group__PWR__Exported__Functions_ga694676ac06a9baf50eae45adae0118ab}
+
+\item 
+\hypertarget{group__PWR__Exported__Functions_ga00ddae00a9c327b81b24d2597b0052f3}{
+void {\bfseries PWR\_\-EnterSTANDBYMode} (void)}
+\label{group__PWR__Exported__Functions_ga00ddae00a9c327b81b24d2597b0052f3}
+
+\item 
+\hypertarget{group__PWR__Exported__Functions_gaa980163a4d83304280ee34942464b4ec}{
+FlagStatus {\bfseries PWR\_\-GetFlagStatus} (uint32\_\-t PWR\_\-FLAG)}
+\label{group__PWR__Exported__Functions_gaa980163a4d83304280ee34942464b4ec}
+
+\item 
+\hypertarget{group__PWR__Exported__Functions_ga01c4b2fbd16514b993324e101c3ddf7c}{
+void {\bfseries PWR\_\-ClearFlag} (uint32\_\-t PWR\_\-FLAG)}
+\label{group__PWR__Exported__Functions_ga01c4b2fbd16514b993324e101c3ddf7c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the functions prototypes for the PWR firmware library. \begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V3.5.0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11-\/March-\/2011 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+
+\subsubsection*{\begin{center}\copyright COPYRIGHT 2011 STMicroelectronics\end{center} }

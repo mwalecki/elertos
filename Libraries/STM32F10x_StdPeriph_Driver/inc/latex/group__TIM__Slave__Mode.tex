@@ -1,0 +1,44 @@
+\hypertarget{group__TIM__Slave__Mode}{
+\section{TIM\_\-Slave\_\-Mode}
+\label{group__TIM__Slave__Mode}\index{TIM\_\-Slave\_\-Mode@{TIM\_\-Slave\_\-Mode}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__TIM__Slave__Mode_gaac1cec731f1a5e680a038c4f472f74af}{
+\#define {\bfseries TIM\_\-SlaveMode\_\-Reset}~((uint16\_\-t)0x0004)}
+\label{group__TIM__Slave__Mode_gaac1cec731f1a5e680a038c4f472f74af}
+
+\item 
+\hypertarget{group__TIM__Slave__Mode_ga1f36c870b926f70b32f274bbc0bc39a5}{
+\#define {\bfseries TIM\_\-SlaveMode\_\-Gated}~((uint16\_\-t)0x0005)}
+\label{group__TIM__Slave__Mode_ga1f36c870b926f70b32f274bbc0bc39a5}
+
+\item 
+\hypertarget{group__TIM__Slave__Mode_ga9e7726c04ee1bafec97226f08adf5677}{
+\#define {\bfseries TIM\_\-SlaveMode\_\-Trigger}~((uint16\_\-t)0x0006)}
+\label{group__TIM__Slave__Mode_ga9e7726c04ee1bafec97226f08adf5677}
+
+\item 
+\hypertarget{group__TIM__Slave__Mode_ga34427a693157ab177fead9871185bd35}{
+\#define {\bfseries TIM\_\-SlaveMode\_\-External1}~((uint16\_\-t)0x0007)}
+\label{group__TIM__Slave__Mode_ga34427a693157ab177fead9871185bd35}
+
+\item 
+\#define {\bfseries IS\_\-TIM\_\-SLAVE\_\-MODE}(MODE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__TIM__Slave__Mode_ga7f0e666bc968c56df7f1f6c2465c89fb}{
+\index{TIM\_\-Slave\_\-Mode@{TIM\_\-Slave\_\-Mode}!IS\_\-TIM\_\-SLAVE\_\-MODE@{IS\_\-TIM\_\-SLAVE\_\-MODE}}
+\index{IS\_\-TIM\_\-SLAVE\_\-MODE@{IS\_\-TIM\_\-SLAVE\_\-MODE}!TIM_Slave_Mode@{TIM\_\-Slave\_\-Mode}}
+\subsubsection[{IS\_\-TIM\_\-SLAVE\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-TIM\_\-SLAVE\_\-MODE(MODE)}}
+\label{group__TIM__Slave__Mode_ga7f0e666bc968c56df7f1f6c2465c89fb}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((MODE) == TIM_SlaveMode_Reset) || \
+                                 ((MODE) == TIM_SlaveMode_Gated) || \
+                                 ((MODE) == TIM_SlaveMode_Trigger) || \
+                                 ((MODE) == TIM_SlaveMode_External1))
+\end{DoxyCode}

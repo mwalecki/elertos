@@ -1,0 +1,38 @@
+\hypertarget{group__RTC__clock__source}{
+\section{RTC\_\-clock\_\-source}
+\label{group__RTC__clock__source}\index{RTC\_\-clock\_\-source@{RTC\_\-clock\_\-source}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__RTC__clock__source_ga18c0c40ff4289148c9fa44c6848d5552}{
+\#define {\bfseries RCC\_\-RTCCLKSource\_\-LSE}~((uint32\_\-t)0x00000100)}
+\label{group__RTC__clock__source_ga18c0c40ff4289148c9fa44c6848d5552}
+
+\item 
+\hypertarget{group__RTC__clock__source_ga7758c87e4584bfa76cb99c726b7162c3}{
+\#define {\bfseries RCC\_\-RTCCLKSource\_\-LSI}~((uint32\_\-t)0x00000200)}
+\label{group__RTC__clock__source_ga7758c87e4584bfa76cb99c726b7162c3}
+
+\item 
+\hypertarget{group__RTC__clock__source_gada0bedcd0afa5104ec0ef398d1ac2778}{
+\#define {\bfseries RCC\_\-RTCCLKSource\_\-HSE\_\-Div128}~((uint32\_\-t)0x00000300)}
+\label{group__RTC__clock__source_gada0bedcd0afa5104ec0ef398d1ac2778}
+
+\item 
+\#define {\bfseries IS\_\-RCC\_\-RTCCLK\_\-SOURCE}(SOURCE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__RTC__clock__source_gae76a0340b02b5342e756fa0d2112ebf5}{
+\index{RTC\_\-clock\_\-source@{RTC\_\-clock\_\-source}!IS\_\-RCC\_\-RTCCLK\_\-SOURCE@{IS\_\-RCC\_\-RTCCLK\_\-SOURCE}}
+\index{IS\_\-RCC\_\-RTCCLK\_\-SOURCE@{IS\_\-RCC\_\-RTCCLK\_\-SOURCE}!RTC_clock_source@{RTC\_\-clock\_\-source}}
+\subsubsection[{IS\_\-RCC\_\-RTCCLK\_\-SOURCE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-RCC\_\-RTCCLK\_\-SOURCE(SOURCE)}}
+\label{group__RTC__clock__source_gae76a0340b02b5342e756fa0d2112ebf5}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((SOURCE) == RCC_RTCCLKSource_LSE) || \
+                                      ((SOURCE) == RCC_RTCCLKSource_LSI) || \
+                                      ((SOURCE) == RCC_RTCCLKSource_HSE_Div128))
+\end{DoxyCode}

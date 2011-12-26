@@ -1,0 +1,40 @@
+\hypertarget{group__DMA__peripheral__data__size}{
+\section{DMA\_\-peripheral\_\-data\_\-size}
+\label{group__DMA__peripheral__data__size}\index{DMA\_\-peripheral\_\-data\_\-size@{DMA\_\-peripheral\_\-data\_\-size}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__DMA__peripheral__data__size_ga7577035ae4ff413164000227a8cea346}{
+\#define {\bfseries DMA\_\-PeripheralDataSize\_\-Byte}~((uint32\_\-t)0x00000000)}
+\label{group__DMA__peripheral__data__size_ga7577035ae4ff413164000227a8cea346}
+
+\item 
+\hypertarget{group__DMA__peripheral__data__size_gab1988e5005ee65c261018f62866e4585}{
+\#define {\bfseries DMA\_\-PeripheralDataSize\_\-HalfWord}~((uint32\_\-t)0x00000100)}
+\label{group__DMA__peripheral__data__size_gab1988e5005ee65c261018f62866e4585}
+
+\item 
+\hypertarget{group__DMA__peripheral__data__size_ga516ea7a40945d8325fe73e079b245ea1}{
+\#define {\bfseries DMA\_\-PeripheralDataSize\_\-Word}~((uint32\_\-t)0x00000200)}
+\label{group__DMA__peripheral__data__size_ga516ea7a40945d8325fe73e079b245ea1}
+
+\item 
+\#define {\bfseries IS\_\-DMA\_\-PERIPHERAL\_\-DATA\_\-SIZE}(SIZE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__DMA__peripheral__data__size_gad7916e0ae55cdf5efdfa68a09a028037}{
+\index{DMA\_\-peripheral\_\-data\_\-size@{DMA\_\-peripheral\_\-data\_\-size}!IS\_\-DMA\_\-PERIPHERAL\_\-DATA\_\-SIZE@{IS\_\-DMA\_\-PERIPHERAL\_\-DATA\_\-SIZE}}
+\index{IS\_\-DMA\_\-PERIPHERAL\_\-DATA\_\-SIZE@{IS\_\-DMA\_\-PERIPHERAL\_\-DATA\_\-SIZE}!DMA_peripheral_data_size@{DMA\_\-peripheral\_\-data\_\-size}}
+\subsubsection[{IS\_\-DMA\_\-PERIPHERAL\_\-DATA\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-DMA\_\-PERIPHERAL\_\-DATA\_\-SIZE(SIZE)}}
+\label{group__DMA__peripheral__data__size_gad7916e0ae55cdf5efdfa68a09a028037}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((SIZE) == DMA_PeripheralDataSize_Byte) || \
+                                           ((SIZE) == DMA_PeripheralDataSize_Half
+      Word) || \
+                                           ((SIZE) == DMA_PeripheralDataSize_Word
+      ))
+\end{DoxyCode}

@@ -1,0 +1,45 @@
+\hypertarget{group__EXTI__Exported__Types}{
+\section{EXTI\_\-Exported\_\-Types}
+\label{group__EXTI__Exported__Types}\index{EXTI\_\-Exported\_\-Types@{EXTI\_\-Exported\_\-Types}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structEXTI__InitTypeDef}{EXTI\_\-InitTypeDef}
+\begin{DoxyCompactList}\small\item\em EXTI Init Structure definition. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__EXTI__Exported__Types_ga8429170f3320b90227f9f5b252c1c5eb}{
+\#define {\bfseries IS\_\-EXTI\_\-MODE}(MODE)~(((MODE) == EXTI\_\-Mode\_\-Interrupt) $|$$|$ ((MODE) == EXTI\_\-Mode\_\-Event))}
+\label{group__EXTI__Exported__Types_ga8429170f3320b90227f9f5b252c1c5eb}
+
+\item 
+\#define {\bfseries IS\_\-EXTI\_\-TRIGGER}(TRIGGER)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__EXTI__Exported__Types_gad5e69af98dc0dfdf64417adc1cf57929}{EXTIMode\_\-TypeDef} \{ {\bfseries EXTI\_\-Mode\_\-Interrupt} =  0x00, 
+{\bfseries EXTI\_\-Mode\_\-Event} =  0x04
+ \}
+\begin{DoxyCompactList}\small\item\em EXTI mode enumeration. \item\end{DoxyCompactList}\item 
+enum \hyperlink{group__EXTI__Exported__Types_ga9da190f5425d1b421a06bced8cc48e9b}{EXTITrigger\_\-TypeDef} \{ {\bfseries EXTI\_\-Trigger\_\-Rising} =  0x08, 
+{\bfseries EXTI\_\-Trigger\_\-Falling} =  0x0C, 
+{\bfseries EXTI\_\-Trigger\_\-Rising\_\-Falling} =  0x10
+ \}
+\begin{DoxyCompactList}\small\item\em EXTI Trigger enumeration. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__EXTI__Exported__Types_gaee95ec6288944a6245696896604e509e}{
+\index{EXTI\_\-Exported\_\-Types@{EXTI\_\-Exported\_\-Types}!IS\_\-EXTI\_\-TRIGGER@{IS\_\-EXTI\_\-TRIGGER}}
+\index{IS\_\-EXTI\_\-TRIGGER@{IS\_\-EXTI\_\-TRIGGER}!EXTI_Exported_Types@{EXTI\_\-Exported\_\-Types}}
+\subsubsection[{IS\_\-EXTI\_\-TRIGGER}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-EXTI\_\-TRIGGER(TRIGGER)}}
+\label{group__EXTI__Exported__Types_gaee95ec6288944a6245696896604e509e}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((TRIGGER) == EXTI_Trigger_Rising) || \
+                                  ((TRIGGER) == EXTI_Trigger_Falling) || \
+                                  ((TRIGGER) == EXTI_Trigger_Rising_Falling))
+\end{DoxyCode}

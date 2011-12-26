@@ -1,0 +1,55 @@
+\hypertarget{structNVIC__InitTypeDef}{
+\section{NVIC\_\-InitTypeDef Struct Reference}
+\label{structNVIC__InitTypeDef}\index{NVIC\_\-InitTypeDef@{NVIC\_\-InitTypeDef}}
+}
+
+
+NVIC Init Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$misc.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\_\-t \hyperlink{structNVIC__InitTypeDef_afa04cf6e559bb690bdd9fcb7e3d93dcf}{NVIC\_\-IRQChannel}
+\item 
+uint8\_\-t \hyperlink{structNVIC__InitTypeDef_aa3fe262c30188404a6e31f922c5ae513}{NVIC\_\-IRQChannelPreemptionPriority}
+\item 
+uint8\_\-t \hyperlink{structNVIC__InitTypeDef_aecc22a002244e3f1f9448dbe46c1db4b}{NVIC\_\-IRQChannelSubPriority}
+\item 
+FunctionalState \hyperlink{structNVIC__InitTypeDef_acb23fabb995fa4980c768825f12f5815}{NVIC\_\-IRQChannelCmd}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+NVIC Init Structure definition. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structNVIC__InitTypeDef_afa04cf6e559bb690bdd9fcb7e3d93dcf}{
+\index{NVIC\_\-InitTypeDef@{NVIC\_\-InitTypeDef}!NVIC\_\-IRQChannel@{NVIC\_\-IRQChannel}}
+\index{NVIC\_\-IRQChannel@{NVIC\_\-IRQChannel}!NVIC_InitTypeDef@{NVIC\_\-InitTypeDef}}
+\subsubsection[{NVIC\_\-IRQChannel}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf NVIC\_\-InitTypeDef::NVIC\_\-IRQChannel}}}
+\label{structNVIC__InitTypeDef_afa04cf6e559bb690bdd9fcb7e3d93dcf}
+Specifies the IRQ channel to be enabled or disabled. This parameter can be a value of IRQn\_\-Type (For the complete STM32 Devices IRQ Channels list, please refer to stm32f10x.h file) \hypertarget{structNVIC__InitTypeDef_acb23fabb995fa4980c768825f12f5815}{
+\index{NVIC\_\-InitTypeDef@{NVIC\_\-InitTypeDef}!NVIC\_\-IRQChannelCmd@{NVIC\_\-IRQChannelCmd}}
+\index{NVIC\_\-IRQChannelCmd@{NVIC\_\-IRQChannelCmd}!NVIC_InitTypeDef@{NVIC\_\-InitTypeDef}}
+\subsubsection[{NVIC\_\-IRQChannelCmd}]{\setlength{\rightskip}{0pt plus 5cm}FunctionalState {\bf NVIC\_\-InitTypeDef::NVIC\_\-IRQChannelCmd}}}
+\label{structNVIC__InitTypeDef_acb23fabb995fa4980c768825f12f5815}
+Specifies whether the IRQ channel defined in NVIC\_\-IRQChannel will be enabled or disabled. This parameter can be set either to ENABLE or DISABLE \hypertarget{structNVIC__InitTypeDef_aa3fe262c30188404a6e31f922c5ae513}{
+\index{NVIC\_\-InitTypeDef@{NVIC\_\-InitTypeDef}!NVIC\_\-IRQChannelPreemptionPriority@{NVIC\_\-IRQChannelPreemptionPriority}}
+\index{NVIC\_\-IRQChannelPreemptionPriority@{NVIC\_\-IRQChannelPreemptionPriority}!NVIC_InitTypeDef@{NVIC\_\-InitTypeDef}}
+\subsubsection[{NVIC\_\-IRQChannelPreemptionPriority}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf NVIC\_\-InitTypeDef::NVIC\_\-IRQChannelPreemptionPriority}}}
+\label{structNVIC__InitTypeDef_aa3fe262c30188404a6e31f922c5ae513}
+Specifies the pre-\/emption priority for the IRQ channel specified in NVIC\_\-IRQChannel. This parameter can be a value between 0 and 15 as described in the table \hyperlink{group__NVIC__Priority__Table}{NVIC\_\-Priority\_\-Table} \hypertarget{structNVIC__InitTypeDef_aecc22a002244e3f1f9448dbe46c1db4b}{
+\index{NVIC\_\-InitTypeDef@{NVIC\_\-InitTypeDef}!NVIC\_\-IRQChannelSubPriority@{NVIC\_\-IRQChannelSubPriority}}
+\index{NVIC\_\-IRQChannelSubPriority@{NVIC\_\-IRQChannelSubPriority}!NVIC_InitTypeDef@{NVIC\_\-InitTypeDef}}
+\subsubsection[{NVIC\_\-IRQChannelSubPriority}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf NVIC\_\-InitTypeDef::NVIC\_\-IRQChannelSubPriority}}}
+\label{structNVIC__InitTypeDef_aecc22a002244e3f1f9448dbe46c1db4b}
+Specifies the subpriority level for the IRQ channel specified in NVIC\_\-IRQChannel. This parameter can be a value between 0 and 15 as described in the table \hyperlink{group__NVIC__Priority__Table}{NVIC\_\-Priority\_\-Table} 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{misc_8h}{misc.h}\end{DoxyCompactItemize}

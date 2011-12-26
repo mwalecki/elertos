@@ -1,0 +1,52 @@
+\hypertarget{group__TIM__Counter__Mode}{
+\section{TIM\_\-Counter\_\-Mode}
+\label{group__TIM__Counter__Mode}\index{TIM\_\-Counter\_\-Mode@{TIM\_\-Counter\_\-Mode}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__TIM__Counter__Mode_gaf4cd3ce74af3122507b77c8f6e79c832}{
+\#define {\bfseries TIM\_\-CounterMode\_\-Up}~((uint16\_\-t)0x0000)}
+\label{group__TIM__Counter__Mode_gaf4cd3ce74af3122507b77c8f6e79c832}
+
+\item 
+\hypertarget{group__TIM__Counter__Mode_gadd7c4200d185bdcd9e64ae80e6b200b0}{
+\#define {\bfseries TIM\_\-CounterMode\_\-Down}~((uint16\_\-t)0x0010)}
+\label{group__TIM__Counter__Mode_gadd7c4200d185bdcd9e64ae80e6b200b0}
+
+\item 
+\hypertarget{group__TIM__Counter__Mode_gac07392e9637f8a0d115d4ba9a002ae93}{
+\#define {\bfseries TIM\_\-CounterMode\_\-CenterAligned1}~((uint16\_\-t)0x0020)}
+\label{group__TIM__Counter__Mode_gac07392e9637f8a0d115d4ba9a002ae93}
+
+\item 
+\hypertarget{group__TIM__Counter__Mode_ga3793122e4c123a99e46fc2f04acea0d4}{
+\#define {\bfseries TIM\_\-CounterMode\_\-CenterAligned2}~((uint16\_\-t)0x0040)}
+\label{group__TIM__Counter__Mode_ga3793122e4c123a99e46fc2f04acea0d4}
+
+\item 
+\hypertarget{group__TIM__Counter__Mode_ga65d9bc01ffa287cd7cf200d08c20a1ce}{
+\#define {\bfseries TIM\_\-CounterMode\_\-CenterAligned3}~((uint16\_\-t)0x0060)}
+\label{group__TIM__Counter__Mode_ga65d9bc01ffa287cd7cf200d08c20a1ce}
+
+\item 
+\#define {\bfseries IS\_\-TIM\_\-COUNTER\_\-MODE}(MODE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__TIM__Counter__Mode_ga9543fec190793e800d5d1b1b853636f5}{
+\index{TIM\_\-Counter\_\-Mode@{TIM\_\-Counter\_\-Mode}!IS\_\-TIM\_\-COUNTER\_\-MODE@{IS\_\-TIM\_\-COUNTER\_\-MODE}}
+\index{IS\_\-TIM\_\-COUNTER\_\-MODE@{IS\_\-TIM\_\-COUNTER\_\-MODE}!TIM_Counter_Mode@{TIM\_\-Counter\_\-Mode}}
+\subsubsection[{IS\_\-TIM\_\-COUNTER\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-TIM\_\-COUNTER\_\-MODE(MODE)}}
+\label{group__TIM__Counter__Mode_ga9543fec190793e800d5d1b1b853636f5}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((MODE) == TIM_CounterMode_Up) ||  \
+                                   ((MODE) == TIM_CounterMode_Down) || \
+                                   ((MODE) == TIM_CounterMode_CenterAligned1) || 
+      \
+                                   ((MODE) == TIM_CounterMode_CenterAligned2) || 
+      \
+                                   ((MODE) == TIM_CounterMode_CenterAligned3))
+\end{DoxyCode}

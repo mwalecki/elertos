@@ -1,0 +1,76 @@
+\hypertarget{structCanRxMsg}{
+\section{CanRxMsg Struct Reference}
+\label{structCanRxMsg}\index{CanRxMsg@{CanRxMsg}}
+}
+
+
+CAN Rx message structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f10x\_\-can.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\_\-t \hyperlink{structCanRxMsg_a62769e18836146f71238bee6b43b531e}{StdId}
+\item 
+uint32\_\-t \hyperlink{structCanRxMsg_a1fdca10d31c81eea2ccef41d2aced562}{ExtId}
+\item 
+uint8\_\-t \hyperlink{structCanRxMsg_a83a67d1a709cc01570ce956e5adc811f}{IDE}
+\item 
+uint8\_\-t \hyperlink{structCanRxMsg_a9a183149a391a24f86da2ce895f0f1c9}{RTR}
+\item 
+uint8\_\-t \hyperlink{structCanRxMsg_abf77d3abf9ad290c08cdfd5d99ebc745}{DLC}
+\item 
+uint8\_\-t \hyperlink{structCanRxMsg_ae8ecbad16622db30d63fda08bc478649}{Data} \mbox{[}8\mbox{]}
+\item 
+uint8\_\-t \hyperlink{structCanRxMsg_a5afe39d8e295659eeb3030593828b96a}{FMI}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+CAN Rx message structure definition. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structCanRxMsg_ae8ecbad16622db30d63fda08bc478649}{
+\index{CanRxMsg@{CanRxMsg}!Data@{Data}}
+\index{Data@{Data}!CanRxMsg@{CanRxMsg}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf CanRxMsg::Data}\mbox{[}8\mbox{]}}}
+\label{structCanRxMsg_ae8ecbad16622db30d63fda08bc478649}
+Contains the data to be received. It ranges from 0 to 0xFF. \hypertarget{structCanRxMsg_abf77d3abf9ad290c08cdfd5d99ebc745}{
+\index{CanRxMsg@{CanRxMsg}!DLC@{DLC}}
+\index{DLC@{DLC}!CanRxMsg@{CanRxMsg}}
+\subsubsection[{DLC}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf CanRxMsg::DLC}}}
+\label{structCanRxMsg_abf77d3abf9ad290c08cdfd5d99ebc745}
+Specifies the length of the frame that will be received. This parameter can be a value between 0 to 8 \hypertarget{structCanRxMsg_a1fdca10d31c81eea2ccef41d2aced562}{
+\index{CanRxMsg@{CanRxMsg}!ExtId@{ExtId}}
+\index{ExtId@{ExtId}!CanRxMsg@{CanRxMsg}}
+\subsubsection[{ExtId}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf CanRxMsg::ExtId}}}
+\label{structCanRxMsg_a1fdca10d31c81eea2ccef41d2aced562}
+Specifies the extended identifier. This parameter can be a value between 0 to 0x1FFFFFFF. \hypertarget{structCanRxMsg_a5afe39d8e295659eeb3030593828b96a}{
+\index{CanRxMsg@{CanRxMsg}!FMI@{FMI}}
+\index{FMI@{FMI}!CanRxMsg@{CanRxMsg}}
+\subsubsection[{FMI}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf CanRxMsg::FMI}}}
+\label{structCanRxMsg_a5afe39d8e295659eeb3030593828b96a}
+Specifies the index of the filter the message stored in the mailbox passes through. This parameter can be a value between 0 to 0xFF \hypertarget{structCanRxMsg_a83a67d1a709cc01570ce956e5adc811f}{
+\index{CanRxMsg@{CanRxMsg}!IDE@{IDE}}
+\index{IDE@{IDE}!CanRxMsg@{CanRxMsg}}
+\subsubsection[{IDE}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf CanRxMsg::IDE}}}
+\label{structCanRxMsg_a83a67d1a709cc01570ce956e5adc811f}
+Specifies the type of identifier for the message that will be received. This parameter can be a value of \hyperlink{group__CAN__identifier__type}{CAN\_\-identifier\_\-type} \hypertarget{structCanRxMsg_a9a183149a391a24f86da2ce895f0f1c9}{
+\index{CanRxMsg@{CanRxMsg}!RTR@{RTR}}
+\index{RTR@{RTR}!CanRxMsg@{CanRxMsg}}
+\subsubsection[{RTR}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf CanRxMsg::RTR}}}
+\label{structCanRxMsg_a9a183149a391a24f86da2ce895f0f1c9}
+Specifies the type of frame for the received message. This parameter can be a value of \hyperlink{group__CAN__remote__transmission__request}{CAN\_\-remote\_\-transmission\_\-request} \hypertarget{structCanRxMsg_a62769e18836146f71238bee6b43b531e}{
+\index{CanRxMsg@{CanRxMsg}!StdId@{StdId}}
+\index{StdId@{StdId}!CanRxMsg@{CanRxMsg}}
+\subsubsection[{StdId}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf CanRxMsg::StdId}}}
+\label{structCanRxMsg_a62769e18836146f71238bee6b43b531e}
+Specifies the standard identifier. This parameter can be a value between 0 to 0x7FF. 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stm32f10x__can_8h}{stm32f10x\_\-can.h}\end{DoxyCompactItemize}

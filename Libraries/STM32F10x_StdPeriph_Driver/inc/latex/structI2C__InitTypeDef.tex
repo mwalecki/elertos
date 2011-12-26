@@ -1,0 +1,69 @@
+\hypertarget{structI2C__InitTypeDef}{
+\section{I2C\_\-InitTypeDef Struct Reference}
+\label{structI2C__InitTypeDef}\index{I2C\_\-InitTypeDef@{I2C\_\-InitTypeDef}}
+}
+
+
+I2C Init structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f10x\_\-i2c.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\_\-t \hyperlink{structI2C__InitTypeDef_a737c289f4515ae4cb642db0412762169}{I2C\_\-ClockSpeed}
+\item 
+uint16\_\-t \hyperlink{structI2C__InitTypeDef_ad5cf353c5b6968b3610b70ca593cec52}{I2C\_\-Mode}
+\item 
+uint16\_\-t \hyperlink{structI2C__InitTypeDef_aff23b28652359513dfd268dee54c3279}{I2C\_\-DutyCycle}
+\item 
+uint16\_\-t \hyperlink{structI2C__InitTypeDef_a08543cb71b4b2a89ad81a2cefff12b53}{I2C\_\-OwnAddress1}
+\item 
+uint16\_\-t \hyperlink{structI2C__InitTypeDef_a7bcae26f098e897832e5e42b055f8c98}{I2C\_\-Ack}
+\item 
+uint16\_\-t \hyperlink{structI2C__InitTypeDef_a300e847972f50b0d25c4f13be5d93d79}{I2C\_\-AcknowledgedAddress}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2C Init structure definition. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structI2C__InitTypeDef_a7bcae26f098e897832e5e42b055f8c98}{
+\index{I2C\_\-InitTypeDef@{I2C\_\-InitTypeDef}!I2C\_\-Ack@{I2C\_\-Ack}}
+\index{I2C\_\-Ack@{I2C\_\-Ack}!I2C_InitTypeDef@{I2C\_\-InitTypeDef}}
+\subsubsection[{I2C\_\-Ack}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf I2C\_\-InitTypeDef::I2C\_\-Ack}}}
+\label{structI2C__InitTypeDef_a7bcae26f098e897832e5e42b055f8c98}
+Enables or disables the acknowledgement. This parameter can be a value of \hyperlink{group__I2C__acknowledgement}{I2C\_\-acknowledgement} \hypertarget{structI2C__InitTypeDef_a300e847972f50b0d25c4f13be5d93d79}{
+\index{I2C\_\-InitTypeDef@{I2C\_\-InitTypeDef}!I2C\_\-AcknowledgedAddress@{I2C\_\-AcknowledgedAddress}}
+\index{I2C\_\-AcknowledgedAddress@{I2C\_\-AcknowledgedAddress}!I2C_InitTypeDef@{I2C\_\-InitTypeDef}}
+\subsubsection[{I2C\_\-AcknowledgedAddress}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf I2C\_\-InitTypeDef::I2C\_\-AcknowledgedAddress}}}
+\label{structI2C__InitTypeDef_a300e847972f50b0d25c4f13be5d93d79}
+Specifies if 7-\/bit or 10-\/bit address is acknowledged. This parameter can be a value of \hyperlink{group__I2C__acknowledged__address}{I2C\_\-acknowledged\_\-address} \hypertarget{structI2C__InitTypeDef_a737c289f4515ae4cb642db0412762169}{
+\index{I2C\_\-InitTypeDef@{I2C\_\-InitTypeDef}!I2C\_\-ClockSpeed@{I2C\_\-ClockSpeed}}
+\index{I2C\_\-ClockSpeed@{I2C\_\-ClockSpeed}!I2C_InitTypeDef@{I2C\_\-InitTypeDef}}
+\subsubsection[{I2C\_\-ClockSpeed}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf I2C\_\-InitTypeDef::I2C\_\-ClockSpeed}}}
+\label{structI2C__InitTypeDef_a737c289f4515ae4cb642db0412762169}
+Specifies the clock frequency. This parameter must be set to a value lower than 400kHz \hypertarget{structI2C__InitTypeDef_aff23b28652359513dfd268dee54c3279}{
+\index{I2C\_\-InitTypeDef@{I2C\_\-InitTypeDef}!I2C\_\-DutyCycle@{I2C\_\-DutyCycle}}
+\index{I2C\_\-DutyCycle@{I2C\_\-DutyCycle}!I2C_InitTypeDef@{I2C\_\-InitTypeDef}}
+\subsubsection[{I2C\_\-DutyCycle}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf I2C\_\-InitTypeDef::I2C\_\-DutyCycle}}}
+\label{structI2C__InitTypeDef_aff23b28652359513dfd268dee54c3279}
+Specifies the I2C fast mode duty cycle. This parameter can be a value of \hyperlink{group__I2C__duty__cycle__in__fast__mode}{I2C\_\-duty\_\-cycle\_\-in\_\-fast\_\-mode} \hypertarget{structI2C__InitTypeDef_ad5cf353c5b6968b3610b70ca593cec52}{
+\index{I2C\_\-InitTypeDef@{I2C\_\-InitTypeDef}!I2C\_\-Mode@{I2C\_\-Mode}}
+\index{I2C\_\-Mode@{I2C\_\-Mode}!I2C_InitTypeDef@{I2C\_\-InitTypeDef}}
+\subsubsection[{I2C\_\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf I2C\_\-InitTypeDef::I2C\_\-Mode}}}
+\label{structI2C__InitTypeDef_ad5cf353c5b6968b3610b70ca593cec52}
+Specifies the I2C mode. This parameter can be a value of \hyperlink{group__I2C__mode}{I2C\_\-mode} \hypertarget{structI2C__InitTypeDef_a08543cb71b4b2a89ad81a2cefff12b53}{
+\index{I2C\_\-InitTypeDef@{I2C\_\-InitTypeDef}!I2C\_\-OwnAddress1@{I2C\_\-OwnAddress1}}
+\index{I2C\_\-OwnAddress1@{I2C\_\-OwnAddress1}!I2C_InitTypeDef@{I2C\_\-InitTypeDef}}
+\subsubsection[{I2C\_\-OwnAddress1}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf I2C\_\-InitTypeDef::I2C\_\-OwnAddress1}}}
+\label{structI2C__InitTypeDef_a08543cb71b4b2a89ad81a2cefff12b53}
+Specifies the first device own address. This parameter can be a 7-\/bit or 10-\/bit address. 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stm32f10x__i2c_8h}{stm32f10x\_\-i2c.h}\end{DoxyCompactItemize}

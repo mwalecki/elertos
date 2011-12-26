@@ -1,0 +1,49 @@
+\hypertarget{group__APB1__APB2__clock__source}{
+\section{APB1\_\-APB2\_\-clock\_\-source}
+\label{group__APB1__APB2__clock__source}\index{APB1\_\-APB2\_\-clock\_\-source@{APB1\_\-APB2\_\-clock\_\-source}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__APB1__APB2__clock__source_gae62b4a39ae69cc221f2ab7d4518bfb76}{
+\#define {\bfseries RCC\_\-HCLK\_\-Div1}~((uint32\_\-t)0x00000000)}
+\label{group__APB1__APB2__clock__source_gae62b4a39ae69cc221f2ab7d4518bfb76}
+
+\item 
+\hypertarget{group__APB1__APB2__clock__source_ga177bb3648def9a961c16f93f15ca0f62}{
+\#define {\bfseries RCC\_\-HCLK\_\-Div2}~((uint32\_\-t)0x00000400)}
+\label{group__APB1__APB2__clock__source_ga177bb3648def9a961c16f93f15ca0f62}
+
+\item 
+\hypertarget{group__APB1__APB2__clock__source_gafd8cf0e32a3ea5648cdc054766bc2017}{
+\#define {\bfseries RCC\_\-HCLK\_\-Div4}~((uint32\_\-t)0x00000500)}
+\label{group__APB1__APB2__clock__source_gafd8cf0e32a3ea5648cdc054766bc2017}
+
+\item 
+\hypertarget{group__APB1__APB2__clock__source_gab2e2b6e0b8fe22d6638b672918b22097}{
+\#define {\bfseries RCC\_\-HCLK\_\-Div8}~((uint32\_\-t)0x00000600)}
+\label{group__APB1__APB2__clock__source_gab2e2b6e0b8fe22d6638b672918b22097}
+
+\item 
+\hypertarget{group__APB1__APB2__clock__source_ga6353aaa0b302fdd5d946fd21756e2273}{
+\#define {\bfseries RCC\_\-HCLK\_\-Div16}~((uint32\_\-t)0x00000700)}
+\label{group__APB1__APB2__clock__source_ga6353aaa0b302fdd5d946fd21756e2273}
+
+\item 
+\#define {\bfseries IS\_\-RCC\_\-PCLK}(PCLK)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__APB1__APB2__clock__source_gab70f1257ea47c1da4def8e351af4d9f2}{
+\index{APB1\_\-APB2\_\-clock\_\-source@{APB1\_\-APB2\_\-clock\_\-source}!IS\_\-RCC\_\-PCLK@{IS\_\-RCC\_\-PCLK}}
+\index{IS\_\-RCC\_\-PCLK@{IS\_\-RCC\_\-PCLK}!APB1_APB2_clock_source@{APB1\_\-APB2\_\-clock\_\-source}}
+\subsubsection[{IS\_\-RCC\_\-PCLK}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-RCC\_\-PCLK(PCLK)}}
+\label{group__APB1__APB2__clock__source_gab70f1257ea47c1da4def8e351af4d9f2}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((PCLK) == RCC_HCLK_Div1) || ((PCLK) == RCC_HCLK_Div2) || \
+                           ((PCLK) == RCC_HCLK_Div4) || ((PCLK) == RCC_HCLK_Div8)
+       || \
+                           ((PCLK) == RCC_HCLK_Div16))
+\end{DoxyCode}

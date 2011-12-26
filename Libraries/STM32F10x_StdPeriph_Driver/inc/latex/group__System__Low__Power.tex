@@ -1,0 +1,38 @@
+\hypertarget{group__System__Low__Power}{
+\section{System\_\-Low\_\-Power}
+\label{group__System__Low__Power}\index{System\_\-Low\_\-Power@{System\_\-Low\_\-Power}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__System__Low__Power_ga10748d2b2875afd122f6476864ad6cae}{
+\#define {\bfseries NVIC\_\-LP\_\-SEVONPEND}~((uint8\_\-t)0x10)}
+\label{group__System__Low__Power_ga10748d2b2875afd122f6476864ad6cae}
+
+\item 
+\hypertarget{group__System__Low__Power_gaeec2d10922fa9ec5e65398667b303253}{
+\#define {\bfseries NVIC\_\-LP\_\-SLEEPDEEP}~((uint8\_\-t)0x04)}
+\label{group__System__Low__Power_gaeec2d10922fa9ec5e65398667b303253}
+
+\item 
+\hypertarget{group__System__Low__Power_ga368dc13a9c762a307c07cfa2e3ef59ad}{
+\#define {\bfseries NVIC\_\-LP\_\-SLEEPONEXIT}~((uint8\_\-t)0x02)}
+\label{group__System__Low__Power_ga368dc13a9c762a307c07cfa2e3ef59ad}
+
+\item 
+\#define {\bfseries IS\_\-NVIC\_\-LP}(LP)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__System__Low__Power_ga985896f03bc1d7b3da17a212f1bc3de9}{
+\index{System\_\-Low\_\-Power@{System\_\-Low\_\-Power}!IS\_\-NVIC\_\-LP@{IS\_\-NVIC\_\-LP}}
+\index{IS\_\-NVIC\_\-LP@{IS\_\-NVIC\_\-LP}!System_Low_Power@{System\_\-Low\_\-Power}}
+\subsubsection[{IS\_\-NVIC\_\-LP}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-NVIC\_\-LP(LP)}}
+\label{group__System__Low__Power_ga985896f03bc1d7b3da17a212f1bc3de9}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((LP) == NVIC_LP_SEVONPEND) || \
+                        ((LP) == NVIC_LP_SLEEPDEEP) || \
+                        ((LP) == NVIC_LP_SLEEPONEXIT))
+\end{DoxyCode}

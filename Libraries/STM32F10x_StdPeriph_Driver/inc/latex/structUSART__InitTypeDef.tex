@@ -1,0 +1,76 @@
+\hypertarget{structUSART__InitTypeDef}{
+\section{USART\_\-InitTypeDef Struct Reference}
+\label{structUSART__InitTypeDef}\index{USART\_\-InitTypeDef@{USART\_\-InitTypeDef}}
+}
+
+
+USART Init Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f10x\_\-usart.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\_\-t \hyperlink{structUSART__InitTypeDef_a6f763cb0e6044f838ee764ce437997b2}{USART\_\-BaudRate}
+\item 
+uint16\_\-t \hyperlink{structUSART__InitTypeDef_a16d1fb7ccc2b51964f1bcfcbfba6d89d}{USART\_\-WordLength}
+\item 
+uint16\_\-t \hyperlink{structUSART__InitTypeDef_ac745bceb79a6c4c2640fd8e8ce6639d6}{USART\_\-StopBits}
+\item 
+uint16\_\-t \hyperlink{structUSART__InitTypeDef_a5ae66aba755bac37c5cf0dfbf529e2ed}{USART\_\-Parity}
+\item 
+uint16\_\-t \hyperlink{structUSART__InitTypeDef_a7d944d35d7d1fc79a63f249615148584}{USART\_\-Mode}
+\item 
+uint16\_\-t \hyperlink{structUSART__InitTypeDef_a9996edf3bfd90c36f03b4075969703f5}{USART\_\-HardwareFlowControl}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+USART Init Structure definition. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structUSART__InitTypeDef_a6f763cb0e6044f838ee764ce437997b2}{
+\index{USART\_\-InitTypeDef@{USART\_\-InitTypeDef}!USART\_\-BaudRate@{USART\_\-BaudRate}}
+\index{USART\_\-BaudRate@{USART\_\-BaudRate}!USART_InitTypeDef@{USART\_\-InitTypeDef}}
+\subsubsection[{USART\_\-BaudRate}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf USART\_\-InitTypeDef::USART\_\-BaudRate}}}
+\label{structUSART__InitTypeDef_a6f763cb0e6044f838ee764ce437997b2}
+This member configures the USART communication baud rate. The baud rate is computed using the following formula:
+\begin{DoxyItemize}
+\item IntegerDivider = ((PCLKx) / (16 $\ast$ (USART\_\-InitStruct-\/$>$USART\_\-BaudRate)))
+\item FractionalDivider = ((IntegerDivider -\/ ((u32) IntegerDivider)) $\ast$ 16) + 0.5 
+\end{DoxyItemize}\hypertarget{structUSART__InitTypeDef_a9996edf3bfd90c36f03b4075969703f5}{
+\index{USART\_\-InitTypeDef@{USART\_\-InitTypeDef}!USART\_\-HardwareFlowControl@{USART\_\-HardwareFlowControl}}
+\index{USART\_\-HardwareFlowControl@{USART\_\-HardwareFlowControl}!USART_InitTypeDef@{USART\_\-InitTypeDef}}
+\subsubsection[{USART\_\-HardwareFlowControl}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf USART\_\-InitTypeDef::USART\_\-HardwareFlowControl}}}
+\label{structUSART__InitTypeDef_a9996edf3bfd90c36f03b4075969703f5}
+Specifies wether the hardware flow control mode is enabled or disabled. This parameter can be a value of \hyperlink{group__USART__Hardware__Flow__Control}{USART\_\-Hardware\_\-Flow\_\-Control} \hypertarget{structUSART__InitTypeDef_a7d944d35d7d1fc79a63f249615148584}{
+\index{USART\_\-InitTypeDef@{USART\_\-InitTypeDef}!USART\_\-Mode@{USART\_\-Mode}}
+\index{USART\_\-Mode@{USART\_\-Mode}!USART_InitTypeDef@{USART\_\-InitTypeDef}}
+\subsubsection[{USART\_\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf USART\_\-InitTypeDef::USART\_\-Mode}}}
+\label{structUSART__InitTypeDef_a7d944d35d7d1fc79a63f249615148584}
+Specifies wether the Receive or Transmit mode is enabled or disabled. This parameter can be a value of \hyperlink{group__USART__Mode}{USART\_\-Mode} \hypertarget{structUSART__InitTypeDef_a5ae66aba755bac37c5cf0dfbf529e2ed}{
+\index{USART\_\-InitTypeDef@{USART\_\-InitTypeDef}!USART\_\-Parity@{USART\_\-Parity}}
+\index{USART\_\-Parity@{USART\_\-Parity}!USART_InitTypeDef@{USART\_\-InitTypeDef}}
+\subsubsection[{USART\_\-Parity}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf USART\_\-InitTypeDef::USART\_\-Parity}}}
+\label{structUSART__InitTypeDef_a5ae66aba755bac37c5cf0dfbf529e2ed}
+Specifies the parity mode. This parameter can be a value of \hyperlink{group__USART__Parity}{USART\_\-Parity} \begin{DoxyNote}{Note}
+When parity is enabled, the computed parity is inserted at the MSB position of the transmitted data (9th bit when the word length is set to 9 data bits; 8th bit when the word length is set to 8 data bits). 
+\end{DoxyNote}
+\hypertarget{structUSART__InitTypeDef_ac745bceb79a6c4c2640fd8e8ce6639d6}{
+\index{USART\_\-InitTypeDef@{USART\_\-InitTypeDef}!USART\_\-StopBits@{USART\_\-StopBits}}
+\index{USART\_\-StopBits@{USART\_\-StopBits}!USART_InitTypeDef@{USART\_\-InitTypeDef}}
+\subsubsection[{USART\_\-StopBits}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf USART\_\-InitTypeDef::USART\_\-StopBits}}}
+\label{structUSART__InitTypeDef_ac745bceb79a6c4c2640fd8e8ce6639d6}
+Specifies the number of stop bits transmitted. This parameter can be a value of \hyperlink{group__USART__Stop__Bits}{USART\_\-Stop\_\-Bits} \hypertarget{structUSART__InitTypeDef_a16d1fb7ccc2b51964f1bcfcbfba6d89d}{
+\index{USART\_\-InitTypeDef@{USART\_\-InitTypeDef}!USART\_\-WordLength@{USART\_\-WordLength}}
+\index{USART\_\-WordLength@{USART\_\-WordLength}!USART_InitTypeDef@{USART\_\-InitTypeDef}}
+\subsubsection[{USART\_\-WordLength}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf USART\_\-InitTypeDef::USART\_\-WordLength}}}
+\label{structUSART__InitTypeDef_a16d1fb7ccc2b51964f1bcfcbfba6d89d}
+Specifies the number of data bits transmitted or received in a frame. This parameter can be a value of \hyperlink{group__USART__Word__Length}{USART\_\-Word\_\-Length} 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stm32f10x__usart_8h}{stm32f10x\_\-usart.h}\end{DoxyCompactItemize}

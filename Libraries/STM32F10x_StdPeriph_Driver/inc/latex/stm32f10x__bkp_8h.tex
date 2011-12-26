@@ -1,0 +1,345 @@
+\hypertarget{stm32f10x__bkp_8h}{
+\section{stm32f10x\_\-bkp.h File Reference}
+\label{stm32f10x__bkp_8h}\index{stm32f10x\_\-bkp.h@{stm32f10x\_\-bkp.h}}
+}
+
+
+This file contains all the functions prototypes for the BKP firmware library.  
+
+
+{\ttfamily \#include \char`\"{}stm32f10x.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__Tamper__Pin__active__level_gae7203c3c0202cd68d201278c8be2b967}{
+\#define {\bfseries BKP\_\-TamperPinLevel\_\-High}~((uint16\_\-t)0x0000)}
+\label{group__Tamper__Pin__active__level_gae7203c3c0202cd68d201278c8be2b967}
+
+\item 
+\hypertarget{group__Tamper__Pin__active__level_gade9fc51f494eddcc4d88679c80fe39ce}{
+\#define {\bfseries BKP\_\-TamperPinLevel\_\-Low}~((uint16\_\-t)0x0001)}
+\label{group__Tamper__Pin__active__level_gade9fc51f494eddcc4d88679c80fe39ce}
+
+\item 
+\#define {\bfseries IS\_\-BKP\_\-TAMPER\_\-PIN\_\-LEVEL}(LEVEL)
+\item 
+\hypertarget{group__RTC__output__source__to__output__on__the__Tamper__pin_ga8a18950396b2db70311480ab76464c6e}{
+\#define {\bfseries BKP\_\-RTCOutputSource\_\-None}~((uint16\_\-t)0x0000)}
+\label{group__RTC__output__source__to__output__on__the__Tamper__pin_ga8a18950396b2db70311480ab76464c6e}
+
+\item 
+\hypertarget{group__RTC__output__source__to__output__on__the__Tamper__pin_ga6fd7cb80bb52bca65641cbe6aa2c4590}{
+\#define {\bfseries BKP\_\-RTCOutputSource\_\-CalibClock}~((uint16\_\-t)0x0080)}
+\label{group__RTC__output__source__to__output__on__the__Tamper__pin_ga6fd7cb80bb52bca65641cbe6aa2c4590}
+
+\item 
+\hypertarget{group__RTC__output__source__to__output__on__the__Tamper__pin_gac016224386421d0cb1c0cd0ee201d65a}{
+\#define {\bfseries BKP\_\-RTCOutputSource\_\-Alarm}~((uint16\_\-t)0x0100)}
+\label{group__RTC__output__source__to__output__on__the__Tamper__pin_gac016224386421d0cb1c0cd0ee201d65a}
+
+\item 
+\hypertarget{group__RTC__output__source__to__output__on__the__Tamper__pin_ga23cb72635820331317ee4ee5a7897a70}{
+\#define {\bfseries BKP\_\-RTCOutputSource\_\-Second}~((uint16\_\-t)0x0300)}
+\label{group__RTC__output__source__to__output__on__the__Tamper__pin_ga23cb72635820331317ee4ee5a7897a70}
+
+\item 
+\#define {\bfseries IS\_\-BKP\_\-RTC\_\-OUTPUT\_\-SOURCE}(SOURCE)
+\item 
+\hypertarget{group__Data__Backup__Register_ga5d4c3eeaccafcfc0ee3b5dc01381bab0}{
+\#define {\bfseries BKP\_\-DR1}~((uint16\_\-t)0x0004)}
+\label{group__Data__Backup__Register_ga5d4c3eeaccafcfc0ee3b5dc01381bab0}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga73867f10a3ef17eeb0d3ace641f185ad}{
+\#define {\bfseries BKP\_\-DR2}~((uint16\_\-t)0x0008)}
+\label{group__Data__Backup__Register_ga73867f10a3ef17eeb0d3ace641f185ad}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gadcc77540e016c6e8dffab223af35ae88}{
+\#define {\bfseries BKP\_\-DR3}~((uint16\_\-t)0x000C)}
+\label{group__Data__Backup__Register_gadcc77540e016c6e8dffab223af35ae88}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gab327f2365ef58f3163f7fe8fa7b3c56e}{
+\#define {\bfseries BKP\_\-DR4}~((uint16\_\-t)0x0010)}
+\label{group__Data__Backup__Register_gab327f2365ef58f3163f7fe8fa7b3c56e}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga21191497b79eb37ab00a1564e060e5ca}{
+\#define {\bfseries BKP\_\-DR5}~((uint16\_\-t)0x0014)}
+\label{group__Data__Backup__Register_ga21191497b79eb37ab00a1564e060e5ca}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga9d84a78d9c99d57844cfc557f4c047b4}{
+\#define {\bfseries BKP\_\-DR6}~((uint16\_\-t)0x0018)}
+\label{group__Data__Backup__Register_ga9d84a78d9c99d57844cfc557f4c047b4}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gaed1b548c12929fbfbc57548ec1316df0}{
+\#define {\bfseries BKP\_\-DR7}~((uint16\_\-t)0x001C)}
+\label{group__Data__Backup__Register_gaed1b548c12929fbfbc57548ec1316df0}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gae6ed231677e748d838f37e7ab89e51ca}{
+\#define {\bfseries BKP\_\-DR8}~((uint16\_\-t)0x0020)}
+\label{group__Data__Backup__Register_gae6ed231677e748d838f37e7ab89e51ca}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga69f61ba6d9ed1092dcd82a5df1a0e054}{
+\#define {\bfseries BKP\_\-DR9}~((uint16\_\-t)0x0024)}
+\label{group__Data__Backup__Register_ga69f61ba6d9ed1092dcd82a5df1a0e054}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga82bb6da0b7a29a737b2d2b03c0561260}{
+\#define {\bfseries BKP\_\-DR10}~((uint16\_\-t)0x0028)}
+\label{group__Data__Backup__Register_ga82bb6da0b7a29a737b2d2b03c0561260}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga7784d76b7357c12fcc2dce349b3d7b6f}{
+\#define {\bfseries BKP\_\-DR11}~((uint16\_\-t)0x0040)}
+\label{group__Data__Backup__Register_ga7784d76b7357c12fcc2dce349b3d7b6f}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga56c63e631781366c4c0c289a27eb325f}{
+\#define {\bfseries BKP\_\-DR12}~((uint16\_\-t)0x0044)}
+\label{group__Data__Backup__Register_ga56c63e631781366c4c0c289a27eb325f}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga35202788ca784ad00d2ee11d54990c86}{
+\#define {\bfseries BKP\_\-DR13}~((uint16\_\-t)0x0048)}
+\label{group__Data__Backup__Register_ga35202788ca784ad00d2ee11d54990c86}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga47211005caa15e93e138691ba9bf2fa1}{
+\#define {\bfseries BKP\_\-DR14}~((uint16\_\-t)0x004C)}
+\label{group__Data__Backup__Register_ga47211005caa15e93e138691ba9bf2fa1}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga230f292dd8ef4e259630fd4f37d75869}{
+\#define {\bfseries BKP\_\-DR15}~((uint16\_\-t)0x0050)}
+\label{group__Data__Backup__Register_ga230f292dd8ef4e259630fd4f37d75869}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga4e12740ecfe8fcce668263c21df5492d}{
+\#define {\bfseries BKP\_\-DR16}~((uint16\_\-t)0x0054)}
+\label{group__Data__Backup__Register_ga4e12740ecfe8fcce668263c21df5492d}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga2d7c7e1c601b0313e60d876560a34329}{
+\#define {\bfseries BKP\_\-DR17}~((uint16\_\-t)0x0058)}
+\label{group__Data__Backup__Register_ga2d7c7e1c601b0313e60d876560a34329}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga43856bf6f92d07ffea0f96f5243ed8a2}{
+\#define {\bfseries BKP\_\-DR18}~((uint16\_\-t)0x005C)}
+\label{group__Data__Backup__Register_ga43856bf6f92d07ffea0f96f5243ed8a2}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga67587a68a981d5d8e0b1302d21db1f9b}{
+\#define {\bfseries BKP\_\-DR19}~((uint16\_\-t)0x0060)}
+\label{group__Data__Backup__Register_ga67587a68a981d5d8e0b1302d21db1f9b}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gaafdc2f269b669c81734360e09d94cee2}{
+\#define {\bfseries BKP\_\-DR20}~((uint16\_\-t)0x0064)}
+\label{group__Data__Backup__Register_gaafdc2f269b669c81734360e09d94cee2}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gabb044653f8eda603075107603949d84a}{
+\#define {\bfseries BKP\_\-DR21}~((uint16\_\-t)0x0068)}
+\label{group__Data__Backup__Register_gabb044653f8eda603075107603949d84a}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gab78636475b284bbaeb819d510cfcc397}{
+\#define {\bfseries BKP\_\-DR22}~((uint16\_\-t)0x006C)}
+\label{group__Data__Backup__Register_gab78636475b284bbaeb819d510cfcc397}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gafe53f4315942eeb540b307a2b534dc2a}{
+\#define {\bfseries BKP\_\-DR23}~((uint16\_\-t)0x0070)}
+\label{group__Data__Backup__Register_gafe53f4315942eeb540b307a2b534dc2a}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga7fa403483a916fa56826a5f7f79551e4}{
+\#define {\bfseries BKP\_\-DR24}~((uint16\_\-t)0x0074)}
+\label{group__Data__Backup__Register_ga7fa403483a916fa56826a5f7f79551e4}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga99c4f81f642716e6b4544284d938ee9f}{
+\#define {\bfseries BKP\_\-DR25}~((uint16\_\-t)0x0078)}
+\label{group__Data__Backup__Register_ga99c4f81f642716e6b4544284d938ee9f}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga06b425e00596cf4c6a43e638f7542e0a}{
+\#define {\bfseries BKP\_\-DR26}~((uint16\_\-t)0x007C)}
+\label{group__Data__Backup__Register_ga06b425e00596cf4c6a43e638f7542e0a}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga282338412a00b49dc1fde17f8eacbae9}{
+\#define {\bfseries BKP\_\-DR27}~((uint16\_\-t)0x0080)}
+\label{group__Data__Backup__Register_ga282338412a00b49dc1fde17f8eacbae9}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga02762501319f1b7e7c01b56d45c45cf9}{
+\#define {\bfseries BKP\_\-DR28}~((uint16\_\-t)0x0084)}
+\label{group__Data__Backup__Register_ga02762501319f1b7e7c01b56d45c45cf9}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga94e935c3e7ce7261d1823e888a8216c5}{
+\#define {\bfseries BKP\_\-DR29}~((uint16\_\-t)0x0088)}
+\label{group__Data__Backup__Register_ga94e935c3e7ce7261d1823e888a8216c5}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga7114464779c0f0e008ec79f66aac9568}{
+\#define {\bfseries BKP\_\-DR30}~((uint16\_\-t)0x008C)}
+\label{group__Data__Backup__Register_ga7114464779c0f0e008ec79f66aac9568}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gadb5b953e765da9d658600151dde63fa3}{
+\#define {\bfseries BKP\_\-DR31}~((uint16\_\-t)0x0090)}
+\label{group__Data__Backup__Register_gadb5b953e765da9d658600151dde63fa3}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gaecc9c23e89fff9a5846305ec391d5cda}{
+\#define {\bfseries BKP\_\-DR32}~((uint16\_\-t)0x0094)}
+\label{group__Data__Backup__Register_gaecc9c23e89fff9a5846305ec391d5cda}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga9a52ed4d0d70fc9d815d5e15945ad0d8}{
+\#define {\bfseries BKP\_\-DR33}~((uint16\_\-t)0x0098)}
+\label{group__Data__Backup__Register_ga9a52ed4d0d70fc9d815d5e15945ad0d8}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga8553dfcf67aad9107544cf52bf0a54a5}{
+\#define {\bfseries BKP\_\-DR34}~((uint16\_\-t)0x009C)}
+\label{group__Data__Backup__Register_ga8553dfcf67aad9107544cf52bf0a54a5}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga54e494fd651d2e1970ab7e5d6528af21}{
+\#define {\bfseries BKP\_\-DR35}~((uint16\_\-t)0x00A0)}
+\label{group__Data__Backup__Register_ga54e494fd651d2e1970ab7e5d6528af21}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga212028eb8d981756b3bc78492434d19a}{
+\#define {\bfseries BKP\_\-DR36}~((uint16\_\-t)0x00A4)}
+\label{group__Data__Backup__Register_ga212028eb8d981756b3bc78492434d19a}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga6c11b636a33c5b352d267355e502b34d}{
+\#define {\bfseries BKP\_\-DR37}~((uint16\_\-t)0x00A8)}
+\label{group__Data__Backup__Register_ga6c11b636a33c5b352d267355e502b34d}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga88f4c7dd39ba83b66159b2c808275a09}{
+\#define {\bfseries BKP\_\-DR38}~((uint16\_\-t)0x00AC)}
+\label{group__Data__Backup__Register_ga88f4c7dd39ba83b66159b2c808275a09}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga1656f56588b474b1f48bb96380cdfd4a}{
+\#define {\bfseries BKP\_\-DR39}~((uint16\_\-t)0x00B0)}
+\label{group__Data__Backup__Register_ga1656f56588b474b1f48bb96380cdfd4a}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga17e0d382ac43abed1663846b5aecc09a}{
+\#define {\bfseries BKP\_\-DR40}~((uint16\_\-t)0x00B4)}
+\label{group__Data__Backup__Register_ga17e0d382ac43abed1663846b5aecc09a}
+
+\item 
+\hypertarget{group__Data__Backup__Register_gae1e184afc030987396716ddfad008e81}{
+\#define {\bfseries BKP\_\-DR41}~((uint16\_\-t)0x00B8)}
+\label{group__Data__Backup__Register_gae1e184afc030987396716ddfad008e81}
+
+\item 
+\hypertarget{group__Data__Backup__Register_ga557d35e490957616b02672005f516542}{
+\#define {\bfseries BKP\_\-DR42}~((uint16\_\-t)0x00BC)}
+\label{group__Data__Backup__Register_ga557d35e490957616b02672005f516542}
+
+\item 
+\#define {\bfseries IS\_\-BKP\_\-DR}(DR)
+\item 
+\hypertarget{group__Data__Backup__Register_gafc3386eaa5383b64e9d706e5fe8dc1cf}{
+\#define {\bfseries IS\_\-BKP\_\-CALIBRATION\_\-VALUE}(VALUE)~((VALUE) $<$= 0x7F)}
+\label{group__Data__Backup__Register_gafc3386eaa5383b64e9d706e5fe8dc1cf}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__BKP__Exported__Functions_gaabff4d8f5ebf4fd9a840bcc9042ca226}{
+void {\bfseries BKP\_\-DeInit} (void)}
+\label{group__BKP__Exported__Functions_gaabff4d8f5ebf4fd9a840bcc9042ca226}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_gae216446d641d075fb575ce6dbe2ff4c1}{
+void {\bfseries BKP\_\-TamperPinLevelConfig} (uint16\_\-t BKP\_\-TamperPinLevel)}
+\label{group__BKP__Exported__Functions_gae216446d641d075fb575ce6dbe2ff4c1}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_ga3a0cdff9ad8238ade2c67e2b70f530ac}{
+void {\bfseries BKP\_\-TamperPinCmd} (FunctionalState NewState)}
+\label{group__BKP__Exported__Functions_ga3a0cdff9ad8238ade2c67e2b70f530ac}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_gab8dbd0c4773f6edb98a28c8ff6a2ead0}{
+void {\bfseries BKP\_\-ITConfig} (FunctionalState NewState)}
+\label{group__BKP__Exported__Functions_gab8dbd0c4773f6edb98a28c8ff6a2ead0}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_ga3d1b22b3c6a79f7b423616a0af1885bf}{
+void {\bfseries BKP\_\-RTCOutputConfig} (uint16\_\-t BKP\_\-RTCOutputSource)}
+\label{group__BKP__Exported__Functions_ga3d1b22b3c6a79f7b423616a0af1885bf}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_gad34db08a944450d2e7d56d0fd8db2bca}{
+void {\bfseries BKP\_\-SetRTCCalibrationValue} (uint8\_\-t CalibrationValue)}
+\label{group__BKP__Exported__Functions_gad34db08a944450d2e7d56d0fd8db2bca}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_ga18d220387db651b3cb71fad5c092e041}{
+void {\bfseries BKP\_\-WriteBackupRegister} (uint16\_\-t BKP\_\-DR, uint16\_\-t Data)}
+\label{group__BKP__Exported__Functions_ga18d220387db651b3cb71fad5c092e041}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_ga359d8fbc945e0f4e34fedbe037d842c8}{
+uint16\_\-t {\bfseries BKP\_\-ReadBackupRegister} (uint16\_\-t BKP\_\-DR)}
+\label{group__BKP__Exported__Functions_ga359d8fbc945e0f4e34fedbe037d842c8}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_gacc9aedde760383f0bd146f0d77a547db}{
+FlagStatus {\bfseries BKP\_\-GetFlagStatus} (void)}
+\label{group__BKP__Exported__Functions_gacc9aedde760383f0bd146f0d77a547db}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_ga3f3aea5b0a3d8d5d79b0b506928351ea}{
+void {\bfseries BKP\_\-ClearFlag} (void)}
+\label{group__BKP__Exported__Functions_ga3f3aea5b0a3d8d5d79b0b506928351ea}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_ga99566c9f1f17f499020606cb63511494}{
+ITStatus {\bfseries BKP\_\-GetITStatus} (void)}
+\label{group__BKP__Exported__Functions_ga99566c9f1f17f499020606cb63511494}
+
+\item 
+\hypertarget{group__BKP__Exported__Functions_ga6a93ef8e40959bb10fea670e2040ad74}{
+void {\bfseries BKP\_\-ClearITPendingBit} (void)}
+\label{group__BKP__Exported__Functions_ga6a93ef8e40959bb10fea670e2040ad74}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the functions prototypes for the BKP firmware library. \begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V3.5.0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11-\/March-\/2011 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+
+\subsubsection*{\begin{center}\copyright COPYRIGHT 2011 STMicroelectronics\end{center} }

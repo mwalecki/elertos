@@ -1,0 +1,45 @@
+\hypertarget{group__SPI__data__direction}{
+\section{SPI\_\-data\_\-direction}
+\label{group__SPI__data__direction}\index{SPI\_\-data\_\-direction@{SPI\_\-data\_\-direction}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__SPI__data__direction_gab6bdb82e315a90210c4425c46bbdf5f1}{
+\#define {\bfseries SPI\_\-Direction\_\-2Lines\_\-FullDuplex}~((uint16\_\-t)0x0000)}
+\label{group__SPI__data__direction_gab6bdb82e315a90210c4425c46bbdf5f1}
+
+\item 
+\hypertarget{group__SPI__data__direction_gab8ab942f7240394f50e4c86c5288516a}{
+\#define {\bfseries SPI\_\-Direction\_\-2Lines\_\-RxOnly}~((uint16\_\-t)0x0400)}
+\label{group__SPI__data__direction_gab8ab942f7240394f50e4c86c5288516a}
+
+\item 
+\hypertarget{group__SPI__data__direction_ga42ea8306cfc1f23ffc51efae6f66320e}{
+\#define {\bfseries SPI\_\-Direction\_\-1Line\_\-Rx}~((uint16\_\-t)0x8000)}
+\label{group__SPI__data__direction_ga42ea8306cfc1f23ffc51efae6f66320e}
+
+\item 
+\hypertarget{group__SPI__data__direction_ga70cc710a771065b2ed11c2ac9697defe}{
+\#define {\bfseries SPI\_\-Direction\_\-1Line\_\-Tx}~((uint16\_\-t)0xC000)}
+\label{group__SPI__data__direction_ga70cc710a771065b2ed11c2ac9697defe}
+
+\item 
+\#define {\bfseries IS\_\-SPI\_\-DIRECTION\_\-MODE}(MODE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__SPI__data__direction_ga536857c68ce1d9806c04046707448b3e}{
+\index{SPI\_\-data\_\-direction@{SPI\_\-data\_\-direction}!IS\_\-SPI\_\-DIRECTION\_\-MODE@{IS\_\-SPI\_\-DIRECTION\_\-MODE}}
+\index{IS\_\-SPI\_\-DIRECTION\_\-MODE@{IS\_\-SPI\_\-DIRECTION\_\-MODE}!SPI_data_direction@{SPI\_\-data\_\-direction}}
+\subsubsection[{IS\_\-SPI\_\-DIRECTION\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-SPI\_\-DIRECTION\_\-MODE(MODE)}}
+\label{group__SPI__data__direction_ga536857c68ce1d9806c04046707448b3e}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((MODE) == SPI_Direction_2Lines_FullDuplex) || \
+                                     ((MODE) == SPI_Direction_2Lines_RxOnly) || \
+      
+                                     ((MODE) == SPI_Direction_1Line_Rx) || \
+                                     ((MODE) == SPI_Direction_1Line_Tx))
+\end{DoxyCode}

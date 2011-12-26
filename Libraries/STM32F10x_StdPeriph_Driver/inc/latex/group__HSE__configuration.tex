@@ -1,0 +1,37 @@
+\hypertarget{group__HSE__configuration}{
+\section{HSE\_\-configuration}
+\label{group__HSE__configuration}\index{HSE\_\-configuration@{HSE\_\-configuration}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__HSE__configuration_ga1616626d23fbce440398578855df6f97}{
+\#define {\bfseries RCC\_\-HSE\_\-OFF}~((uint32\_\-t)0x00000000)}
+\label{group__HSE__configuration_ga1616626d23fbce440398578855df6f97}
+
+\item 
+\hypertarget{group__HSE__configuration_gabc4f70a44776c557af20496b04d9a9db}{
+\#define {\bfseries RCC\_\-HSE\_\-ON}~((uint32\_\-t)0x00010000)}
+\label{group__HSE__configuration_gabc4f70a44776c557af20496b04d9a9db}
+
+\item 
+\hypertarget{group__HSE__configuration_ga09061e9909d5f588baa7bfb0f7edd9fa}{
+\#define {\bfseries RCC\_\-HSE\_\-Bypass}~((uint32\_\-t)0x00040000)}
+\label{group__HSE__configuration_ga09061e9909d5f588baa7bfb0f7edd9fa}
+
+\item 
+\#define {\bfseries IS\_\-RCC\_\-HSE}(HSE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__HSE__configuration_ga287bbcafd73d07ec915c2f793301908a}{
+\index{HSE\_\-configuration@{HSE\_\-configuration}!IS\_\-RCC\_\-HSE@{IS\_\-RCC\_\-HSE}}
+\index{IS\_\-RCC\_\-HSE@{IS\_\-RCC\_\-HSE}!HSE_configuration@{HSE\_\-configuration}}
+\subsubsection[{IS\_\-RCC\_\-HSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-RCC\_\-HSE(HSE)}}
+\label{group__HSE__configuration_ga287bbcafd73d07ec915c2f793301908a}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((HSE) == RCC_HSE_OFF) || ((HSE) == RCC_HSE_ON) || \
+                         ((HSE) == RCC_HSE_Bypass))
+\end{DoxyCode}

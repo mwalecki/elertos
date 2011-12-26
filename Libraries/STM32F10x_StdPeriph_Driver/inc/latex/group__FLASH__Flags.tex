@@ -1,0 +1,96 @@
+\hypertarget{group__FLASH__Flags}{
+\section{FLASH\_\-Flags}
+\label{group__FLASH__Flags}\index{FLASH\_\-Flags@{FLASH\_\-Flags}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__FLASH__Flags_gad3bc368f954ad7744deda3315da2fff7}{FLASH\_\-FLAG\_\-BSY}~((uint32\_\-t)0x00000001)
+\item 
+\#define \hyperlink{group__FLASH__Flags_gaf043ba4d8f837350bfc7754a99fae5a9}{FLASH\_\-FLAG\_\-EOP}~((uint32\_\-t)0x00000020)
+\item 
+\#define \hyperlink{group__FLASH__Flags_gae2ef62dee0a5ca01e6226746039b6f20}{FLASH\_\-FLAG\_\-PGERR}~((uint32\_\-t)0x00000004)
+\item 
+\#define \hyperlink{group__FLASH__Flags_ga5c59a7f07507cac38091275964d3d35d}{FLASH\_\-FLAG\_\-WRPRTERR}~((uint32\_\-t)0x00000010)
+\item 
+\#define \hyperlink{group__FLASH__Flags_gac36b0605df97c9414933369a32251e4a}{FLASH\_\-FLAG\_\-OPTERR}~((uint32\_\-t)0x00000001)
+\item 
+\#define \hyperlink{group__FLASH__Flags_ga1f85e6d511503886e9fbe7d0228c97a4}{FLASH\_\-FLAG\_\-BANK1\_\-BSY}~FLASH\_\-FLAG\_\-BSY
+\item 
+\#define \hyperlink{group__FLASH__Flags_gafa7670ee5ce8a2eb1f64c458a9f08e5b}{FLASH\_\-FLAG\_\-BANK1\_\-EOP}~FLASH\_\-FLAG\_\-EOP
+\item 
+\#define \hyperlink{group__FLASH__Flags_gaa1056ffdd1c434a2967d5ed7c0d263be}{FLASH\_\-FLAG\_\-BANK1\_\-PGERR}~FLASH\_\-FLAG\_\-PGERR
+\item 
+\#define \hyperlink{group__FLASH__Flags_ga1646345adbcda773ef25785b1bdc4c43}{FLASH\_\-FLAG\_\-BANK1\_\-WRPRTERR}~FLASH\_\-FLAG\_\-WRPRTERR
+\item 
+\hypertarget{group__FLASH__Flags_ga82f8c6104c348d6aa47c7658ed3b6b36}{
+\#define {\bfseries IS\_\-FLASH\_\-CLEAR\_\-FLAG}(FLAG)~((((FLAG) \& (uint32\_\-t)0xFFFFFFCA) == 0x00000000) \&\& ((FLAG) != 0x00000000))}
+\label{group__FLASH__Flags_ga82f8c6104c348d6aa47c7658ed3b6b36}
+
+\item 
+\#define {\bfseries IS\_\-FLASH\_\-GET\_\-FLAG}(FLAG)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__FLASH__Flags_ga1f85e6d511503886e9fbe7d0228c97a4}{
+\index{FLASH\_\-Flags@{FLASH\_\-Flags}!FLASH\_\-FLAG\_\-BANK1\_\-BSY@{FLASH\_\-FLAG\_\-BANK1\_\-BSY}}
+\index{FLASH\_\-FLAG\_\-BANK1\_\-BSY@{FLASH\_\-FLAG\_\-BANK1\_\-BSY}!FLASH_Flags@{FLASH\_\-Flags}}
+\subsubsection[{FLASH\_\-FLAG\_\-BANK1\_\-BSY}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-FLAG\_\-BANK1\_\-BSY~FLASH\_\-FLAG\_\-BSY}}
+\label{group__FLASH__Flags_ga1f85e6d511503886e9fbe7d0228c97a4}
+FLASH BANK1 Busy flag \hypertarget{group__FLASH__Flags_gafa7670ee5ce8a2eb1f64c458a9f08e5b}{
+\index{FLASH\_\-Flags@{FLASH\_\-Flags}!FLASH\_\-FLAG\_\-BANK1\_\-EOP@{FLASH\_\-FLAG\_\-BANK1\_\-EOP}}
+\index{FLASH\_\-FLAG\_\-BANK1\_\-EOP@{FLASH\_\-FLAG\_\-BANK1\_\-EOP}!FLASH_Flags@{FLASH\_\-Flags}}
+\subsubsection[{FLASH\_\-FLAG\_\-BANK1\_\-EOP}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-FLAG\_\-BANK1\_\-EOP~FLASH\_\-FLAG\_\-EOP}}
+\label{group__FLASH__Flags_gafa7670ee5ce8a2eb1f64c458a9f08e5b}
+FLASH BANK1 End of Operation flag \hypertarget{group__FLASH__Flags_gaa1056ffdd1c434a2967d5ed7c0d263be}{
+\index{FLASH\_\-Flags@{FLASH\_\-Flags}!FLASH\_\-FLAG\_\-BANK1\_\-PGERR@{FLASH\_\-FLAG\_\-BANK1\_\-PGERR}}
+\index{FLASH\_\-FLAG\_\-BANK1\_\-PGERR@{FLASH\_\-FLAG\_\-BANK1\_\-PGERR}!FLASH_Flags@{FLASH\_\-Flags}}
+\subsubsection[{FLASH\_\-FLAG\_\-BANK1\_\-PGERR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-FLAG\_\-BANK1\_\-PGERR~FLASH\_\-FLAG\_\-PGERR}}
+\label{group__FLASH__Flags_gaa1056ffdd1c434a2967d5ed7c0d263be}
+FLASH BANK1 Program error flag \hypertarget{group__FLASH__Flags_ga1646345adbcda773ef25785b1bdc4c43}{
+\index{FLASH\_\-Flags@{FLASH\_\-Flags}!FLASH\_\-FLAG\_\-BANK1\_\-WRPRTERR@{FLASH\_\-FLAG\_\-BANK1\_\-WRPRTERR}}
+\index{FLASH\_\-FLAG\_\-BANK1\_\-WRPRTERR@{FLASH\_\-FLAG\_\-BANK1\_\-WRPRTERR}!FLASH_Flags@{FLASH\_\-Flags}}
+\subsubsection[{FLASH\_\-FLAG\_\-BANK1\_\-WRPRTERR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-FLAG\_\-BANK1\_\-WRPRTERR~FLASH\_\-FLAG\_\-WRPRTERR}}
+\label{group__FLASH__Flags_ga1646345adbcda773ef25785b1bdc4c43}
+FLASH BANK1 Write protected error flag \hypertarget{group__FLASH__Flags_gad3bc368f954ad7744deda3315da2fff7}{
+\index{FLASH\_\-Flags@{FLASH\_\-Flags}!FLASH\_\-FLAG\_\-BSY@{FLASH\_\-FLAG\_\-BSY}}
+\index{FLASH\_\-FLAG\_\-BSY@{FLASH\_\-FLAG\_\-BSY}!FLASH_Flags@{FLASH\_\-Flags}}
+\subsubsection[{FLASH\_\-FLAG\_\-BSY}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-FLAG\_\-BSY~((uint32\_\-t)0x00000001)}}
+\label{group__FLASH__Flags_gad3bc368f954ad7744deda3315da2fff7}
+FLASH Busy flag \hypertarget{group__FLASH__Flags_gaf043ba4d8f837350bfc7754a99fae5a9}{
+\index{FLASH\_\-Flags@{FLASH\_\-Flags}!FLASH\_\-FLAG\_\-EOP@{FLASH\_\-FLAG\_\-EOP}}
+\index{FLASH\_\-FLAG\_\-EOP@{FLASH\_\-FLAG\_\-EOP}!FLASH_Flags@{FLASH\_\-Flags}}
+\subsubsection[{FLASH\_\-FLAG\_\-EOP}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-FLAG\_\-EOP~((uint32\_\-t)0x00000020)}}
+\label{group__FLASH__Flags_gaf043ba4d8f837350bfc7754a99fae5a9}
+FLASH End of Operation flag \hypertarget{group__FLASH__Flags_gac36b0605df97c9414933369a32251e4a}{
+\index{FLASH\_\-Flags@{FLASH\_\-Flags}!FLASH\_\-FLAG\_\-OPTERR@{FLASH\_\-FLAG\_\-OPTERR}}
+\index{FLASH\_\-FLAG\_\-OPTERR@{FLASH\_\-FLAG\_\-OPTERR}!FLASH_Flags@{FLASH\_\-Flags}}
+\subsubsection[{FLASH\_\-FLAG\_\-OPTERR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-FLAG\_\-OPTERR~((uint32\_\-t)0x00000001)}}
+\label{group__FLASH__Flags_gac36b0605df97c9414933369a32251e4a}
+FLASH Option Byte error flag \hypertarget{group__FLASH__Flags_gae2ef62dee0a5ca01e6226746039b6f20}{
+\index{FLASH\_\-Flags@{FLASH\_\-Flags}!FLASH\_\-FLAG\_\-PGERR@{FLASH\_\-FLAG\_\-PGERR}}
+\index{FLASH\_\-FLAG\_\-PGERR@{FLASH\_\-FLAG\_\-PGERR}!FLASH_Flags@{FLASH\_\-Flags}}
+\subsubsection[{FLASH\_\-FLAG\_\-PGERR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-FLAG\_\-PGERR~((uint32\_\-t)0x00000004)}}
+\label{group__FLASH__Flags_gae2ef62dee0a5ca01e6226746039b6f20}
+FLASH Program error flag \hypertarget{group__FLASH__Flags_ga5c59a7f07507cac38091275964d3d35d}{
+\index{FLASH\_\-Flags@{FLASH\_\-Flags}!FLASH\_\-FLAG\_\-WRPRTERR@{FLASH\_\-FLAG\_\-WRPRTERR}}
+\index{FLASH\_\-FLAG\_\-WRPRTERR@{FLASH\_\-FLAG\_\-WRPRTERR}!FLASH_Flags@{FLASH\_\-Flags}}
+\subsubsection[{FLASH\_\-FLAG\_\-WRPRTERR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FLASH\_\-FLAG\_\-WRPRTERR~((uint32\_\-t)0x00000010)}}
+\label{group__FLASH__Flags_ga5c59a7f07507cac38091275964d3d35d}
+FLASH Write protected error flag \hypertarget{group__FLASH__Flags_ga61b60325cd94e1608e34afc7aff20ee4}{
+\index{FLASH\_\-Flags@{FLASH\_\-Flags}!IS\_\-FLASH\_\-GET\_\-FLAG@{IS\_\-FLASH\_\-GET\_\-FLAG}}
+\index{IS\_\-FLASH\_\-GET\_\-FLAG@{IS\_\-FLASH\_\-GET\_\-FLAG}!FLASH_Flags@{FLASH\_\-Flags}}
+\subsubsection[{IS\_\-FLASH\_\-GET\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-FLASH\_\-GET\_\-FLAG(FLAG)}}
+\label{group__FLASH__Flags_ga61b60325cd94e1608e34afc7aff20ee4}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((FLAG) == FLASH_FLAG_BSY) || ((FLAG) == FLASH_FLAG_EOP) || \
+                                  ((FLAG) == FLASH_FLAG_PGERR) || ((FLAG) == 
+      FLASH_FLAG_WRPRTERR) || \
+                                                                  ((FLAG) == 
+      FLASH_FLAG_BANK1_BSY) || ((FLAG) == FLASH_FLAG_BANK1_EOP) || \
+                                  ((FLAG) == FLASH_FLAG_BANK1_PGERR) || ((FLAG) =
+      = FLASH_FLAG_BANK1_WRPRTERR) || \
+                                  ((FLAG) == FLASH_FLAG_OPTERR))
+\end{DoxyCode}

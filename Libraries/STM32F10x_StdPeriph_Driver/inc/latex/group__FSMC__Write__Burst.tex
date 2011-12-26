@@ -1,0 +1,32 @@
+\hypertarget{group__FSMC__Write__Burst}{
+\section{FSMC\_\-Write\_\-Burst}
+\label{group__FSMC__Write__Burst}\index{FSMC\_\-Write\_\-Burst@{FSMC\_\-Write\_\-Burst}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FSMC__Write__Burst_ga65a49ecd05b3a128e8908c6a625adae7}{
+\#define {\bfseries FSMC\_\-WriteBurst\_\-Disable}~((uint32\_\-t)0x00000000)}
+\label{group__FSMC__Write__Burst_ga65a49ecd05b3a128e8908c6a625adae7}
+
+\item 
+\hypertarget{group__FSMC__Write__Burst_ga1b2b66a0eb42778c2cc9a05003cf7655}{
+\#define {\bfseries FSMC\_\-WriteBurst\_\-Enable}~((uint32\_\-t)0x00080000)}
+\label{group__FSMC__Write__Burst_ga1b2b66a0eb42778c2cc9a05003cf7655}
+
+\item 
+\#define {\bfseries IS\_\-FSMC\_\-WRITE\_\-BURST}(BURST)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__FSMC__Write__Burst_gab7b03a33fab765827832abbf07d01a10}{
+\index{FSMC\_\-Write\_\-Burst@{FSMC\_\-Write\_\-Burst}!IS\_\-FSMC\_\-WRITE\_\-BURST@{IS\_\-FSMC\_\-WRITE\_\-BURST}}
+\index{IS\_\-FSMC\_\-WRITE\_\-BURST@{IS\_\-FSMC\_\-WRITE\_\-BURST}!FSMC_Write_Burst@{FSMC\_\-Write\_\-Burst}}
+\subsubsection[{IS\_\-FSMC\_\-WRITE\_\-BURST}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-FSMC\_\-WRITE\_\-BURST(BURST)}}
+\label{group__FSMC__Write__Burst_gab7b03a33fab765827832abbf07d01a10}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((BURST) == FSMC_WriteBurst_Disable) || \
+                                    ((BURST) == FSMC_WriteBurst_Enable))
+\end{DoxyCode}

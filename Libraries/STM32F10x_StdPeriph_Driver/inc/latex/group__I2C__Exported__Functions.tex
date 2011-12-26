@@ -1,0 +1,239 @@
+\hypertarget{group__I2C__Exported__Functions}{
+\section{I2C\_\-Exported\_\-Functions}
+\label{group__I2C__Exported__Functions}\index{I2C\_\-Exported\_\-Functions@{I2C\_\-Exported\_\-Functions}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga2ee214364603059ad5d9089f749f5bfd}{
+void {\bfseries I2C\_\-DeInit} (I2C\_\-TypeDef $\ast$I2Cx)}
+\label{group__I2C__Exported__Functions_ga2ee214364603059ad5d9089f749f5bfd}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gaac29465bca70fbc91c2f922ab67bb88e}{
+void {\bfseries I2C\_\-Init} (I2C\_\-TypeDef $\ast$I2Cx, \hyperlink{structI2C__InitTypeDef}{I2C\_\-InitTypeDef} $\ast$I2C\_\-InitStruct)}
+\label{group__I2C__Exported__Functions_gaac29465bca70fbc91c2f922ab67bb88e}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga08582aca6d7d7910cd5cbff0d9def350}{
+void {\bfseries I2C\_\-StructInit} (\hyperlink{structI2C__InitTypeDef}{I2C\_\-InitTypeDef} $\ast$I2C\_\-InitStruct)}
+\label{group__I2C__Exported__Functions_ga08582aca6d7d7910cd5cbff0d9def350}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7e1323c9133c2cb424dfb5b10b7d2f0b}{
+void {\bfseries I2C\_\-Cmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga7e1323c9133c2cb424dfb5b10b7d2f0b}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga38502ce11e5ec923e0f6476aaa35b45c}{
+void {\bfseries I2C\_\-DMACmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga38502ce11e5ec923e0f6476aaa35b45c}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gab2e994c5681eb6ec7c26a03ffe1de060}{
+void {\bfseries I2C\_\-DMALastTransferCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_gab2e994c5681eb6ec7c26a03ffe1de060}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga36c522b471588be9779c878222ccb20f}{
+void {\bfseries I2C\_\-GenerateSTART} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga36c522b471588be9779c878222ccb20f}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga5c92cb573ca0ae58cc465e5400246561}{
+void {\bfseries I2C\_\-GenerateSTOP} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga5c92cb573ca0ae58cc465e5400246561}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7bb44e894d68a7991f564c43fb187486}{
+void {\bfseries I2C\_\-AcknowledgeConfig} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga7bb44e894d68a7991f564c43fb187486}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7be2cc634a613c8e3539137e897a22df}{
+void {\bfseries I2C\_\-OwnAddress2Config} (I2C\_\-TypeDef $\ast$I2Cx, uint8\_\-t Address)}
+\label{group__I2C__Exported__Functions_ga7be2cc634a613c8e3539137e897a22df}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga02145a333a56e79557d6ef4ea03fc313}{
+void {\bfseries I2C\_\-DualAddressCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga02145a333a56e79557d6ef4ea03fc313}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga65c740fc8d7b3b9f15cc432d8699d471}{
+void {\bfseries I2C\_\-GeneralCallCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga65c740fc8d7b3b9f15cc432d8699d471}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga58fed146a06cb81d2940604e460de047}{
+void {\bfseries I2C\_\-ITConfig} (I2C\_\-TypeDef $\ast$I2Cx, uint16\_\-t I2C\_\-IT, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga58fed146a06cb81d2940604e460de047}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7bd9e70b8eafde0dd5eb42b0d95fe1a9}{
+void {\bfseries I2C\_\-SendData} (I2C\_\-TypeDef $\ast$I2Cx, uint8\_\-t Data)}
+\label{group__I2C__Exported__Functions_ga7bd9e70b8eafde0dd5eb42b0d95fe1a9}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gaeaaa4b6f77f50eb57465148c55d27fb2}{
+uint8\_\-t {\bfseries I2C\_\-ReceiveData} (I2C\_\-TypeDef $\ast$I2Cx)}
+\label{group__I2C__Exported__Functions_gaeaaa4b6f77f50eb57465148c55d27fb2}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga009fc2a5b2313c36da39ece39a1156a6}{
+void {\bfseries I2C\_\-Send7bitAddress} (I2C\_\-TypeDef $\ast$I2Cx, uint8\_\-t Address, uint8\_\-t I2C\_\-Direction)}
+\label{group__I2C__Exported__Functions_ga009fc2a5b2313c36da39ece39a1156a6}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga8021dc796d15f997356b0583d6346805}{
+uint16\_\-t {\bfseries I2C\_\-ReadRegister} (I2C\_\-TypeDef $\ast$I2Cx, uint8\_\-t I2C\_\-Register)}
+\label{group__I2C__Exported__Functions_ga8021dc796d15f997356b0583d6346805}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga1289c908aeb882443aba323b459c638b}{
+void {\bfseries I2C\_\-SoftwareResetCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga1289c908aeb882443aba323b459c638b}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gad08ebffc3a234d84e6405ec115bd74f1}{
+void {\bfseries I2C\_\-NACKPositionConfig} (I2C\_\-TypeDef $\ast$I2Cx, uint16\_\-t I2C\_\-NACKPosition)}
+\label{group__I2C__Exported__Functions_gad08ebffc3a234d84e6405ec115bd74f1}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga75a810776d9710d2f6d9c5d9e93241c6}{
+void {\bfseries I2C\_\-SMBusAlertConfig} (I2C\_\-TypeDef $\ast$I2Cx, uint16\_\-t I2C\_\-SMBusAlert)}
+\label{group__I2C__Exported__Functions_ga75a810776d9710d2f6d9c5d9e93241c6}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gaa27d1440290fe601e730b6980999afe3}{
+void {\bfseries I2C\_\-TransmitPEC} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_gaa27d1440290fe601e730b6980999afe3}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga5d0f939bdd45542502827bf408f24161}{
+void {\bfseries I2C\_\-PECPositionConfig} (I2C\_\-TypeDef $\ast$I2Cx, uint16\_\-t I2C\_\-PECPosition)}
+\label{group__I2C__Exported__Functions_ga5d0f939bdd45542502827bf408f24161}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gae86801251359226c35745e0a258388b0}{
+void {\bfseries I2C\_\-CalculatePEC} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_gae86801251359226c35745e0a258388b0}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7bf75e7c27c0e1d73e70fc0e1c7cd1dd}{
+uint8\_\-t {\bfseries I2C\_\-GetPEC} (I2C\_\-TypeDef $\ast$I2Cx)}
+\label{group__I2C__Exported__Functions_ga7bf75e7c27c0e1d73e70fc0e1c7cd1dd}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga66d86742bf1be58b17ef8779ffc79d02}{
+void {\bfseries I2C\_\-ARPCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga66d86742bf1be58b17ef8779ffc79d02}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7459feb3b1dfcd3e4f6574002ca7d3bd}{
+void {\bfseries I2C\_\-StretchClockCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga7459feb3b1dfcd3e4f6574002ca7d3bd}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gaa570f76bc34e5b0531b29b1a90af1275}{
+void {\bfseries I2C\_\-FastModeDutyCycleConfig} (I2C\_\-TypeDef $\ast$I2Cx, uint16\_\-t I2C\_\-DutyCycle)}
+\label{group__I2C__Exported__Functions_gaa570f76bc34e5b0531b29b1a90af1275}
+
+\item 
+ErrorStatus \hyperlink{group__I2C__Exported__Functions_ga2d5701342f9d4c1f09bf9d3cdcacc326}{I2C\_\-CheckEvent} (I2C\_\-TypeDef $\ast$I2Cx, uint32\_\-t I2C\_\-EVENT)
+\begin{DoxyCompactList}\small\item\em I2C State Monitoring Functions. \item\end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{group__I2C__Exported__Functions_ga29237aea9b5a3ead33167e1d027e9f1a}{I2C\_\-GetLastEvent} (I2C\_\-TypeDef $\ast$I2Cx)
+\item 
+FlagStatus \hyperlink{group__I2C__Exported__Functions_ga15c95d0ed124f029621a2061b1677ee7}{I2C\_\-GetFlagStatus} (I2C\_\-TypeDef $\ast$I2Cx, uint32\_\-t I2C\_\-FLAG)
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga9d4f8fe9f7232696114b5578b1223963}{
+void {\bfseries I2C\_\-ClearFlag} (I2C\_\-TypeDef $\ast$I2Cx, uint32\_\-t I2C\_\-FLAG)}
+\label{group__I2C__Exported__Functions_ga9d4f8fe9f7232696114b5578b1223963}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga447771fbbd94a56f3570b9f430a069ba}{
+ITStatus {\bfseries I2C\_\-GetITStatus} (I2C\_\-TypeDef $\ast$I2Cx, uint32\_\-t I2C\_\-IT)}
+\label{group__I2C__Exported__Functions_ga447771fbbd94a56f3570b9f430a069ba}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga110dda440fa200b5f77349df19b3e6bb}{
+void {\bfseries I2C\_\-ClearITPendingBit} (I2C\_\-TypeDef $\ast$I2Cx, uint32\_\-t I2C\_\-IT)}
+\label{group__I2C__Exported__Functions_ga110dda440fa200b5f77349df19b3e6bb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__I2C__Exported__Functions_ga2d5701342f9d4c1f09bf9d3cdcacc326}{
+\index{I2C\_\-Exported\_\-Functions@{I2C\_\-Exported\_\-Functions}!I2C\_\-CheckEvent@{I2C\_\-CheckEvent}}
+\index{I2C\_\-CheckEvent@{I2C\_\-CheckEvent}!I2C_Exported_Functions@{I2C\_\-Exported\_\-Functions}}
+\subsubsection[{I2C\_\-CheckEvent}]{\setlength{\rightskip}{0pt plus 5cm}ErrorStatus I2C\_\-CheckEvent (I2C\_\-TypeDef $\ast$ {\em I2Cx}, \/  uint32\_\-t {\em I2C\_\-EVENT})}}
+\label{group__I2C__Exported__Functions_ga2d5701342f9d4c1f09bf9d3cdcacc326}
+
+
+I2C State Monitoring Functions. 
+
+This I2C driver provides three different ways for I2C state monitoring depending on the application requirements and constraints:
+
+1) Basic state monitoring: Using \hyperlink{group__I2C__Exported__Functions_ga2d5701342f9d4c1f09bf9d3cdcacc326}{I2C\_\-CheckEvent()} function: It compares the status registers (SR1 and SR2) content to a given event (can be the combination of one or more flags). It returns SUCCESS if the current status includes the given flags and returns ERROR if one or more flags are missing in the current status.
+\begin{DoxyItemize}
+\item When to use:
+\begin{DoxyItemize}
+\item This function is suitable for most applications as well as for startup activity since the events are fully described in the product reference manual (RM0008).
+\item It is also suitable for users who need to define their own events.
+\end{DoxyItemize}
+\item Limitations:
+\begin{DoxyItemize}
+\item If an error occurs (ie. error flags are set besides to the monitored flags), the \hyperlink{group__I2C__Exported__Functions_ga2d5701342f9d4c1f09bf9d3cdcacc326}{I2C\_\-CheckEvent()} function may return SUCCESS despite the communication hold or corrupted real state. In this case, it is advised to use error interrupts to monitor the error events and handle them in the interrupt IRQ handler.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+For error management, it is advised to use the following functions:
+\begin{DoxyItemize}
+\item I2C\_\-ITConfig() to configure and enable the error interrupts (I2C\_\-IT\_\-ERR).
+\item I2Cx\_\-ER\_\-IRQHandler() which is called when the error interrupt occurs. Where x is the peripheral instance (I2C1, I2C2 ...)
+\item \hyperlink{group__I2C__Exported__Functions_ga15c95d0ed124f029621a2061b1677ee7}{I2C\_\-GetFlagStatus()} or I2C\_\-GetITStatus() to be called into I2Cx\_\-ER\_\-IRQHandler() in order to determine which error occurred.
+\item I2C\_\-ClearFlag() or I2C\_\-ClearITPendingBit() and/or I2C\_\-SoftwareResetCmd() and/or I2C\_\-GenerateStop() in order to clear the error flag and source, and return to correct communication status.
+\end{DoxyItemize}
+\end{DoxyNote}
+2) Advanced state monitoring: Using the function \hyperlink{group__I2C__Exported__Functions_ga29237aea9b5a3ead33167e1d027e9f1a}{I2C\_\-GetLastEvent()} which returns the image of both status registers in a single word (uint32\_\-t) (Status Register 2 value is shifted left by 16 bits and concatenated to Status Register 1).
+\begin{DoxyItemize}
+\item When to use:
+\begin{DoxyItemize}
+\item This function is suitable for the same applications above but it allows to overcome the limitations of \hyperlink{group__I2C__Exported__Functions_ga15c95d0ed124f029621a2061b1677ee7}{I2C\_\-GetFlagStatus()} function (see below). The returned value could be compared to events already defined in the library (\hyperlink{stm32f10x__i2c_8h}{stm32f10x\_\-i2c.h}) or to custom values defined by user.
+\item This function is suitable when multiple flags are monitored at the same time.
+\item At the opposite of \hyperlink{group__I2C__Exported__Functions_ga2d5701342f9d4c1f09bf9d3cdcacc326}{I2C\_\-CheckEvent()} function, this function allows user to choose when an event is accepted (when all events flags are set and no other flags are set or just when the needed flags are set like \hyperlink{group__I2C__Exported__Functions_ga2d5701342f9d4c1f09bf9d3cdcacc326}{I2C\_\-CheckEvent()} function).
+\end{DoxyItemize}
+\item Limitations:
+\begin{DoxyItemize}
+\item User may need to define his own events.
+\item Same remark concerning the error management is applicable for this function if user decides to check only regular communication flags (and ignores error flags).
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+3) Flag-\/based state monitoring: Using the function \hyperlink{group__I2C__Exported__Functions_ga15c95d0ed124f029621a2061b1677ee7}{I2C\_\-GetFlagStatus()} which simply returns the status of one single flag (ie. I2C\_\-FLAG\_\-RXNE ...).
+\begin{DoxyItemize}
+\item When to use:
+\begin{DoxyItemize}
+\item This function could be used for specific applications or in debug phase.
+\item It is suitable when only one flag checking is needed (most I2C events are monitored through multiple flags).
+\end{DoxyItemize}
+\item Limitations:
+\begin{DoxyItemize}
+\item When calling this function, the Status register is accessed. Some flags are cleared when the status register is accessed. So checking the status of one Flag, may clear other ones.
+\item Function may need to be called twice or more in order to monitor one single event.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+1) Basic state monitoring \hypertarget{group__I2C__Exported__Functions_ga15c95d0ed124f029621a2061b1677ee7}{
+\index{I2C\_\-Exported\_\-Functions@{I2C\_\-Exported\_\-Functions}!I2C\_\-GetFlagStatus@{I2C\_\-GetFlagStatus}}
+\index{I2C\_\-GetFlagStatus@{I2C\_\-GetFlagStatus}!I2C_Exported_Functions@{I2C\_\-Exported\_\-Functions}}
+\subsubsection[{I2C\_\-GetFlagStatus}]{\setlength{\rightskip}{0pt plus 5cm}FlagStatus I2C\_\-GetFlagStatus (I2C\_\-TypeDef $\ast$ {\em I2Cx}, \/  uint32\_\-t {\em I2C\_\-FLAG})}}
+\label{group__I2C__Exported__Functions_ga15c95d0ed124f029621a2061b1677ee7}
+3) Flag-\/based state monitoring \hypertarget{group__I2C__Exported__Functions_ga29237aea9b5a3ead33167e1d027e9f1a}{
+\index{I2C\_\-Exported\_\-Functions@{I2C\_\-Exported\_\-Functions}!I2C\_\-GetLastEvent@{I2C\_\-GetLastEvent}}
+\index{I2C\_\-GetLastEvent@{I2C\_\-GetLastEvent}!I2C_Exported_Functions@{I2C\_\-Exported\_\-Functions}}
+\subsubsection[{I2C\_\-GetLastEvent}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t I2C\_\-GetLastEvent (I2C\_\-TypeDef $\ast$ {\em I2Cx})}}
+\label{group__I2C__Exported__Functions_ga29237aea9b5a3ead33167e1d027e9f1a}
+2) Advanced state monitoring 

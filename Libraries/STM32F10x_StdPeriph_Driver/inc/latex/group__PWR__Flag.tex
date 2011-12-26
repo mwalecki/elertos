@@ -1,0 +1,42 @@
+\hypertarget{group__PWR__Flag}{
+\section{PWR\_\-Flag}
+\label{group__PWR__Flag}\index{PWR\_\-Flag@{PWR\_\-Flag}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__PWR__Flag_ga2d06760a5769e729b06d41e37036d58e}{
+\#define {\bfseries PWR\_\-FLAG\_\-WU}~((uint32\_\-t)0x00000001)}
+\label{group__PWR__Flag_ga2d06760a5769e729b06d41e37036d58e}
+
+\item 
+\hypertarget{group__PWR__Flag_ga9e55f0b5dec2346d5c8dee3ab3c0c2df}{
+\#define {\bfseries PWR\_\-FLAG\_\-SB}~((uint32\_\-t)0x00000002)}
+\label{group__PWR__Flag_ga9e55f0b5dec2346d5c8dee3ab3c0c2df}
+
+\item 
+\hypertarget{group__PWR__Flag_gaefd05d58cc050eeef83a1b5c520b2c2a}{
+\#define {\bfseries PWR\_\-FLAG\_\-PVDO}~((uint32\_\-t)0x00000004)}
+\label{group__PWR__Flag_gaefd05d58cc050eeef83a1b5c520b2c2a}
+
+\item 
+\#define {\bfseries IS\_\-PWR\_\-GET\_\-FLAG}(FLAG)
+\item 
+\hypertarget{group__PWR__Flag_ga36d35a770e683e4a0baf3aac350fcb5a}{
+\#define {\bfseries IS\_\-PWR\_\-CLEAR\_\-FLAG}(FLAG)~(((FLAG) == PWR\_\-FLAG\_\-WU) $|$$|$ ((FLAG) == PWR\_\-FLAG\_\-SB))}
+\label{group__PWR__Flag_ga36d35a770e683e4a0baf3aac350fcb5a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__PWR__Flag_gadc822638d0dd52d2f920808dd96c00a1}{
+\index{PWR\_\-Flag@{PWR\_\-Flag}!IS\_\-PWR\_\-GET\_\-FLAG@{IS\_\-PWR\_\-GET\_\-FLAG}}
+\index{IS\_\-PWR\_\-GET\_\-FLAG@{IS\_\-PWR\_\-GET\_\-FLAG}!PWR_Flag@{PWR\_\-Flag}}
+\subsubsection[{IS\_\-PWR\_\-GET\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-PWR\_\-GET\_\-FLAG(FLAG)}}
+\label{group__PWR__Flag_gadc822638d0dd52d2f920808dd96c00a1}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((FLAG) == PWR_FLAG_WU) || ((FLAG) == PWR_FLAG_SB) || \
+                               ((FLAG) == PWR_FLAG_PVDO))
+\end{DoxyCode}

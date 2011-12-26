@@ -1,0 +1,33 @@
+\hypertarget{group__SPI__NSS__internal__software__management}{
+\section{SPI\_\-NSS\_\-internal\_\-software\_\-management}
+\label{group__SPI__NSS__internal__software__management}\index{SPI\_\-NSS\_\-internal\_\-software\_\-management@{SPI\_\-NSS\_\-internal\_\-software\_\-management}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__SPI__NSS__internal__software__management_ga6b2102816167d12140648dba49a192a7}{
+\#define {\bfseries SPI\_\-NSSInternalSoft\_\-Set}~((uint16\_\-t)0x0100)}
+\label{group__SPI__NSS__internal__software__management_ga6b2102816167d12140648dba49a192a7}
+
+\item 
+\hypertarget{group__SPI__NSS__internal__software__management_ga292ec7bc0cd362d61b3b5eed620522c2}{
+\#define {\bfseries SPI\_\-NSSInternalSoft\_\-Reset}~((uint16\_\-t)0xFEFF)}
+\label{group__SPI__NSS__internal__software__management_ga292ec7bc0cd362d61b3b5eed620522c2}
+
+\item 
+\#define {\bfseries IS\_\-SPI\_\-NSS\_\-INTERNAL}(INTERNAL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__SPI__NSS__internal__software__management_ga7036de442206fb8b365528c115345b36}{
+\index{SPI\_\-NSS\_\-internal\_\-software\_\-management@{SPI\_\-NSS\_\-internal\_\-software\_\-management}!IS\_\-SPI\_\-NSS\_\-INTERNAL@{IS\_\-SPI\_\-NSS\_\-INTERNAL}}
+\index{IS\_\-SPI\_\-NSS\_\-INTERNAL@{IS\_\-SPI\_\-NSS\_\-INTERNAL}!SPI_NSS_internal_software_management@{SPI\_\-NSS\_\-internal\_\-software\_\-management}}
+\subsubsection[{IS\_\-SPI\_\-NSS\_\-INTERNAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-SPI\_\-NSS\_\-INTERNAL(INTERNAL)}}
+\label{group__SPI__NSS__internal__software__management_ga7036de442206fb8b365528c115345b36}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((INTERNAL) == SPI_NSSInternalSoft_Set) || \
+                                       ((INTERNAL) == SPI_NSSInternalSoft_Reset))
+      
+\end{DoxyCode}

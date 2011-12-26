@@ -1,0 +1,32 @@
+\hypertarget{group__FSMC__Wait__Signal}{
+\section{FSMC\_\-Wait\_\-Signal}
+\label{group__FSMC__Wait__Signal}\index{FSMC\_\-Wait\_\-Signal@{FSMC\_\-Wait\_\-Signal}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FSMC__Wait__Signal_ga6ea66c8ddee073281c421533bdff7e19}{
+\#define {\bfseries FSMC\_\-WaitSignal\_\-Disable}~((uint32\_\-t)0x00000000)}
+\label{group__FSMC__Wait__Signal_ga6ea66c8ddee073281c421533bdff7e19}
+
+\item 
+\hypertarget{group__FSMC__Wait__Signal_gaf809e339f1cdc9d0a815fd98712e9ee3}{
+\#define {\bfseries FSMC\_\-WaitSignal\_\-Enable}~((uint32\_\-t)0x00002000)}
+\label{group__FSMC__Wait__Signal_gaf809e339f1cdc9d0a815fd98712e9ee3}
+
+\item 
+\#define {\bfseries IS\_\-FSMC\_\-WAITE\_\-SIGNAL}(SIGNAL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__FSMC__Wait__Signal_gae617db4f15c82850d4f5c927f9a7db3e}{
+\index{FSMC\_\-Wait\_\-Signal@{FSMC\_\-Wait\_\-Signal}!IS\_\-FSMC\_\-WAITE\_\-SIGNAL@{IS\_\-FSMC\_\-WAITE\_\-SIGNAL}}
+\index{IS\_\-FSMC\_\-WAITE\_\-SIGNAL@{IS\_\-FSMC\_\-WAITE\_\-SIGNAL}!FSMC_Wait_Signal@{FSMC\_\-Wait\_\-Signal}}
+\subsubsection[{IS\_\-FSMC\_\-WAITE\_\-SIGNAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-FSMC\_\-WAITE\_\-SIGNAL(SIGNAL)}}
+\label{group__FSMC__Wait__Signal_gae617db4f15c82850d4f5c927f9a7db3e}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((SIGNAL) == FSMC_WaitSignal_Disable) || \
+                                      ((SIGNAL) == FSMC_WaitSignal_Enable))
+\end{DoxyCode}

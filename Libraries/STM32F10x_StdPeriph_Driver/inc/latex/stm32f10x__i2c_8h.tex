@@ -1,0 +1,630 @@
+\hypertarget{stm32f10x__i2c_8h}{
+\section{stm32f10x\_\-i2c.h File Reference}
+\label{stm32f10x__i2c_8h}\index{stm32f10x\_\-i2c.h@{stm32f10x\_\-i2c.h}}
+}
+
+
+This file contains all the functions prototypes for the I2C firmware library.  
+
+
+{\ttfamily \#include \char`\"{}stm32f10x.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structI2C__InitTypeDef}{I2C\_\-InitTypeDef}
+\begin{DoxyCompactList}\small\item\em I2C Init structure definition. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries IS\_\-I2C\_\-ALL\_\-PERIPH}(PERIPH)
+\item 
+\hypertarget{group__I2C__mode_ga8bc3b0555ca31b6f8423bc2ada45d1ac}{
+\#define {\bfseries I2C\_\-Mode\_\-I2C}~((uint16\_\-t)0x0000)}
+\label{group__I2C__mode_ga8bc3b0555ca31b6f8423bc2ada45d1ac}
+
+\item 
+\hypertarget{group__I2C__mode_gaf0cf66bc1f4986ba8a9925da924e06da}{
+\#define {\bfseries I2C\_\-Mode\_\-SMBusDevice}~((uint16\_\-t)0x0002)}
+\label{group__I2C__mode_gaf0cf66bc1f4986ba8a9925da924e06da}
+
+\item 
+\hypertarget{group__I2C__mode_gacfd37619c8d91dea5dec2921840acede}{
+\#define {\bfseries I2C\_\-Mode\_\-SMBusHost}~((uint16\_\-t)0x000A)}
+\label{group__I2C__mode_gacfd37619c8d91dea5dec2921840acede}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-MODE}(MODE)
+\item 
+\#define \hyperlink{group__I2C__duty__cycle__in__fast__mode_ga2b4ff186808a8095fc2d1b8193f30ce1}{I2C\_\-DutyCycle\_\-16\_\-9}~((uint16\_\-t)0x4000)
+\item 
+\#define \hyperlink{group__I2C__duty__cycle__in__fast__mode_gafe0af31970aceef0fa8df6a10bef35db}{I2C\_\-DutyCycle\_\-2}~((uint16\_\-t)0xBFFF)
+\item 
+\#define {\bfseries IS\_\-I2C\_\-DUTY\_\-CYCLE}(CYCLE)
+\item 
+\hypertarget{group__I2C__acknowledgement_ga616466f8ef5a47237cdbf7ac578ec507}{
+\#define {\bfseries I2C\_\-Ack\_\-Enable}~((uint16\_\-t)0x0400)}
+\label{group__I2C__acknowledgement_ga616466f8ef5a47237cdbf7ac578ec507}
+
+\item 
+\hypertarget{group__I2C__acknowledgement_gadb5f47c052ac6bae1aa58c724e339e36}{
+\#define {\bfseries I2C\_\-Ack\_\-Disable}~((uint16\_\-t)0x0000)}
+\label{group__I2C__acknowledgement_gadb5f47c052ac6bae1aa58c724e339e36}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-ACK\_\-STATE}(STATE)
+\item 
+\hypertarget{group__I2C__transfer__direction_ga9895ee2d7d8cc8ba4daafafa1c3ce1ac}{
+\#define {\bfseries I2C\_\-Direction\_\-Transmitter}~((uint8\_\-t)0x00)}
+\label{group__I2C__transfer__direction_ga9895ee2d7d8cc8ba4daafafa1c3ce1ac}
+
+\item 
+\hypertarget{group__I2C__transfer__direction_gafe3b9b98552980ca56c8e21a90040fa0}{
+\#define {\bfseries I2C\_\-Direction\_\-Receiver}~((uint8\_\-t)0x01)}
+\label{group__I2C__transfer__direction_gafe3b9b98552980ca56c8e21a90040fa0}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-DIRECTION}(DIRECTION)
+\item 
+\hypertarget{group__I2C__acknowledged__address_ga5e5ad2148f9da14457c7b59357acee97}{
+\#define {\bfseries I2C\_\-AcknowledgedAddress\_\-7bit}~((uint16\_\-t)0x4000)}
+\label{group__I2C__acknowledged__address_ga5e5ad2148f9da14457c7b59357acee97}
+
+\item 
+\hypertarget{group__I2C__acknowledged__address_gaf0bb8f71795f046ad9f6c1fc7fe0fc53}{
+\#define {\bfseries I2C\_\-AcknowledgedAddress\_\-10bit}~((uint16\_\-t)0xC000)}
+\label{group__I2C__acknowledged__address_gaf0bb8f71795f046ad9f6c1fc7fe0fc53}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-ACKNOWLEDGE\_\-ADDRESS}(ADDRESS)
+\item 
+\hypertarget{group__I2C__registers_ga4b9e7934e490c3540e50cf2f1d0a7688}{
+\#define {\bfseries I2C\_\-Register\_\-CR1}~((uint8\_\-t)0x00)}
+\label{group__I2C__registers_ga4b9e7934e490c3540e50cf2f1d0a7688}
+
+\item 
+\hypertarget{group__I2C__registers_gaf278337dd03b6ae56eac3f335381eca3}{
+\#define {\bfseries I2C\_\-Register\_\-CR2}~((uint8\_\-t)0x04)}
+\label{group__I2C__registers_gaf278337dd03b6ae56eac3f335381eca3}
+
+\item 
+\hypertarget{group__I2C__registers_ga706317a00c0d450e95c00efd2afe1836}{
+\#define {\bfseries I2C\_\-Register\_\-OAR1}~((uint8\_\-t)0x08)}
+\label{group__I2C__registers_ga706317a00c0d450e95c00efd2afe1836}
+
+\item 
+\hypertarget{group__I2C__registers_gaffdc1902493456dea95216a39fc54e2b}{
+\#define {\bfseries I2C\_\-Register\_\-OAR2}~((uint8\_\-t)0x0C)}
+\label{group__I2C__registers_gaffdc1902493456dea95216a39fc54e2b}
+
+\item 
+\hypertarget{group__I2C__registers_gaea281721e7a8461d90bf59898487c096}{
+\#define {\bfseries I2C\_\-Register\_\-DR}~((uint8\_\-t)0x10)}
+\label{group__I2C__registers_gaea281721e7a8461d90bf59898487c096}
+
+\item 
+\hypertarget{group__I2C__registers_gaf3bc5f4dc87513e2eceba4f503c14d6a}{
+\#define {\bfseries I2C\_\-Register\_\-SR1}~((uint8\_\-t)0x14)}
+\label{group__I2C__registers_gaf3bc5f4dc87513e2eceba4f503c14d6a}
+
+\item 
+\hypertarget{group__I2C__registers_ga0b5f7949e449223ec97e0169d79d007d}{
+\#define {\bfseries I2C\_\-Register\_\-SR2}~((uint8\_\-t)0x18)}
+\label{group__I2C__registers_ga0b5f7949e449223ec97e0169d79d007d}
+
+\item 
+\hypertarget{group__I2C__registers_ga7a0de765650408f3915b54141f052c5b}{
+\#define {\bfseries I2C\_\-Register\_\-CCR}~((uint8\_\-t)0x1C)}
+\label{group__I2C__registers_ga7a0de765650408f3915b54141f052c5b}
+
+\item 
+\hypertarget{group__I2C__registers_ga488c25a0a9f2c572af28768589fcbab2}{
+\#define {\bfseries I2C\_\-Register\_\-TRISE}~((uint8\_\-t)0x20)}
+\label{group__I2C__registers_ga488c25a0a9f2c572af28768589fcbab2}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-REGISTER}(REGISTER)
+\item 
+\hypertarget{group__I2C__SMBus__alert__pin__level_ga6f923166107afb8aad1d7d1a87048d6e}{
+\#define {\bfseries I2C\_\-SMBusAlert\_\-Low}~((uint16\_\-t)0x2000)}
+\label{group__I2C__SMBus__alert__pin__level_ga6f923166107afb8aad1d7d1a87048d6e}
+
+\item 
+\hypertarget{group__I2C__SMBus__alert__pin__level_gac3ab64f43ef90f0f83f9c88981aaa862}{
+\#define {\bfseries I2C\_\-SMBusAlert\_\-High}~((uint16\_\-t)0xDFFF)}
+\label{group__I2C__SMBus__alert__pin__level_gac3ab64f43ef90f0f83f9c88981aaa862}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-SMBUS\_\-ALERT}(ALERT)
+\item 
+\hypertarget{group__I2C__PEC__position_ga74d0996efe6e278fb28d053ba78fccc5}{
+\#define {\bfseries I2C\_\-PECPosition\_\-Next}~((uint16\_\-t)0x0800)}
+\label{group__I2C__PEC__position_ga74d0996efe6e278fb28d053ba78fccc5}
+
+\item 
+\hypertarget{group__I2C__PEC__position_ga8a393364dd651f88bcaebac71c1c52c7}{
+\#define {\bfseries I2C\_\-PECPosition\_\-Current}~((uint16\_\-t)0xF7FF)}
+\label{group__I2C__PEC__position_ga8a393364dd651f88bcaebac71c1c52c7}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-PEC\_\-POSITION}(POSITION)
+\item 
+\hypertarget{group__I2C__NCAK__position_gacb512a4bd4841a763b6ec51606687fca}{
+\#define {\bfseries I2C\_\-NACKPosition\_\-Next}~((uint16\_\-t)0x0800)}
+\label{group__I2C__NCAK__position_gacb512a4bd4841a763b6ec51606687fca}
+
+\item 
+\hypertarget{group__I2C__NCAK__position_ga8d91c1e62730a9d927ca8e9ec4f7ef8f}{
+\#define {\bfseries I2C\_\-NACKPosition\_\-Current}~((uint16\_\-t)0xF7FF)}
+\label{group__I2C__NCAK__position_ga8d91c1e62730a9d927ca8e9ec4f7ef8f}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-NACK\_\-POSITION}(POSITION)
+\item 
+\hypertarget{group__I2C__interrupts__definition_gad3ff3f405b882aa4d2f91310aa1cc0df}{
+\#define {\bfseries I2C\_\-IT\_\-BUF}~((uint16\_\-t)0x0400)}
+\label{group__I2C__interrupts__definition_gad3ff3f405b882aa4d2f91310aa1cc0df}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gadd59efa313e1598a084a1e5ec3905b02}{
+\#define {\bfseries I2C\_\-IT\_\-EVT}~((uint16\_\-t)0x0200)}
+\label{group__I2C__interrupts__definition_gadd59efa313e1598a084a1e5ec3905b02}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gadba3667b439cbf4ba1e6e9aec961ab03}{
+\#define {\bfseries I2C\_\-IT\_\-ERR}~((uint16\_\-t)0x0100)}
+\label{group__I2C__interrupts__definition_gadba3667b439cbf4ba1e6e9aec961ab03}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gae2695a081871336881f9105d6c847c4f}{
+\#define {\bfseries IS\_\-I2C\_\-CONFIG\_\-IT}(IT)~((((IT) \& (uint16\_\-t)0xF8FF) == 0x00) \&\& ((IT) != 0x00))}
+\label{group__I2C__interrupts__definition_gae2695a081871336881f9105d6c847c4f}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gab6049d4dd856a085127752e01ebb8120}{
+\#define {\bfseries I2C\_\-IT\_\-SMBALERT}~((uint32\_\-t)0x01008000)}
+\label{group__I2C__interrupts__definition_gab6049d4dd856a085127752e01ebb8120}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_ga45ce34b163b456a5fb3833f1264d93b4}{
+\#define {\bfseries I2C\_\-IT\_\-TIMEOUT}~((uint32\_\-t)0x01004000)}
+\label{group__I2C__interrupts__definition_ga45ce34b163b456a5fb3833f1264d93b4}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_ga23069e7787c4f052f34887c02bc44100}{
+\#define {\bfseries I2C\_\-IT\_\-PECERR}~((uint32\_\-t)0x01001000)}
+\label{group__I2C__interrupts__definition_ga23069e7787c4f052f34887c02bc44100}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_ga8e1e9e73d9057ccfce3493b5cf672833}{
+\#define {\bfseries I2C\_\-IT\_\-OVR}~((uint32\_\-t)0x01000800)}
+\label{group__I2C__interrupts__definition_ga8e1e9e73d9057ccfce3493b5cf672833}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gabfb721ac5783336e6d2334f635e2e91b}{
+\#define {\bfseries I2C\_\-IT\_\-AF}~((uint32\_\-t)0x01000400)}
+\label{group__I2C__interrupts__definition_gabfb721ac5783336e6d2334f635e2e91b}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_ga2439154bee2a45a4147921cec18177d1}{
+\#define {\bfseries I2C\_\-IT\_\-ARLO}~((uint32\_\-t)0x01000200)}
+\label{group__I2C__interrupts__definition_ga2439154bee2a45a4147921cec18177d1}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gad9aec016c98df6dbb95a5c10b180c202}{
+\#define {\bfseries I2C\_\-IT\_\-BERR}~((uint32\_\-t)0x01000100)}
+\label{group__I2C__interrupts__definition_gad9aec016c98df6dbb95a5c10b180c202}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gacb41229da2cd9460c3272cfb13aa29d3}{
+\#define {\bfseries I2C\_\-IT\_\-TXE}~((uint32\_\-t)0x06000080)}
+\label{group__I2C__interrupts__definition_gacb41229da2cd9460c3272cfb13aa29d3}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gac95135720c0de2fd01c44c3f7b6c81d4}{
+\#define {\bfseries I2C\_\-IT\_\-RXNE}~((uint32\_\-t)0x06000040)}
+\label{group__I2C__interrupts__definition_gac95135720c0de2fd01c44c3f7b6c81d4}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_ga741e098abb485b327c7668518117e415}{
+\#define {\bfseries I2C\_\-IT\_\-STOPF}~((uint32\_\-t)0x02000010)}
+\label{group__I2C__interrupts__definition_ga741e098abb485b327c7668518117e415}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_ga8a9bc5a1dee3bbd41347b19cf117c0f3}{
+\#define {\bfseries I2C\_\-IT\_\-ADD10}~((uint32\_\-t)0x02000008)}
+\label{group__I2C__interrupts__definition_ga8a9bc5a1dee3bbd41347b19cf117c0f3}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gaef469fef934f655614b7cffd00b87ceb}{
+\#define {\bfseries I2C\_\-IT\_\-BTF}~((uint32\_\-t)0x02000004)}
+\label{group__I2C__interrupts__definition_gaef469fef934f655614b7cffd00b87ceb}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gaf68f1eda33dcb13626597f477d044025}{
+\#define {\bfseries I2C\_\-IT\_\-ADDR}~((uint32\_\-t)0x02000002)}
+\label{group__I2C__interrupts__definition_gaf68f1eda33dcb13626597f477d044025}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_gaec2fb9bbd0e1b128b4450b2a7b312896}{
+\#define {\bfseries I2C\_\-IT\_\-SB}~((uint32\_\-t)0x02000001)}
+\label{group__I2C__interrupts__definition_gaec2fb9bbd0e1b128b4450b2a7b312896}
+
+\item 
+\hypertarget{group__I2C__interrupts__definition_ga368c05fc9aadd7bb4d23280791b5a751}{
+\#define {\bfseries IS\_\-I2C\_\-CLEAR\_\-IT}(IT)~((((IT) \& (uint16\_\-t)0x20FF) == 0x00) \&\& ((IT) != (uint16\_\-t)0x00))}
+\label{group__I2C__interrupts__definition_ga368c05fc9aadd7bb4d23280791b5a751}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-GET\_\-IT}(IT)
+\item 
+\hypertarget{group__I2C__flags__definition_ga3755b783aa73568659478c2e2e45e27f}{
+\#define \hyperlink{group__I2C__flags__definition_ga3755b783aa73568659478c2e2e45e27f}{I2C\_\-FLAG\_\-DUALF}~((uint32\_\-t)0x00800000)}
+\label{group__I2C__flags__definition_ga3755b783aa73568659478c2e2e45e27f}
+
+\begin{DoxyCompactList}\small\item\em SR2 register flags. \item\end{DoxyCompactList}\item 
+\hypertarget{group__I2C__flags__definition_gaf15403a1852f39aaadbb8942ba98d97e}{
+\#define {\bfseries I2C\_\-FLAG\_\-SMBHOST}~((uint32\_\-t)0x00400000)}
+\label{group__I2C__flags__definition_gaf15403a1852f39aaadbb8942ba98d97e}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga371fb29861d1cd41736253e804c67ad5}{
+\#define {\bfseries I2C\_\-FLAG\_\-SMBDEFAULT}~((uint32\_\-t)0x00200000)}
+\label{group__I2C__flags__definition_ga371fb29861d1cd41736253e804c67ad5}
+
+\item 
+\hypertarget{group__I2C__flags__definition_gab3a93b6840ad406c2fc09e0e96c59b88}{
+\#define {\bfseries I2C\_\-FLAG\_\-GENCALL}~((uint32\_\-t)0x00100000)}
+\label{group__I2C__flags__definition_gab3a93b6840ad406c2fc09e0e96c59b88}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga0359a5f960670d51cb17e659d32498ea}{
+\#define {\bfseries I2C\_\-FLAG\_\-TRA}~((uint32\_\-t)0x00040000)}
+\label{group__I2C__flags__definition_ga0359a5f960670d51cb17e659d32498ea}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga50f69f043d99600221076100823b6ff3}{
+\#define {\bfseries I2C\_\-FLAG\_\-BUSY}~((uint32\_\-t)0x00020000)}
+\label{group__I2C__flags__definition_ga50f69f043d99600221076100823b6ff3}
+
+\item 
+\hypertarget{group__I2C__flags__definition_gae8e6a404cbfd70420d278d520304f368}{
+\#define {\bfseries I2C\_\-FLAG\_\-MSL}~((uint32\_\-t)0x00010000)}
+\label{group__I2C__flags__definition_gae8e6a404cbfd70420d278d520304f368}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga4e1d7cd1574d03ba501c27483300c1be}{
+\#define \hyperlink{group__I2C__flags__definition_ga4e1d7cd1574d03ba501c27483300c1be}{I2C\_\-FLAG\_\-SMBALERT}~((uint32\_\-t)0x10008000)}
+\label{group__I2C__flags__definition_ga4e1d7cd1574d03ba501c27483300c1be}
+
+\begin{DoxyCompactList}\small\item\em SR1 register flags. \item\end{DoxyCompactList}\item 
+\hypertarget{group__I2C__flags__definition_ga89c8d5d8ccc77a8619fafe9b39d1cc74}{
+\#define {\bfseries I2C\_\-FLAG\_\-TIMEOUT}~((uint32\_\-t)0x10004000)}
+\label{group__I2C__flags__definition_ga89c8d5d8ccc77a8619fafe9b39d1cc74}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga6c7addb6413f165f42bcc87506ea8467}{
+\#define {\bfseries I2C\_\-FLAG\_\-PECERR}~((uint32\_\-t)0x10001000)}
+\label{group__I2C__flags__definition_ga6c7addb6413f165f42bcc87506ea8467}
+
+\item 
+\hypertarget{group__I2C__flags__definition_gab579673c8ac920db199aa7f18e547fb3}{
+\#define {\bfseries I2C\_\-FLAG\_\-OVR}~((uint32\_\-t)0x10000800)}
+\label{group__I2C__flags__definition_gab579673c8ac920db199aa7f18e547fb3}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga2f89dbba9b964e6ade1480705e7a97d4}{
+\#define {\bfseries I2C\_\-FLAG\_\-AF}~((uint32\_\-t)0x10000400)}
+\label{group__I2C__flags__definition_ga2f89dbba9b964e6ade1480705e7a97d4}
+
+\item 
+\hypertarget{group__I2C__flags__definition_gae1e67936f4780e42b8bbe04ac9c20a7b}{
+\#define {\bfseries I2C\_\-FLAG\_\-ARLO}~((uint32\_\-t)0x10000200)}
+\label{group__I2C__flags__definition_gae1e67936f4780e42b8bbe04ac9c20a7b}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga0454176b6ddd5c402abc3ef5953a21ad}{
+\#define {\bfseries I2C\_\-FLAG\_\-BERR}~((uint32\_\-t)0x10000100)}
+\label{group__I2C__flags__definition_ga0454176b6ddd5c402abc3ef5953a21ad}
+
+\item 
+\hypertarget{group__I2C__flags__definition_gaeda14a3e9d02ff20a0d001bba9328f3d}{
+\#define {\bfseries I2C\_\-FLAG\_\-TXE}~((uint32\_\-t)0x10000080)}
+\label{group__I2C__flags__definition_gaeda14a3e9d02ff20a0d001bba9328f3d}
+
+\item 
+\hypertarget{group__I2C__flags__definition_gad53c5b70a186f699f187c7a641ab0dac}{
+\#define {\bfseries I2C\_\-FLAG\_\-RXNE}~((uint32\_\-t)0x10000040)}
+\label{group__I2C__flags__definition_gad53c5b70a186f699f187c7a641ab0dac}
+
+\item 
+\hypertarget{group__I2C__flags__definition_gacc7d993963e199a6ddba391dab8da896}{
+\#define {\bfseries I2C\_\-FLAG\_\-STOPF}~((uint32\_\-t)0x10000010)}
+\label{group__I2C__flags__definition_gacc7d993963e199a6ddba391dab8da896}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga316c78cbf34b74da96d69f702a0d1444}{
+\#define {\bfseries I2C\_\-FLAG\_\-ADD10}~((uint32\_\-t)0x10000008)}
+\label{group__I2C__flags__definition_ga316c78cbf34b74da96d69f702a0d1444}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga4dc3d44342007a5cd21c3baa0d938606}{
+\#define {\bfseries I2C\_\-FLAG\_\-BTF}~((uint32\_\-t)0x10000004)}
+\label{group__I2C__flags__definition_ga4dc3d44342007a5cd21c3baa0d938606}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga5472d1196e934e0cc471aba8f66af416}{
+\#define {\bfseries I2C\_\-FLAG\_\-ADDR}~((uint32\_\-t)0x10000002)}
+\label{group__I2C__flags__definition_ga5472d1196e934e0cc471aba8f66af416}
+
+\item 
+\hypertarget{group__I2C__flags__definition_gae009ab84be03fcc438625b1c39376ad4}{
+\#define {\bfseries I2C\_\-FLAG\_\-SB}~((uint32\_\-t)0x10000001)}
+\label{group__I2C__flags__definition_gae009ab84be03fcc438625b1c39376ad4}
+
+\item 
+\hypertarget{group__I2C__flags__definition_ga66c8180841350c47627c323acfe42ee9}{
+\#define {\bfseries IS\_\-I2C\_\-CLEAR\_\-FLAG}(FLAG)~((((FLAG) \& (uint16\_\-t)0x20FF) == 0x00) \&\& ((FLAG) != (uint16\_\-t)0x00))}
+\label{group__I2C__flags__definition_ga66c8180841350c47627c323acfe42ee9}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-GET\_\-FLAG}(FLAG)
+\item 
+\#define \hyperlink{group__I2C__Events_gaeef8c22ac035122b06e31b360ac7aeb3}{I2C\_\-EVENT\_\-MASTER\_\-MODE\_\-SELECT}~((uint32\_\-t)0x00030001)
+\begin{DoxyCompactList}\small\item\em Communication start. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{group__I2C__Events_ga2361a6e60b7dc86fb682dd06fbd3edb7}{I2C\_\-EVENT\_\-MASTER\_\-TRANSMITTER\_\-MODE\_\-SELECTED}~((uint32\_\-t)0x00070082)
+\begin{DoxyCompactList}\small\item\em Address Acknowledge. \item\end{DoxyCompactList}\item 
+\hypertarget{group__I2C__Events_gabfde82864432ddb87b6462234d542e60}{
+\#define {\bfseries I2C\_\-EVENT\_\-MASTER\_\-RECEIVER\_\-MODE\_\-SELECTED}~((uint32\_\-t)0x00030002)}
+\label{group__I2C__Events_gabfde82864432ddb87b6462234d542e60}
+
+\item 
+\hypertarget{group__I2C__Events_gad04882597bbf542c6fee7a9c837fbc8c}{
+\#define {\bfseries I2C\_\-EVENT\_\-MASTER\_\-MODE\_\-ADDRESS10}~((uint32\_\-t)0x00030008)}
+\label{group__I2C__Events_gad04882597bbf542c6fee7a9c837fbc8c}
+
+\item 
+\#define \hyperlink{group__I2C__Events_ga6bcf2ae49961e07e27cf9fdf334719e3}{I2C\_\-EVENT\_\-MASTER\_\-BYTE\_\-RECEIVED}~((uint32\_\-t)0x00030040)
+\begin{DoxyCompactList}\small\item\em Communication events. \item\end{DoxyCompactList}\item 
+\hypertarget{group__I2C__Events_ga037ac1e67e44ee085acac6f034bd73b2}{
+\#define {\bfseries I2C\_\-EVENT\_\-MASTER\_\-BYTE\_\-TRANSMITTING}~((uint32\_\-t)0x00070080)}
+\label{group__I2C__Events_ga037ac1e67e44ee085acac6f034bd73b2}
+
+\item 
+\hypertarget{group__I2C__Events_ga8fe3b96b54e3c38e1de5d48536039c8f}{
+\#define {\bfseries I2C\_\-EVENT\_\-MASTER\_\-BYTE\_\-TRANSMITTED}~((uint32\_\-t)0x00070084)}
+\label{group__I2C__Events_ga8fe3b96b54e3c38e1de5d48536039c8f}
+
+\item 
+\#define \hyperlink{group__I2C__Events_ga6cf0e334704618b024eee604849f50f7}{I2C\_\-EVENT\_\-SLAVE\_\-RECEIVER\_\-ADDRESS\_\-MATCHED}~((uint32\_\-t)0x00020002)
+\begin{DoxyCompactList}\small\item\em Communication start events. \item\end{DoxyCompactList}\item 
+\hypertarget{group__I2C__Events_ga3fa381c1fd9a95c8ae13c6cc402b1327}{
+\#define {\bfseries I2C\_\-EVENT\_\-SLAVE\_\-TRANSMITTER\_\-ADDRESS\_\-MATCHED}~((uint32\_\-t)0x00060082)}
+\label{group__I2C__Events_ga3fa381c1fd9a95c8ae13c6cc402b1327}
+
+\item 
+\hypertarget{group__I2C__Events_ga17e78ab01fa980b3df10f8d9f6864c48}{
+\#define {\bfseries I2C\_\-EVENT\_\-SLAVE\_\-RECEIVER\_\-SECONDADDRESS\_\-MATCHED}~((uint32\_\-t)0x00820000)}
+\label{group__I2C__Events_ga17e78ab01fa980b3df10f8d9f6864c48}
+
+\item 
+\hypertarget{group__I2C__Events_ga6221aa204356bec9146f800ccfc99fc1}{
+\#define {\bfseries I2C\_\-EVENT\_\-SLAVE\_\-TRANSMITTER\_\-SECONDADDRESS\_\-MATCHED}~((uint32\_\-t)0x00860080)}
+\label{group__I2C__Events_ga6221aa204356bec9146f800ccfc99fc1}
+
+\item 
+\hypertarget{group__I2C__Events_ga15195f6def95f688ae9725899f49ea23}{
+\#define {\bfseries I2C\_\-EVENT\_\-SLAVE\_\-GENERALCALLADDRESS\_\-MATCHED}~((uint32\_\-t)0x00120000)}
+\label{group__I2C__Events_ga15195f6def95f688ae9725899f49ea23}
+
+\item 
+\#define \hyperlink{group__I2C__Events_ga8b244626839940569c6c8bbfc4efe21d}{I2C\_\-EVENT\_\-SLAVE\_\-BYTE\_\-RECEIVED}~((uint32\_\-t)0x00020040)
+\begin{DoxyCompactList}\small\item\em Communication events. \item\end{DoxyCompactList}\item 
+\hypertarget{group__I2C__Events_ga3148d8d7087e418959bc31e2646b2941}{
+\#define {\bfseries I2C\_\-EVENT\_\-SLAVE\_\-STOP\_\-DETECTED}~((uint32\_\-t)0x00000010)}
+\label{group__I2C__Events_ga3148d8d7087e418959bc31e2646b2941}
+
+\item 
+\hypertarget{group__I2C__Events_ga50652880323b8c2746b5afbdfea03fe1}{
+\#define {\bfseries I2C\_\-EVENT\_\-SLAVE\_\-BYTE\_\-TRANSMITTED}~((uint32\_\-t)0x00060084)}
+\label{group__I2C__Events_ga50652880323b8c2746b5afbdfea03fe1}
+
+\item 
+\hypertarget{group__I2C__Events_gaa574c93a99497649f3d8e7ff53796231}{
+\#define {\bfseries I2C\_\-EVENT\_\-SLAVE\_\-BYTE\_\-TRANSMITTING}~((uint32\_\-t)0x00060080)}
+\label{group__I2C__Events_gaa574c93a99497649f3d8e7ff53796231}
+
+\item 
+\hypertarget{group__I2C__Events_ga249bd611f1ca64653c0bfc606c591088}{
+\#define {\bfseries I2C\_\-EVENT\_\-SLAVE\_\-ACK\_\-FAILURE}~((uint32\_\-t)0x00000400)}
+\label{group__I2C__Events_ga249bd611f1ca64653c0bfc606c591088}
+
+\item 
+\#define {\bfseries IS\_\-I2C\_\-EVENT}(EVENT)
+\item 
+\hypertarget{group__I2C__own__address1_gad84e8b9523d45b6105b4d5cb68994a79}{
+\#define {\bfseries IS\_\-I2C\_\-OWN\_\-ADDRESS1}(ADDRESS1)~((ADDRESS1) $<$= 0x3FF)}
+\label{group__I2C__own__address1_gad84e8b9523d45b6105b4d5cb68994a79}
+
+\item 
+\hypertarget{group__I2C__clock__speed_gae0d731df1b264d853703716c29309b9b}{
+\#define {\bfseries IS\_\-I2C\_\-CLOCK\_\-SPEED}(SPEED)~(((SPEED) $>$= 0x1) \&\& ((SPEED) $<$= 400000))}
+\label{group__I2C__clock__speed_gae0d731df1b264d853703716c29309b9b}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga2ee214364603059ad5d9089f749f5bfd}{
+void {\bfseries I2C\_\-DeInit} (I2C\_\-TypeDef $\ast$I2Cx)}
+\label{group__I2C__Exported__Functions_ga2ee214364603059ad5d9089f749f5bfd}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gaac29465bca70fbc91c2f922ab67bb88e}{
+void {\bfseries I2C\_\-Init} (I2C\_\-TypeDef $\ast$I2Cx, \hyperlink{structI2C__InitTypeDef}{I2C\_\-InitTypeDef} $\ast$I2C\_\-InitStruct)}
+\label{group__I2C__Exported__Functions_gaac29465bca70fbc91c2f922ab67bb88e}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga08582aca6d7d7910cd5cbff0d9def350}{
+void {\bfseries I2C\_\-StructInit} (\hyperlink{structI2C__InitTypeDef}{I2C\_\-InitTypeDef} $\ast$I2C\_\-InitStruct)}
+\label{group__I2C__Exported__Functions_ga08582aca6d7d7910cd5cbff0d9def350}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7e1323c9133c2cb424dfb5b10b7d2f0b}{
+void {\bfseries I2C\_\-Cmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga7e1323c9133c2cb424dfb5b10b7d2f0b}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga38502ce11e5ec923e0f6476aaa35b45c}{
+void {\bfseries I2C\_\-DMACmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga38502ce11e5ec923e0f6476aaa35b45c}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gab2e994c5681eb6ec7c26a03ffe1de060}{
+void {\bfseries I2C\_\-DMALastTransferCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_gab2e994c5681eb6ec7c26a03ffe1de060}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga36c522b471588be9779c878222ccb20f}{
+void {\bfseries I2C\_\-GenerateSTART} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga36c522b471588be9779c878222ccb20f}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga5c92cb573ca0ae58cc465e5400246561}{
+void {\bfseries I2C\_\-GenerateSTOP} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga5c92cb573ca0ae58cc465e5400246561}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7bb44e894d68a7991f564c43fb187486}{
+void {\bfseries I2C\_\-AcknowledgeConfig} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga7bb44e894d68a7991f564c43fb187486}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7be2cc634a613c8e3539137e897a22df}{
+void {\bfseries I2C\_\-OwnAddress2Config} (I2C\_\-TypeDef $\ast$I2Cx, uint8\_\-t Address)}
+\label{group__I2C__Exported__Functions_ga7be2cc634a613c8e3539137e897a22df}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga02145a333a56e79557d6ef4ea03fc313}{
+void {\bfseries I2C\_\-DualAddressCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga02145a333a56e79557d6ef4ea03fc313}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga65c740fc8d7b3b9f15cc432d8699d471}{
+void {\bfseries I2C\_\-GeneralCallCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga65c740fc8d7b3b9f15cc432d8699d471}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga58fed146a06cb81d2940604e460de047}{
+void {\bfseries I2C\_\-ITConfig} (I2C\_\-TypeDef $\ast$I2Cx, uint16\_\-t I2C\_\-IT, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga58fed146a06cb81d2940604e460de047}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7bd9e70b8eafde0dd5eb42b0d95fe1a9}{
+void {\bfseries I2C\_\-SendData} (I2C\_\-TypeDef $\ast$I2Cx, uint8\_\-t Data)}
+\label{group__I2C__Exported__Functions_ga7bd9e70b8eafde0dd5eb42b0d95fe1a9}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gaeaaa4b6f77f50eb57465148c55d27fb2}{
+uint8\_\-t {\bfseries I2C\_\-ReceiveData} (I2C\_\-TypeDef $\ast$I2Cx)}
+\label{group__I2C__Exported__Functions_gaeaaa4b6f77f50eb57465148c55d27fb2}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga009fc2a5b2313c36da39ece39a1156a6}{
+void {\bfseries I2C\_\-Send7bitAddress} (I2C\_\-TypeDef $\ast$I2Cx, uint8\_\-t Address, uint8\_\-t I2C\_\-Direction)}
+\label{group__I2C__Exported__Functions_ga009fc2a5b2313c36da39ece39a1156a6}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga8021dc796d15f997356b0583d6346805}{
+uint16\_\-t {\bfseries I2C\_\-ReadRegister} (I2C\_\-TypeDef $\ast$I2Cx, uint8\_\-t I2C\_\-Register)}
+\label{group__I2C__Exported__Functions_ga8021dc796d15f997356b0583d6346805}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga1289c908aeb882443aba323b459c638b}{
+void {\bfseries I2C\_\-SoftwareResetCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga1289c908aeb882443aba323b459c638b}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gad08ebffc3a234d84e6405ec115bd74f1}{
+void {\bfseries I2C\_\-NACKPositionConfig} (I2C\_\-TypeDef $\ast$I2Cx, uint16\_\-t I2C\_\-NACKPosition)}
+\label{group__I2C__Exported__Functions_gad08ebffc3a234d84e6405ec115bd74f1}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga75a810776d9710d2f6d9c5d9e93241c6}{
+void {\bfseries I2C\_\-SMBusAlertConfig} (I2C\_\-TypeDef $\ast$I2Cx, uint16\_\-t I2C\_\-SMBusAlert)}
+\label{group__I2C__Exported__Functions_ga75a810776d9710d2f6d9c5d9e93241c6}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gaa27d1440290fe601e730b6980999afe3}{
+void {\bfseries I2C\_\-TransmitPEC} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_gaa27d1440290fe601e730b6980999afe3}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga5d0f939bdd45542502827bf408f24161}{
+void {\bfseries I2C\_\-PECPositionConfig} (I2C\_\-TypeDef $\ast$I2Cx, uint16\_\-t I2C\_\-PECPosition)}
+\label{group__I2C__Exported__Functions_ga5d0f939bdd45542502827bf408f24161}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gae86801251359226c35745e0a258388b0}{
+void {\bfseries I2C\_\-CalculatePEC} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_gae86801251359226c35745e0a258388b0}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7bf75e7c27c0e1d73e70fc0e1c7cd1dd}{
+uint8\_\-t {\bfseries I2C\_\-GetPEC} (I2C\_\-TypeDef $\ast$I2Cx)}
+\label{group__I2C__Exported__Functions_ga7bf75e7c27c0e1d73e70fc0e1c7cd1dd}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga66d86742bf1be58b17ef8779ffc79d02}{
+void {\bfseries I2C\_\-ARPCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga66d86742bf1be58b17ef8779ffc79d02}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga7459feb3b1dfcd3e4f6574002ca7d3bd}{
+void {\bfseries I2C\_\-StretchClockCmd} (I2C\_\-TypeDef $\ast$I2Cx, FunctionalState NewState)}
+\label{group__I2C__Exported__Functions_ga7459feb3b1dfcd3e4f6574002ca7d3bd}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_gaa570f76bc34e5b0531b29b1a90af1275}{
+void {\bfseries I2C\_\-FastModeDutyCycleConfig} (I2C\_\-TypeDef $\ast$I2Cx, uint16\_\-t I2C\_\-DutyCycle)}
+\label{group__I2C__Exported__Functions_gaa570f76bc34e5b0531b29b1a90af1275}
+
+\item 
+ErrorStatus \hyperlink{group__I2C__Exported__Functions_ga2d5701342f9d4c1f09bf9d3cdcacc326}{I2C\_\-CheckEvent} (I2C\_\-TypeDef $\ast$I2Cx, uint32\_\-t I2C\_\-EVENT)
+\begin{DoxyCompactList}\small\item\em I2C State Monitoring Functions. \item\end{DoxyCompactList}\item 
+uint32\_\-t \hyperlink{group__I2C__Exported__Functions_ga29237aea9b5a3ead33167e1d027e9f1a}{I2C\_\-GetLastEvent} (I2C\_\-TypeDef $\ast$I2Cx)
+\item 
+FlagStatus \hyperlink{group__I2C__Exported__Functions_ga15c95d0ed124f029621a2061b1677ee7}{I2C\_\-GetFlagStatus} (I2C\_\-TypeDef $\ast$I2Cx, uint32\_\-t I2C\_\-FLAG)
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga9d4f8fe9f7232696114b5578b1223963}{
+void {\bfseries I2C\_\-ClearFlag} (I2C\_\-TypeDef $\ast$I2Cx, uint32\_\-t I2C\_\-FLAG)}
+\label{group__I2C__Exported__Functions_ga9d4f8fe9f7232696114b5578b1223963}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga447771fbbd94a56f3570b9f430a069ba}{
+ITStatus {\bfseries I2C\_\-GetITStatus} (I2C\_\-TypeDef $\ast$I2Cx, uint32\_\-t I2C\_\-IT)}
+\label{group__I2C__Exported__Functions_ga447771fbbd94a56f3570b9f430a069ba}
+
+\item 
+\hypertarget{group__I2C__Exported__Functions_ga110dda440fa200b5f77349df19b3e6bb}{
+void {\bfseries I2C\_\-ClearITPendingBit} (I2C\_\-TypeDef $\ast$I2Cx, uint32\_\-t I2C\_\-IT)}
+\label{group__I2C__Exported__Functions_ga110dda440fa200b5f77349df19b3e6bb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the functions prototypes for the I2C firmware library. \begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V3.5.0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11-\/March-\/2011 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+
+\subsubsection*{\begin{center}\copyright COPYRIGHT 2011 STMicroelectronics\end{center} }

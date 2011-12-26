@@ -1,0 +1,76 @@
+\hypertarget{group__Preemption__Priority__Group}{
+\section{Preemption\_\-Priority\_\-Group}
+\label{group__Preemption__Priority__Group}\index{Preemption\_\-Priority\_\-Group@{Preemption\_\-Priority\_\-Group}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__Preemption__Priority__Group_gaeac0cf537f65d17bc19aee2410b2b60e}{NVIC\_\-PriorityGroup\_\-0}~((uint32\_\-t)0x700)
+\item 
+\#define \hyperlink{group__Preemption__Priority__Group_ga89bf0bf9e70f1a372a541b1b8d7493aa}{NVIC\_\-PriorityGroup\_\-1}~((uint32\_\-t)0x600)
+\item 
+\#define \hyperlink{group__Preemption__Priority__Group_ga505002e8b76aef65499ca371e40ec8b4}{NVIC\_\-PriorityGroup\_\-2}~((uint32\_\-t)0x500)
+\item 
+\#define \hyperlink{group__Preemption__Priority__Group_ga49bdbee77d4a70339d63c80462d49b4d}{NVIC\_\-PriorityGroup\_\-3}~((uint32\_\-t)0x400)
+\item 
+\#define \hyperlink{group__Preemption__Priority__Group_gaf9020c585da2a299328f0b06dee391a2}{NVIC\_\-PriorityGroup\_\-4}~((uint32\_\-t)0x300)
+\item 
+\#define {\bfseries IS\_\-NVIC\_\-PRIORITY\_\-GROUP}(GROUP)
+\item 
+\hypertarget{group__Preemption__Priority__Group_gaf30fd8f5960c2e28a772d8f16bb156dd}{
+\#define {\bfseries IS\_\-NVIC\_\-PREEMPTION\_\-PRIORITY}(PRIORITY)~((PRIORITY) $<$ 0x10)}
+\label{group__Preemption__Priority__Group_gaf30fd8f5960c2e28a772d8f16bb156dd}
+
+\item 
+\hypertarget{group__Preemption__Priority__Group_ga010705bc997dcff935b965b372cba61d}{
+\#define {\bfseries IS\_\-NVIC\_\-SUB\_\-PRIORITY}(PRIORITY)~((PRIORITY) $<$ 0x10)}
+\label{group__Preemption__Priority__Group_ga010705bc997dcff935b965b372cba61d}
+
+\item 
+\hypertarget{group__Preemption__Priority__Group_ga1184bbb97d758385f98ab40dd5e5af59}{
+\#define {\bfseries IS\_\-NVIC\_\-OFFSET}(OFFSET)~((OFFSET) $<$ 0x000FFFFF)}
+\label{group__Preemption__Priority__Group_ga1184bbb97d758385f98ab40dd5e5af59}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__Preemption__Priority__Group_ga6569304a39fe4f91bd59b6a586c8ede9}{
+\index{Preemption\_\-Priority\_\-Group@{Preemption\_\-Priority\_\-Group}!IS\_\-NVIC\_\-PRIORITY\_\-GROUP@{IS\_\-NVIC\_\-PRIORITY\_\-GROUP}}
+\index{IS\_\-NVIC\_\-PRIORITY\_\-GROUP@{IS\_\-NVIC\_\-PRIORITY\_\-GROUP}!Preemption_Priority_Group@{Preemption\_\-Priority\_\-Group}}
+\subsubsection[{IS\_\-NVIC\_\-PRIORITY\_\-GROUP}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-NVIC\_\-PRIORITY\_\-GROUP(GROUP)}}
+\label{group__Preemption__Priority__Group_ga6569304a39fe4f91bd59b6a586c8ede9}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((GROUP) == NVIC_PriorityGroup_0) || \
+                                       ((GROUP) == NVIC_PriorityGroup_1) || \
+                                       ((GROUP) == NVIC_PriorityGroup_2) || \
+                                       ((GROUP) == NVIC_PriorityGroup_3) || \
+                                       ((GROUP) == NVIC_PriorityGroup_4))
+\end{DoxyCode}
+\hypertarget{group__Preemption__Priority__Group_gaeac0cf537f65d17bc19aee2410b2b60e}{
+\index{Preemption\_\-Priority\_\-Group@{Preemption\_\-Priority\_\-Group}!NVIC\_\-PriorityGroup\_\-0@{NVIC\_\-PriorityGroup\_\-0}}
+\index{NVIC\_\-PriorityGroup\_\-0@{NVIC\_\-PriorityGroup\_\-0}!Preemption_Priority_Group@{Preemption\_\-Priority\_\-Group}}
+\subsubsection[{NVIC\_\-PriorityGroup\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define NVIC\_\-PriorityGroup\_\-0~((uint32\_\-t)0x700)}}
+\label{group__Preemption__Priority__Group_gaeac0cf537f65d17bc19aee2410b2b60e}
+0 bits for pre-\/emption priority 4 bits for subpriority \hypertarget{group__Preemption__Priority__Group_ga89bf0bf9e70f1a372a541b1b8d7493aa}{
+\index{Preemption\_\-Priority\_\-Group@{Preemption\_\-Priority\_\-Group}!NVIC\_\-PriorityGroup\_\-1@{NVIC\_\-PriorityGroup\_\-1}}
+\index{NVIC\_\-PriorityGroup\_\-1@{NVIC\_\-PriorityGroup\_\-1}!Preemption_Priority_Group@{Preemption\_\-Priority\_\-Group}}
+\subsubsection[{NVIC\_\-PriorityGroup\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define NVIC\_\-PriorityGroup\_\-1~((uint32\_\-t)0x600)}}
+\label{group__Preemption__Priority__Group_ga89bf0bf9e70f1a372a541b1b8d7493aa}
+1 bits for pre-\/emption priority 3 bits for subpriority \hypertarget{group__Preemption__Priority__Group_ga505002e8b76aef65499ca371e40ec8b4}{
+\index{Preemption\_\-Priority\_\-Group@{Preemption\_\-Priority\_\-Group}!NVIC\_\-PriorityGroup\_\-2@{NVIC\_\-PriorityGroup\_\-2}}
+\index{NVIC\_\-PriorityGroup\_\-2@{NVIC\_\-PriorityGroup\_\-2}!Preemption_Priority_Group@{Preemption\_\-Priority\_\-Group}}
+\subsubsection[{NVIC\_\-PriorityGroup\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define NVIC\_\-PriorityGroup\_\-2~((uint32\_\-t)0x500)}}
+\label{group__Preemption__Priority__Group_ga505002e8b76aef65499ca371e40ec8b4}
+2 bits for pre-\/emption priority 2 bits for subpriority \hypertarget{group__Preemption__Priority__Group_ga49bdbee77d4a70339d63c80462d49b4d}{
+\index{Preemption\_\-Priority\_\-Group@{Preemption\_\-Priority\_\-Group}!NVIC\_\-PriorityGroup\_\-3@{NVIC\_\-PriorityGroup\_\-3}}
+\index{NVIC\_\-PriorityGroup\_\-3@{NVIC\_\-PriorityGroup\_\-3}!Preemption_Priority_Group@{Preemption\_\-Priority\_\-Group}}
+\subsubsection[{NVIC\_\-PriorityGroup\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define NVIC\_\-PriorityGroup\_\-3~((uint32\_\-t)0x400)}}
+\label{group__Preemption__Priority__Group_ga49bdbee77d4a70339d63c80462d49b4d}
+3 bits for pre-\/emption priority 1 bits for subpriority \hypertarget{group__Preemption__Priority__Group_gaf9020c585da2a299328f0b06dee391a2}{
+\index{Preemption\_\-Priority\_\-Group@{Preemption\_\-Priority\_\-Group}!NVIC\_\-PriorityGroup\_\-4@{NVIC\_\-PriorityGroup\_\-4}}
+\index{NVIC\_\-PriorityGroup\_\-4@{NVIC\_\-PriorityGroup\_\-4}!Preemption_Priority_Group@{Preemption\_\-Priority\_\-Group}}
+\subsubsection[{NVIC\_\-PriorityGroup\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define NVIC\_\-PriorityGroup\_\-4~((uint32\_\-t)0x300)}}
+\label{group__Preemption__Priority__Group_gaf9020c585da2a299328f0b06dee391a2}
+4 bits for pre-\/emption priority 0 bits for subpriority 

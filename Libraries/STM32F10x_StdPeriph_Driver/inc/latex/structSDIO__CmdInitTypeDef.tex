@@ -1,0 +1,50 @@
+\hypertarget{structSDIO__CmdInitTypeDef}{
+\section{SDIO\_\-CmdInitTypeDef Struct Reference}
+\label{structSDIO__CmdInitTypeDef}\index{SDIO\_\-CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\_\-t \hyperlink{structSDIO__CmdInitTypeDef_a37dfc4d7191ec10cffdb05ecf58d4807}{SDIO\_\-Argument}
+\item 
+uint32\_\-t \hyperlink{structSDIO__CmdInitTypeDef_ab5e1df1f0e8d48a308edfb59a6f80fb4}{SDIO\_\-CmdIndex}
+\item 
+uint32\_\-t \hyperlink{structSDIO__CmdInitTypeDef_aecb203e21321126d5f05c34787cacfd2}{SDIO\_\-Response}
+\item 
+uint32\_\-t \hyperlink{structSDIO__CmdInitTypeDef_a582258554233ff8550bd04d2d790c67c}{SDIO\_\-Wait}
+\item 
+uint32\_\-t \hyperlink{structSDIO__CmdInitTypeDef_ab0e869ae285cc132478dd743c28cd8e2}{SDIO\_\-CPSM}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structSDIO__CmdInitTypeDef_a37dfc4d7191ec10cffdb05ecf58d4807}{
+\index{SDIO\_\-CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}!SDIO\_\-Argument@{SDIO\_\-Argument}}
+\index{SDIO\_\-Argument@{SDIO\_\-Argument}!SDIO_CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}}
+\subsubsection[{SDIO\_\-Argument}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf SDIO\_\-CmdInitTypeDef::SDIO\_\-Argument}}}
+\label{structSDIO__CmdInitTypeDef_a37dfc4d7191ec10cffdb05ecf58d4807}
+Specifies the SDIO command argument which is sent to a card as part of a command message. If a command contains an argument, it must be loaded into this register before writing the command to the command register \hypertarget{structSDIO__CmdInitTypeDef_ab5e1df1f0e8d48a308edfb59a6f80fb4}{
+\index{SDIO\_\-CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}!SDIO\_\-CmdIndex@{SDIO\_\-CmdIndex}}
+\index{SDIO\_\-CmdIndex@{SDIO\_\-CmdIndex}!SDIO_CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}}
+\subsubsection[{SDIO\_\-CmdIndex}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf SDIO\_\-CmdInitTypeDef::SDIO\_\-CmdIndex}}}
+\label{structSDIO__CmdInitTypeDef_ab5e1df1f0e8d48a308edfb59a6f80fb4}
+Specifies the SDIO command index. It must be lower than 0x40. \hypertarget{structSDIO__CmdInitTypeDef_ab0e869ae285cc132478dd743c28cd8e2}{
+\index{SDIO\_\-CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}!SDIO\_\-CPSM@{SDIO\_\-CPSM}}
+\index{SDIO\_\-CPSM@{SDIO\_\-CPSM}!SDIO_CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}}
+\subsubsection[{SDIO\_\-CPSM}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf SDIO\_\-CmdInitTypeDef::SDIO\_\-CPSM}}}
+\label{structSDIO__CmdInitTypeDef_ab0e869ae285cc132478dd743c28cd8e2}
+Specifies whether SDIO Command path state machine (CPSM) is enabled or disabled. This parameter can be a value of \hyperlink{group__SDIO__CPSM__State}{SDIO\_\-CPSM\_\-State} \hypertarget{structSDIO__CmdInitTypeDef_aecb203e21321126d5f05c34787cacfd2}{
+\index{SDIO\_\-CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}!SDIO\_\-Response@{SDIO\_\-Response}}
+\index{SDIO\_\-Response@{SDIO\_\-Response}!SDIO_CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}}
+\subsubsection[{SDIO\_\-Response}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf SDIO\_\-CmdInitTypeDef::SDIO\_\-Response}}}
+\label{structSDIO__CmdInitTypeDef_aecb203e21321126d5f05c34787cacfd2}
+Specifies the SDIO response type. This parameter can be a value of \hyperlink{group__SDIO__Response__Type}{SDIO\_\-Response\_\-Type} \hypertarget{structSDIO__CmdInitTypeDef_a582258554233ff8550bd04d2d790c67c}{
+\index{SDIO\_\-CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}!SDIO\_\-Wait@{SDIO\_\-Wait}}
+\index{SDIO\_\-Wait@{SDIO\_\-Wait}!SDIO_CmdInitTypeDef@{SDIO\_\-CmdInitTypeDef}}
+\subsubsection[{SDIO\_\-Wait}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf SDIO\_\-CmdInitTypeDef::SDIO\_\-Wait}}}
+\label{structSDIO__CmdInitTypeDef_a582258554233ff8550bd04d2d790c67c}
+Specifies whether SDIO wait-\/for-\/interrupt request is enabled or disabled. This parameter can be a value of \hyperlink{group__SDIO__Wait__Interrupt__State}{SDIO\_\-Wait\_\-Interrupt\_\-State} 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stm32f10x__sdio_8h}{stm32f10x\_\-sdio.h}\end{DoxyCompactItemize}

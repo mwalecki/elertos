@@ -1,0 +1,114 @@
+\hypertarget{group__USART__Flags}{
+\section{USART\_\-Flags}
+\label{group__USART__Flags}\index{USART\_\-Flags@{USART\_\-Flags}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__USART__Flags_ga94b7272319cca88a65075d5cb6048441}{
+\#define {\bfseries USART\_\-FLAG\_\-CTS}~((uint16\_\-t)0x0200)}
+\label{group__USART__Flags_ga94b7272319cca88a65075d5cb6048441}
+
+\item 
+\hypertarget{group__USART__Flags_ga27be6517de20ce14711f71dcd5a7b91f}{
+\#define {\bfseries USART\_\-FLAG\_\-LBD}~((uint16\_\-t)0x0100)}
+\label{group__USART__Flags_ga27be6517de20ce14711f71dcd5a7b91f}
+
+\item 
+\hypertarget{group__USART__Flags_ga7129f13333f2a7218838cc32fe507bfa}{
+\#define {\bfseries USART\_\-FLAG\_\-TXE}~((uint16\_\-t)0x0080)}
+\label{group__USART__Flags_ga7129f13333f2a7218838cc32fe507bfa}
+
+\item 
+\hypertarget{group__USART__Flags_gae7b85c9e2cc86af5bbc8b8d8b854410f}{
+\#define {\bfseries USART\_\-FLAG\_\-TC}~((uint16\_\-t)0x0040)}
+\label{group__USART__Flags_gae7b85c9e2cc86af5bbc8b8d8b854410f}
+
+\item 
+\hypertarget{group__USART__Flags_ga11d6b70c8f00216b6d8a43790dfdcf2f}{
+\#define {\bfseries USART\_\-FLAG\_\-RXNE}~((uint16\_\-t)0x0020)}
+\label{group__USART__Flags_ga11d6b70c8f00216b6d8a43790dfdcf2f}
+
+\item 
+\hypertarget{group__USART__Flags_gac2f1ccc91a834f9cbec3f058872b972a}{
+\#define {\bfseries USART\_\-FLAG\_\-IDLE}~((uint16\_\-t)0x0010)}
+\label{group__USART__Flags_gac2f1ccc91a834f9cbec3f058872b972a}
+
+\item 
+\hypertarget{group__USART__Flags_gabdb285b5c1876d93f9c802f9304538d5}{
+\#define {\bfseries USART\_\-FLAG\_\-ORE}~((uint16\_\-t)0x0008)}
+\label{group__USART__Flags_gabdb285b5c1876d93f9c802f9304538d5}
+
+\item 
+\hypertarget{group__USART__Flags_ga81781d27ffc8b85dfaf7b7b791229547}{
+\#define {\bfseries USART\_\-FLAG\_\-NE}~((uint16\_\-t)0x0004)}
+\label{group__USART__Flags_ga81781d27ffc8b85dfaf7b7b791229547}
+
+\item 
+\hypertarget{group__USART__Flags_ga3551a32bac49a2ec040e5fdafcc9c4bd}{
+\#define {\bfseries USART\_\-FLAG\_\-FE}~((uint16\_\-t)0x0002)}
+\label{group__USART__Flags_ga3551a32bac49a2ec040e5fdafcc9c4bd}
+
+\item 
+\hypertarget{group__USART__Flags_ga5e87fde5704f27c75df25395e23404ad}{
+\#define {\bfseries USART\_\-FLAG\_\-PE}~((uint16\_\-t)0x0001)}
+\label{group__USART__Flags_ga5e87fde5704f27c75df25395e23404ad}
+
+\item 
+\#define {\bfseries IS\_\-USART\_\-FLAG}(FLAG)
+\item 
+\hypertarget{group__USART__Flags_gadc905fdce8defba31c00c95554a26bc3}{
+\#define {\bfseries IS\_\-USART\_\-CLEAR\_\-FLAG}(FLAG)~((((FLAG) \& (uint16\_\-t)0xFC9F) == 0x00) \&\& ((FLAG) != (uint16\_\-t)0x00))}
+\label{group__USART__Flags_gadc905fdce8defba31c00c95554a26bc3}
+
+\item 
+\#define {\bfseries IS\_\-USART\_\-PERIPH\_\-FLAG}(PERIPH, USART\_\-FLAG)
+\item 
+\hypertarget{group__USART__Flags_ga9dc365e0a1e01031a8e0757a34b9d420}{
+\#define {\bfseries IS\_\-USART\_\-BAUDRATE}(BAUDRATE)~(((BAUDRATE) $>$ 0) \&\& ((BAUDRATE) $<$ 0x0044AA21))}
+\label{group__USART__Flags_ga9dc365e0a1e01031a8e0757a34b9d420}
+
+\item 
+\hypertarget{group__USART__Flags_ga194e771c3324f9e130b2887c701460a7}{
+\#define {\bfseries IS\_\-USART\_\-ADDRESS}(ADDRESS)~((ADDRESS) $<$= 0xF)}
+\label{group__USART__Flags_ga194e771c3324f9e130b2887c701460a7}
+
+\item 
+\hypertarget{group__USART__Flags_gafd6307e41818e076d31f3c24cb5ba135}{
+\#define {\bfseries IS\_\-USART\_\-DATA}(DATA)~((DATA) $<$= 0x1FF)}
+\label{group__USART__Flags_gafd6307e41818e076d31f3c24cb5ba135}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__USART__Flags_ga3e20747ce7c97a36718933c0cb3dac29}{
+\index{USART\_\-Flags@{USART\_\-Flags}!IS\_\-USART\_\-FLAG@{IS\_\-USART\_\-FLAG}}
+\index{IS\_\-USART\_\-FLAG@{IS\_\-USART\_\-FLAG}!USART_Flags@{USART\_\-Flags}}
+\subsubsection[{IS\_\-USART\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-USART\_\-FLAG(FLAG)}}
+\label{group__USART__Flags_ga3e20747ce7c97a36718933c0cb3dac29}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((FLAG) == USART_FLAG_PE) || ((FLAG) == USART_FLAG_TXE) || \
+                             ((FLAG) == USART_FLAG_TC) || ((FLAG) == USART_FLAG_R
+      XNE) || \
+                             ((FLAG) == USART_FLAG_IDLE) || ((FLAG) == USART_FLAG
+      _LBD) || \
+                             ((FLAG) == USART_FLAG_CTS) || ((FLAG) == USART_FLAG_
+      ORE) || \
+                             ((FLAG) == USART_FLAG_NE) || ((FLAG) == USART_FLAG_F
+      E))
+\end{DoxyCode}
+\hypertarget{group__USART__Flags_gad8395894e77b07a0713756b355aa22e5}{
+\index{USART\_\-Flags@{USART\_\-Flags}!IS\_\-USART\_\-PERIPH\_\-FLAG@{IS\_\-USART\_\-PERIPH\_\-FLAG}}
+\index{IS\_\-USART\_\-PERIPH\_\-FLAG@{IS\_\-USART\_\-PERIPH\_\-FLAG}!USART_Flags@{USART\_\-Flags}}
+\subsubsection[{IS\_\-USART\_\-PERIPH\_\-FLAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-USART\_\-PERIPH\_\-FLAG(PERIPH, \/  USART\_\-FLAG)}}
+\label{group__USART__Flags_gad8395894e77b07a0713756b355aa22e5}
+{\bfseries Value:}
+\begin{DoxyCode}
+((((*(uint32_t*)&(PERIPH)) != UART4_BASE) &&\
+                                                  ((*(uint32_t*)&(PERIPH)) != UAR
+      T5_BASE)) \
+                                                  || ((USART_FLAG) != USART_FLAG_
+      CTS))
+\end{DoxyCode}

@@ -1,0 +1,420 @@
+\hypertarget{stm32f10x__flash_8h}{
+\section{stm32f10x\_\-flash.h File Reference}
+\label{stm32f10x__flash_8h}\index{stm32f10x\_\-flash.h@{stm32f10x\_\-flash.h}}
+}
+
+
+This file contains all the functions prototypes for the FLASH firmware library.  
+
+
+{\ttfamily \#include \char`\"{}stm32f10x.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__Flash__Latency_ga09afe6e52b819cc074f6111ec42ac3c3}{FLASH\_\-Latency\_\-0}~((uint32\_\-t)0x00000000)
+\item 
+\#define \hyperlink{group__Flash__Latency_ga6b7281665340fe8f7919bdfcfd06f8e6}{FLASH\_\-Latency\_\-1}~((uint32\_\-t)0x00000001)
+\item 
+\#define \hyperlink{group__Flash__Latency_ga55173ebb5c978459ce18d5e2516e3e89}{FLASH\_\-Latency\_\-2}~((uint32\_\-t)0x00000002)
+\item 
+\#define {\bfseries IS\_\-FLASH\_\-LATENCY}(LATENCY)
+\item 
+\#define \hyperlink{group__Half__Cycle__Enable__Disable_ga95adf58ccf48094a9648085ac8d8af13}{FLASH\_\-HalfCycleAccess\_\-Enable}~((uint32\_\-t)0x00000008)
+\item 
+\#define \hyperlink{group__Half__Cycle__Enable__Disable_gad1ec816fa04b9a45e51c1cc9f1ba8f42}{FLASH\_\-HalfCycleAccess\_\-Disable}~((uint32\_\-t)0x00000000)
+\item 
+\#define {\bfseries IS\_\-FLASH\_\-HALFCYCLEACCESS\_\-STATE}(STATE)
+\item 
+\#define \hyperlink{group__Prefetch__Buffer__Enable__Disable_gad0fac43d078a77794f22840f326a6ed9}{FLASH\_\-PrefetchBuffer\_\-Enable}~((uint32\_\-t)0x00000010)
+\item 
+\#define \hyperlink{group__Prefetch__Buffer__Enable__Disable_ga2feb631ad85449f83517f05aaf4ba26c}{FLASH\_\-PrefetchBuffer\_\-Disable}~((uint32\_\-t)0x00000000)
+\item 
+\#define {\bfseries IS\_\-FLASH\_\-PREFETCHBUFFER\_\-STATE}(STATE)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gac5c6f6155e4ebae0978a3d2a0d991e68}{FLASH\_\-WRProt\_\-Pages0to3}~((uint32\_\-t)0x00000001)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga1b33c4de30c55331e7e60c0795c824ad}{FLASH\_\-WRProt\_\-Pages4to7}~((uint32\_\-t)0x00000002)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga7eca7a8b11accdd6dadf3445847e1a57}{FLASH\_\-WRProt\_\-Pages8to11}~((uint32\_\-t)0x00000004)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gaa02b9439f75982e2e1c14f8af9a8c091}{FLASH\_\-WRProt\_\-Pages12to15}~((uint32\_\-t)0x00000008)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gaa589ce30909c3a9a0bffc8a59b6013fb}{FLASH\_\-WRProt\_\-Pages16to19}~((uint32\_\-t)0x00000010)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga537e0f85899e13ca2ed93455e537d950}{FLASH\_\-WRProt\_\-Pages20to23}~((uint32\_\-t)0x00000020)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga1d6b94b48e0dd21949139267b90a08ef}{FLASH\_\-WRProt\_\-Pages24to27}~((uint32\_\-t)0x00000040)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga800860d071cfb40b1b0e94111a0cb549}{FLASH\_\-WRProt\_\-Pages28to31}~((uint32\_\-t)0x00000080)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga81a4250850e5fe7c251365cc22839a96}{FLASH\_\-WRProt\_\-Pages32to35}~((uint32\_\-t)0x00000100)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga783f47425af52b9a12914520d9ee175e}{FLASH\_\-WRProt\_\-Pages36to39}~((uint32\_\-t)0x00000200)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga30798723c36db2b8145b6a5c8ffafded}{FLASH\_\-WRProt\_\-Pages40to43}~((uint32\_\-t)0x00000400)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gaa2d897455d5f71c9fd3721d49b3578fc}{FLASH\_\-WRProt\_\-Pages44to47}~((uint32\_\-t)0x00000800)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gac6bb79080cb276b330499f26c706048e}{FLASH\_\-WRProt\_\-Pages48to51}~((uint32\_\-t)0x00001000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gab5beefbfebf060f71421995f3c7a6418}{FLASH\_\-WRProt\_\-Pages52to55}~((uint32\_\-t)0x00002000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga3705c210feeeb63c31976495c0b851f1}{FLASH\_\-WRProt\_\-Pages56to59}~((uint32\_\-t)0x00004000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga1978945fc02d1867900f17c4999c50d5}{FLASH\_\-WRProt\_\-Pages60to63}~((uint32\_\-t)0x00008000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga124928d6134ddac13e3e8810a0d8dd1a}{FLASH\_\-WRProt\_\-Pages64to67}~((uint32\_\-t)0x00010000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gafbb813885c6cd505c64083f2f88532fb}{FLASH\_\-WRProt\_\-Pages68to71}~((uint32\_\-t)0x00020000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga1a19c52012bbb30f3ae1599fa5a200cc}{FLASH\_\-WRProt\_\-Pages72to75}~((uint32\_\-t)0x00040000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga9e1f9abfa57766312c6cbae9b42f3ab6}{FLASH\_\-WRProt\_\-Pages76to79}~((uint32\_\-t)0x00080000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga5749428874f99f77a5c5fc48a88816d9}{FLASH\_\-WRProt\_\-Pages80to83}~((uint32\_\-t)0x00100000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga9dbf7aeb5b54b42f9b345c95d00eaf32}{FLASH\_\-WRProt\_\-Pages84to87}~((uint32\_\-t)0x00200000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gaeece6aa5e198239067c47f678b9d015e}{FLASH\_\-WRProt\_\-Pages88to91}~((uint32\_\-t)0x00400000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gab7d95c1f574523ef827bafd01a64b0bb}{FLASH\_\-WRProt\_\-Pages92to95}~((uint32\_\-t)0x00800000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga8f3ea488c33b3e209cab996545f55c49}{FLASH\_\-WRProt\_\-Pages96to99}~((uint32\_\-t)0x01000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga0c03cee6931c623ccdaae19233c81f4e}{FLASH\_\-WRProt\_\-Pages100to103}~((uint32\_\-t)0x02000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga2e096d51e61a972c97093110211b3be5}{FLASH\_\-WRProt\_\-Pages104to107}~((uint32\_\-t)0x04000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga899e34df1ab5369d840461686eb9c318}{FLASH\_\-WRProt\_\-Pages108to111}~((uint32\_\-t)0x08000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gacd2d5839240b77f70be15e76086745ab}{FLASH\_\-WRProt\_\-Pages112to115}~((uint32\_\-t)0x10000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga1283655c7c974e0de142cec7921c8673}{FLASH\_\-WRProt\_\-Pages116to119}~((uint32\_\-t)0x20000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gac8d2f42123810fefc68572709d8830ec}{FLASH\_\-WRProt\_\-Pages120to123}~((uint32\_\-t)0x40000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gae6e70db5200b52248c9ec4293ff9890e}{FLASH\_\-WRProt\_\-Pages124to127}~((uint32\_\-t)0x80000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga7dfbb58b90b63afef11bfcf7a8f109e2}{FLASH\_\-WRProt\_\-Pages0to1}~((uint32\_\-t)0x00000001)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gaeeb592e66053dde68ebb3ff3926d033d}{FLASH\_\-WRProt\_\-Pages2to3}~((uint32\_\-t)0x00000002)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga2835294ea5c096360cc5683b7f90b543}{FLASH\_\-WRProt\_\-Pages4to5}~((uint32\_\-t)0x00000004)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga289b919ff7f6e7287facf108b8b94619}{FLASH\_\-WRProt\_\-Pages6to7}~((uint32\_\-t)0x00000008)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga72f231c0fe953f3cd43cf421c2626f90}{FLASH\_\-WRProt\_\-Pages8to9}~((uint32\_\-t)0x00000010)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga778d8038df46c0d25d9a24717a5c5dc9}{FLASH\_\-WRProt\_\-Pages10to11}~((uint32\_\-t)0x00000020)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga571e248a64ef9bf7f99ed85831aacaaa}{FLASH\_\-WRProt\_\-Pages12to13}~((uint32\_\-t)0x00000040)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga5e5fcead35c861e1329c3e4e7e3ffa4e}{FLASH\_\-WRProt\_\-Pages14to15}~((uint32\_\-t)0x00000080)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga33deabc2c4a82cfa4a98008082e29ea7}{FLASH\_\-WRProt\_\-Pages16to17}~((uint32\_\-t)0x00000100)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga856fdcf3d41edc73902fcf93a1e375d9}{FLASH\_\-WRProt\_\-Pages18to19}~((uint32\_\-t)0x00000200)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga09215d5d245c8f5cd664c5cc4ff9fb69}{FLASH\_\-WRProt\_\-Pages20to21}~((uint32\_\-t)0x00000400)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga58394c78e6b08542381ade1674efe62c}{FLASH\_\-WRProt\_\-Pages22to23}~((uint32\_\-t)0x00000800)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gac36c4a402c77b28f46451e97dc3632f7}{FLASH\_\-WRProt\_\-Pages24to25}~((uint32\_\-t)0x00001000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga92c8a9f8b6875fccb072df795eff5e7e}{FLASH\_\-WRProt\_\-Pages26to27}~((uint32\_\-t)0x00002000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gae42c20bedcbaf926c7c49f51a7eea63f}{FLASH\_\-WRProt\_\-Pages28to29}~((uint32\_\-t)0x00004000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gaabe41461f613c6eb37c782295ad9f90f}{FLASH\_\-WRProt\_\-Pages30to31}~((uint32\_\-t)0x00008000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga86aa121a8917e58ad6bfdf98ba873d36}{FLASH\_\-WRProt\_\-Pages32to33}~((uint32\_\-t)0x00010000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gaa5fee32ae0631b81413414f8e716868b}{FLASH\_\-WRProt\_\-Pages34to35}~((uint32\_\-t)0x00020000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gab00dc29c0f12afd25cdb21b6d187ccc9}{FLASH\_\-WRProt\_\-Pages36to37}~((uint32\_\-t)0x00040000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gacd33bf5c4a305a271da6035ed19cefc2}{FLASH\_\-WRProt\_\-Pages38to39}~((uint32\_\-t)0x00080000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gaaf0c1391987f76b381d26ff4b5142268}{FLASH\_\-WRProt\_\-Pages40to41}~((uint32\_\-t)0x00100000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gab9583317ad7ec30119cdd97e17e74121}{FLASH\_\-WRProt\_\-Pages42to43}~((uint32\_\-t)0x00200000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga934a862a6a5cd350f00f5ded27e4bbd4}{FLASH\_\-WRProt\_\-Pages44to45}~((uint32\_\-t)0x00400000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga8c9bd2510c0af75911a6b24271a33c95}{FLASH\_\-WRProt\_\-Pages46to47}~((uint32\_\-t)0x00800000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga12744383aa65b2eb38e37d41a12bb6fe}{FLASH\_\-WRProt\_\-Pages48to49}~((uint32\_\-t)0x01000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga053321e47944270a5fdcf0d58e16ec13}{FLASH\_\-WRProt\_\-Pages50to51}~((uint32\_\-t)0x02000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gae4eefefb23e8913e4aa558a6a2599fa5}{FLASH\_\-WRProt\_\-Pages52to53}~((uint32\_\-t)0x04000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gacd4ea5e6cc3819f40a55a61f3075b626}{FLASH\_\-WRProt\_\-Pages54to55}~((uint32\_\-t)0x08000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga1779d1131ad245861c61dbf43a2d2d3d}{FLASH\_\-WRProt\_\-Pages56to57}~((uint32\_\-t)0x10000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga4a05bf4eec7521ae90ff662db2a9f4f5}{FLASH\_\-WRProt\_\-Pages58to59}~((uint32\_\-t)0x20000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga22f620be7f346efcb2cbb732b879fd0c}{FLASH\_\-WRProt\_\-Pages60to61}~((uint32\_\-t)0x40000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga346285408d8f738796fc22d710777ba9}{FLASH\_\-WRProt\_\-Pages62to127}~((uint32\_\-t)0x80000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gacec4a825ff505ef5751ec6e5cf6d941e}{FLASH\_\-WRProt\_\-Pages62to255}~((uint32\_\-t)0x80000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_gab233da6081eaf5d664f16c0e8c7df138}{FLASH\_\-WRProt\_\-Pages62to511}~((uint32\_\-t)0x80000000)
+\item 
+\#define \hyperlink{group__Option__Bytes__Write__Protection_ga6fdaf38a559d606660dd10a411b77ea5}{FLASH\_\-WRProt\_\-AllPages}~((uint32\_\-t)0xFFFFFFFF)
+\item 
+\hypertarget{group__Option__Bytes__Write__Protection_gafe68b93dfb1ebf68d74f871850ab373b}{
+\#define {\bfseries IS\_\-FLASH\_\-WRPROT\_\-PAGE}(PAGE)~(((PAGE) != 0x00000000))}
+\label{group__Option__Bytes__Write__Protection_gafe68b93dfb1ebf68d74f871850ab373b}
+
+\item 
+\hypertarget{group__Option__Bytes__Write__Protection_gad0c8166ba15a0b8d458412a8bb74e2f0}{
+\#define {\bfseries IS\_\-FLASH\_\-ADDRESS}(ADDRESS)~(((ADDRESS) $>$= 0x08000000) \&\& ((ADDRESS) $<$ 0x080FFFFF))}
+\label{group__Option__Bytes__Write__Protection_gad0c8166ba15a0b8d458412a8bb74e2f0}
+
+\item 
+\hypertarget{group__Option__Bytes__Write__Protection_ga73fcac8d5f301a5c98518374ae926633}{
+\#define {\bfseries IS\_\-OB\_\-DATA\_\-ADDRESS}(ADDRESS)~(((ADDRESS) == 0x1FFFF804) $|$$|$ ((ADDRESS) == 0x1FFFF806))}
+\label{group__Option__Bytes__Write__Protection_ga73fcac8d5f301a5c98518374ae926633}
+
+\item 
+\#define \hyperlink{group__Option__Bytes__IWatchdog_ga5a357e232c955444c3f2ccb9a937ffce}{OB\_\-IWDG\_\-SW}~((uint16\_\-t)0x0001)
+\item 
+\#define \hyperlink{group__Option__Bytes__IWatchdog_gadfcbfa963d79c339ec8e2d5a7734e47a}{OB\_\-IWDG\_\-HW}~((uint16\_\-t)0x0000)
+\item 
+\hypertarget{group__Option__Bytes__IWatchdog_gaf2871652c08e76499d9449be6556f12c}{
+\#define {\bfseries IS\_\-OB\_\-IWDG\_\-SOURCE}(SOURCE)~(((SOURCE) == OB\_\-IWDG\_\-SW) $|$$|$ ((SOURCE) == OB\_\-IWDG\_\-HW))}
+\label{group__Option__Bytes__IWatchdog_gaf2871652c08e76499d9449be6556f12c}
+
+\item 
+\#define \hyperlink{group__Option__Bytes__nRST__STOP_ga6762d6e4045fec58b49dfc03c1927d51}{OB\_\-STOP\_\-NoRST}~((uint16\_\-t)0x0002)
+\item 
+\#define \hyperlink{group__Option__Bytes__nRST__STOP_gaef92c03b1f279c532bfa13d3bb074b57}{OB\_\-STOP\_\-RST}~((uint16\_\-t)0x0000)
+\item 
+\hypertarget{group__Option__Bytes__nRST__STOP_ga131ae3434f300c8317dd6b3b349c7cab}{
+\#define {\bfseries IS\_\-OB\_\-STOP\_\-SOURCE}(SOURCE)~(((SOURCE) == OB\_\-STOP\_\-NoRST) $|$$|$ ((SOURCE) == OB\_\-STOP\_\-RST))}
+\label{group__Option__Bytes__nRST__STOP_ga131ae3434f300c8317dd6b3b349c7cab}
+
+\item 
+\#define \hyperlink{group__Option__Bytes__nRST__STDBY_ga9588443b20719498422aeb72b65de839}{OB\_\-STDBY\_\-NoRST}~((uint16\_\-t)0x0004)
+\item 
+\#define \hyperlink{group__Option__Bytes__nRST__STDBY_ga69451a6f69247528f58735c9c83499ce}{OB\_\-STDBY\_\-RST}~((uint16\_\-t)0x0000)
+\item 
+\hypertarget{group__Option__Bytes__nRST__STDBY_ga8a05393df3a5e89551b4e2e1e8c5b884}{
+\#define {\bfseries IS\_\-OB\_\-STDBY\_\-SOURCE}(SOURCE)~(((SOURCE) == OB\_\-STDBY\_\-NoRST) $|$$|$ ((SOURCE) == OB\_\-STDBY\_\-RST))}
+\label{group__Option__Bytes__nRST__STDBY_ga8a05393df3a5e89551b4e2e1e8c5b884}
+
+\item 
+\#define \hyperlink{group__FLASH__Interrupts_ga61c74493d4c1f36ddaf563719d446a7d}{FLASH\_\-IT\_\-ERROR}~((uint32\_\-t)0x00000400)
+\item 
+\#define \hyperlink{group__FLASH__Interrupts_gaea20e80e1806d58a7544cfe8659e7f11}{FLASH\_\-IT\_\-EOP}~((uint32\_\-t)0x00001000)
+\item 
+\#define \hyperlink{group__FLASH__Interrupts_ga808627239be1bf9c2d8bfed36ec4db19}{FLASH\_\-IT\_\-BANK1\_\-ERROR}~FLASH\_\-IT\_\-ERROR
+\item 
+\#define \hyperlink{group__FLASH__Interrupts_gac8825e2ce2c0e6ca63a40a347bd351a9}{FLASH\_\-IT\_\-BANK1\_\-EOP}~FLASH\_\-IT\_\-EOP
+\item 
+\hypertarget{group__FLASH__Interrupts_ga46ee77d0be1f3e0a14ded0651163ae11}{
+\#define {\bfseries IS\_\-FLASH\_\-IT}(IT)~((((IT) \& (uint32\_\-t)0xFFFFEBFF) == 0x00000000) \&\& (((IT) != 0x00000000)))}
+\label{group__FLASH__Interrupts_ga46ee77d0be1f3e0a14ded0651163ae11}
+
+\item 
+\#define \hyperlink{group__FLASH__Flags_gad3bc368f954ad7744deda3315da2fff7}{FLASH\_\-FLAG\_\-BSY}~((uint32\_\-t)0x00000001)
+\item 
+\#define \hyperlink{group__FLASH__Flags_gaf043ba4d8f837350bfc7754a99fae5a9}{FLASH\_\-FLAG\_\-EOP}~((uint32\_\-t)0x00000020)
+\item 
+\#define \hyperlink{group__FLASH__Flags_gae2ef62dee0a5ca01e6226746039b6f20}{FLASH\_\-FLAG\_\-PGERR}~((uint32\_\-t)0x00000004)
+\item 
+\#define \hyperlink{group__FLASH__Flags_ga5c59a7f07507cac38091275964d3d35d}{FLASH\_\-FLAG\_\-WRPRTERR}~((uint32\_\-t)0x00000010)
+\item 
+\#define \hyperlink{group__FLASH__Flags_gac36b0605df97c9414933369a32251e4a}{FLASH\_\-FLAG\_\-OPTERR}~((uint32\_\-t)0x00000001)
+\item 
+\#define \hyperlink{group__FLASH__Flags_ga1f85e6d511503886e9fbe7d0228c97a4}{FLASH\_\-FLAG\_\-BANK1\_\-BSY}~FLASH\_\-FLAG\_\-BSY
+\item 
+\#define \hyperlink{group__FLASH__Flags_gafa7670ee5ce8a2eb1f64c458a9f08e5b}{FLASH\_\-FLAG\_\-BANK1\_\-EOP}~FLASH\_\-FLAG\_\-EOP
+\item 
+\#define \hyperlink{group__FLASH__Flags_gaa1056ffdd1c434a2967d5ed7c0d263be}{FLASH\_\-FLAG\_\-BANK1\_\-PGERR}~FLASH\_\-FLAG\_\-PGERR
+\item 
+\#define \hyperlink{group__FLASH__Flags_ga1646345adbcda773ef25785b1bdc4c43}{FLASH\_\-FLAG\_\-BANK1\_\-WRPRTERR}~FLASH\_\-FLAG\_\-WRPRTERR
+\item 
+\hypertarget{group__FLASH__Flags_ga82f8c6104c348d6aa47c7658ed3b6b36}{
+\#define {\bfseries IS\_\-FLASH\_\-CLEAR\_\-FLAG}(FLAG)~((((FLAG) \& (uint32\_\-t)0xFFFFFFCA) == 0x00000000) \&\& ((FLAG) != 0x00000000))}
+\label{group__FLASH__Flags_ga82f8c6104c348d6aa47c7658ed3b6b36}
+
+\item 
+\#define {\bfseries IS\_\-FLASH\_\-GET\_\-FLAG}(FLAG)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} \{ \par
+{\bfseries FLASH\_\-BUSY} =  1, 
+{\bfseries FLASH\_\-ERROR\_\-PG}, 
+{\bfseries FLASH\_\-ERROR\_\-WRP}, 
+{\bfseries FLASH\_\-COMPLETE}, 
+\par
+{\bfseries FLASH\_\-TIMEOUT}
+ \}
+\begin{DoxyCompactList}\small\item\em FLASH Status. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga54bcb96270215c752c3479c8c9e438c0}{
+void {\bfseries FLASH\_\-SetLatency} (uint32\_\-t FLASH\_\-Latency)}
+\label{group__FLASH__Exported__Functions_ga54bcb96270215c752c3479c8c9e438c0}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga978103a57b37920ac01128e999f9ece6}{
+void {\bfseries FLASH\_\-HalfCycleAccessCmd} (uint32\_\-t FLASH\_\-HalfCycleAccess)}
+\label{group__FLASH__Exported__Functions_ga978103a57b37920ac01128e999f9ece6}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga6b93faaf0f560bf8d662b2cefe2f70e8}{
+void {\bfseries FLASH\_\-PrefetchBufferCmd} (uint32\_\-t FLASH\_\-PrefetchBuffer)}
+\label{group__FLASH__Exported__Functions_ga6b93faaf0f560bf8d662b2cefe2f70e8}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga4084d0184bab463a1579271bf474aaef}{
+void {\bfseries FLASH\_\-Unlock} (void)}
+\label{group__FLASH__Exported__Functions_ga4084d0184bab463a1579271bf474aaef}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga46899557353c4312ddbe3f25e65df1d8}{
+void {\bfseries FLASH\_\-Lock} (void)}
+\label{group__FLASH__Exported__Functions_ga46899557353c4312ddbe3f25e65df1d8}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga13a2ca18bfb3d5fb827a2751799f8451}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-ErasePage} (uint32\_\-t Page\_\-Address)}
+\label{group__FLASH__Exported__Functions_ga13a2ca18bfb3d5fb827a2751799f8451}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_gab2e6dea62c72b3e47c17512579d37498}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-EraseAllPages} (void)}
+\label{group__FLASH__Exported__Functions_gab2e6dea62c72b3e47c17512579d37498}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga152768609e85d74a9d8474be8dc2874b}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-EraseOptionBytes} (void)}
+\label{group__FLASH__Exported__Functions_ga152768609e85d74a9d8474be8dc2874b}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_gaac9a2f400b92537bd42a6bd7cc237b11}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-ProgramWord} (uint32\_\-t Address, uint32\_\-t Data)}
+\label{group__FLASH__Exported__Functions_gaac9a2f400b92537bd42a6bd7cc237b11}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga5c1336f667950a8765887228f1d0d501}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-ProgramHalfWord} (uint32\_\-t Address, uint16\_\-t Data)}
+\label{group__FLASH__Exported__Functions_ga5c1336f667950a8765887228f1d0d501}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga1382ff9d4ded8a5c076fde4fff529d21}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-ProgramOptionByteData} (uint32\_\-t Address, uint8\_\-t Data)}
+\label{group__FLASH__Exported__Functions_ga1382ff9d4ded8a5c076fde4fff529d21}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_gabad10c15e2d1ff1cb9e1083d08a9e763}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-EnableWriteProtection} (uint32\_\-t FLASH\_\-Pages)}
+\label{group__FLASH__Exported__Functions_gabad10c15e2d1ff1cb9e1083d08a9e763}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga0b8d1a8277950c890bbc247bbeafb40f}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-ReadOutProtection} (FunctionalState NewState)}
+\label{group__FLASH__Exported__Functions_ga0b8d1a8277950c890bbc247bbeafb40f}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_gaae1c493bb06c930ceb84dedfdb7325f6}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-UserOptionByteConfig} (uint16\_\-t OB\_\-IWDG, uint16\_\-t OB\_\-STOP, uint16\_\-t OB\_\-STDBY)}
+\label{group__FLASH__Exported__Functions_gaae1c493bb06c930ceb84dedfdb7325f6}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga31441647fac5fbb38369613076737943}{
+uint32\_\-t {\bfseries FLASH\_\-GetUserOptionByte} (void)}
+\label{group__FLASH__Exported__Functions_ga31441647fac5fbb38369613076737943}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_gac009e061562c7d36d7d2d00bb1c8aafa}{
+uint32\_\-t {\bfseries FLASH\_\-GetWriteProtectionOptionByte} (void)}
+\label{group__FLASH__Exported__Functions_gac009e061562c7d36d7d2d00bb1c8aafa}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga57fe56770ff25b358f3e36bd70632e37}{
+FlagStatus {\bfseries FLASH\_\-GetReadOutProtectionStatus} (void)}
+\label{group__FLASH__Exported__Functions_ga57fe56770ff25b358f3e36bd70632e37}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga289bffe7f078d6a130222f03c59bc235}{
+FlagStatus {\bfseries FLASH\_\-GetPrefetchBufferStatus} (void)}
+\label{group__FLASH__Exported__Functions_ga289bffe7f078d6a130222f03c59bc235}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga94c1e51a9c3bf8d48eb6eb4a4d054861}{
+void {\bfseries FLASH\_\-ITConfig} (uint32\_\-t FLASH\_\-IT, FunctionalState NewState)}
+\label{group__FLASH__Exported__Functions_ga94c1e51a9c3bf8d48eb6eb4a4d054861}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_gae3fb545e32f21501ca27d4380e0f2088}{
+FlagStatus {\bfseries FLASH\_\-GetFlagStatus} (uint32\_\-t FLASH\_\-FLAG)}
+\label{group__FLASH__Exported__Functions_gae3fb545e32f21501ca27d4380e0f2088}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_gac4be1d486483fa5cd70ec77d44ca8f87}{
+void {\bfseries FLASH\_\-ClearFlag} (uint32\_\-t FLASH\_\-FLAG)}
+\label{group__FLASH__Exported__Functions_gac4be1d486483fa5cd70ec77d44ca8f87}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_gac265b8d1e7ea11e44ceee28797c3debb}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-GetStatus} (void)}
+\label{group__FLASH__Exported__Functions_gac265b8d1e7ea11e44ceee28797c3debb}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga2ad803999ae93ec03700983c59cae264}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-WaitForLastOperation} (uint32\_\-t Timeout)}
+\label{group__FLASH__Exported__Functions_ga2ad803999ae93ec03700983c59cae264}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga358c4b7e0ef20693ca62cc9d20c94a5a}{
+void {\bfseries FLASH\_\-UnlockBank1} (void)}
+\label{group__FLASH__Exported__Functions_ga358c4b7e0ef20693ca62cc9d20c94a5a}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_gafe4188ab9eb12c046970660f65a3faf9}{
+void {\bfseries FLASH\_\-LockBank1} (void)}
+\label{group__FLASH__Exported__Functions_gafe4188ab9eb12c046970660f65a3faf9}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga2036728450ee18e789b25fe3fd9c80ee}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-EraseAllBank1Pages} (void)}
+\label{group__FLASH__Exported__Functions_ga2036728450ee18e789b25fe3fd9c80ee}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga9d5b76b75ef4c578cc45dc836a1929b6}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-GetBank1Status} (void)}
+\label{group__FLASH__Exported__Functions_ga9d5b76b75ef4c578cc45dc836a1929b6}
+
+\item 
+\hypertarget{group__FLASH__Exported__Functions_ga470d345c2ea4304f899aa988bdd23824}{
+\hyperlink{group__FLASH__Exported__Types_gadc63a6f3404ff1f71229a66915e9cdc0}{FLASH\_\-Status} {\bfseries FLASH\_\-WaitForLastBank1Operation} (uint32\_\-t Timeout)}
+\label{group__FLASH__Exported__Functions_ga470d345c2ea4304f899aa988bdd23824}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the functions prototypes for the FLASH firmware library. \begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V3.5.0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11-\/March-\/2011 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+
+\subsubsection*{\begin{center}\copyright COPYRIGHT 2011 STMicroelectronics\end{center} }

@@ -1,0 +1,531 @@
+\hypertarget{stm32f10x__can_8h}{
+\section{stm32f10x\_\-can.h File Reference}
+\label{stm32f10x__can_8h}\index{stm32f10x\_\-can.h@{stm32f10x\_\-can.h}}
+}
+
+
+This file contains all the functions prototypes for the CAN firmware library.  
+
+
+{\ttfamily \#include \char`\"{}stm32f10x.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCAN__InitTypeDef}{CAN\_\-InitTypeDef}
+\begin{DoxyCompactList}\small\item\em CAN init structure definition. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structCAN__FilterInitTypeDef}{CAN\_\-FilterInitTypeDef}
+\begin{DoxyCompactList}\small\item\em CAN filter init structure definition. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structCanTxMsg}{CanTxMsg}
+\begin{DoxyCompactList}\small\item\em CAN Tx message structure definition. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structCanRxMsg}{CanRxMsg}
+\begin{DoxyCompactList}\small\item\em CAN Rx message structure definition. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries IS\_\-CAN\_\-ALL\_\-PERIPH}(PERIPH)
+\item 
+\#define \hyperlink{group__CAN__sleep__constants_ga095c319e8c54c974eb2b6eeadf180d96}{CAN\_\-InitStatus\_\-Failed}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__sleep__constants_ga6bed5957af8f2f6b00568e15ccac5772}{CAN\_\-InitStatus\_\-Success}~((uint8\_\-t)0x01)
+\item 
+\#define \hyperlink{group__CAN__Mode_gaaf1f48ab4917ccfd5fd31dd781d59e29}{CAN\_\-Mode\_\-Normal}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__Mode_gaad036c944403186eb3496ff65020c0ee}{CAN\_\-Mode\_\-LoopBack}~((uint8\_\-t)0x01)
+\item 
+\#define \hyperlink{group__CAN__Mode_gac05e5d666f18eb35e8da70e6e17e8fb8}{CAN\_\-Mode\_\-Silent}~((uint8\_\-t)0x02)
+\item 
+\#define \hyperlink{group__CAN__Mode_ga087afa0d24d2cf399225993573c984eb}{CAN\_\-Mode\_\-Silent\_\-LoopBack}~((uint8\_\-t)0x03)
+\item 
+\#define {\bfseries IS\_\-CAN\_\-MODE}(MODE)
+\item 
+\#define \hyperlink{group__CAN__Operating__Mode_gace8a4b5c164aba6f473d6254ad1e8a36}{CAN\_\-OperatingMode\_\-Initialization}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__Operating__Mode_ga663ecffaa60d1a201a035dfa45325848}{CAN\_\-OperatingMode\_\-Normal}~((uint8\_\-t)0x01)
+\item 
+\#define \hyperlink{group__CAN__Operating__Mode_ga173b85d2baaa6249d966b8073e3ad8ca}{CAN\_\-OperatingMode\_\-Sleep}~((uint8\_\-t)0x02)
+\item 
+\#define {\bfseries IS\_\-CAN\_\-OPERATING\_\-MODE}(MODE)
+\item 
+\#define \hyperlink{group__CAN__Mode__Status_ga9882944537945325ef08e1986838ea45}{CAN\_\-ModeStatus\_\-Failed}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__Mode__Status_ga7ca0ea503eb3b3a7c0abdfad27cb6579}{CAN\_\-ModeStatus\_\-Success}~((uint8\_\-t)!CAN\_\-ModeStatus\_\-Failed)
+\item 
+\#define \hyperlink{group__CAN__synchronisation__jump__width_ga4e03d22ae683b63cb4df238449ec967c}{CAN\_\-SJW\_\-1tq}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__synchronisation__jump__width_gad39e7656c555cc00bc4d7c1bff39916f}{CAN\_\-SJW\_\-2tq}~((uint8\_\-t)0x01)
+\item 
+\#define \hyperlink{group__CAN__synchronisation__jump__width_gab4de740e2184aac71c2c8cba22a8ecd2}{CAN\_\-SJW\_\-3tq}~((uint8\_\-t)0x02)
+\item 
+\#define \hyperlink{group__CAN__synchronisation__jump__width_ga7f26a36d478c7ba1a1441b369d62f693}{CAN\_\-SJW\_\-4tq}~((uint8\_\-t)0x03)
+\item 
+\#define {\bfseries IS\_\-CAN\_\-SJW}(SJW)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_ga76b8fb0815b7a3f398fffe72dda0bc04}{CAN\_\-BS1\_\-1tq}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_ga1544ecf902e6173859d60cff9530971a}{CAN\_\-BS1\_\-2tq}~((uint8\_\-t)0x01)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_gaa808099663480de935d3ce9187c2dcab}{CAN\_\-BS1\_\-3tq}~((uint8\_\-t)0x02)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_ga7c5c668200f41991e14b31ca20235000}{CAN\_\-BS1\_\-4tq}~((uint8\_\-t)0x03)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_ga31dea95492dababfcf79bcaeb884b99e}{CAN\_\-BS1\_\-5tq}~((uint8\_\-t)0x04)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_gaa7fc6fcdf9c1c70ee9700b35e32e205e}{CAN\_\-BS1\_\-6tq}~((uint8\_\-t)0x05)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_gafec90578d657073a671b6326f3bfcf8e}{CAN\_\-BS1\_\-7tq}~((uint8\_\-t)0x06)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_ga1049ea9bc5b3da680574ca444e888de4}{CAN\_\-BS1\_\-8tq}~((uint8\_\-t)0x07)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_ga0493701bdd73a9649510f035439a6580}{CAN\_\-BS1\_\-9tq}~((uint8\_\-t)0x08)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_gaf1b474aa632787e70bedd0c5dfdbf5ed}{CAN\_\-BS1\_\-10tq}~((uint8\_\-t)0x09)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_ga4f765ffbe7fda4fb6d0fde7bc4058a14}{CAN\_\-BS1\_\-11tq}~((uint8\_\-t)0x0A)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_ga14c4e928f615babc14c6a9e80ee86a6c}{CAN\_\-BS1\_\-12tq}~((uint8\_\-t)0x0B)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_ga2087caec94be44837c1e6965da7f6236}{CAN\_\-BS1\_\-13tq}~((uint8\_\-t)0x0C)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_gac0c71e1020a4fbaf66bce754bd54d8cb}{CAN\_\-BS1\_\-14tq}~((uint8\_\-t)0x0D)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_gaa52c8674dc7caae1089e5276cd13db5f}{CAN\_\-BS1\_\-15tq}~((uint8\_\-t)0x0E)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__1_ga3be52c699f5618cc318c143ee42f5966}{CAN\_\-BS1\_\-16tq}~((uint8\_\-t)0x0F)
+\item 
+\hypertarget{group__CAN__time__quantum__in__bit__segment__1_ga225f1457e1c6b8fc3b5af0f463933152}{
+\#define {\bfseries IS\_\-CAN\_\-BS1}(BS1)~((BS1) $<$= CAN\_\-BS1\_\-16tq)}
+\label{group__CAN__time__quantum__in__bit__segment__1_ga225f1457e1c6b8fc3b5af0f463933152}
+
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__2_gad9af25a3f61df7b09b8d6a5e81d8027e}{CAN\_\-BS2\_\-1tq}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__2_gac43d82f74990620499f1998187ff3602}{CAN\_\-BS2\_\-2tq}~((uint8\_\-t)0x01)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__2_gab3d325ce4a5d0eb1ee8ee50ad4ec7e49}{CAN\_\-BS2\_\-3tq}~((uint8\_\-t)0x02)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__2_gaaff1c1cdd809f185299971c6437f32a0}{CAN\_\-BS2\_\-4tq}~((uint8\_\-t)0x03)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__2_ga89feba32bcc2e909f858d535edaad101}{CAN\_\-BS2\_\-5tq}~((uint8\_\-t)0x04)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__2_ga72c3245b794d3238763d1ec319bf386f}{CAN\_\-BS2\_\-6tq}~((uint8\_\-t)0x05)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__2_ga8005adaef02fb90e400909de08dec031}{CAN\_\-BS2\_\-7tq}~((uint8\_\-t)0x06)
+\item 
+\#define \hyperlink{group__CAN__time__quantum__in__bit__segment__2_gaad8dcbb266cf5074bfb67bd7108597c6}{CAN\_\-BS2\_\-8tq}~((uint8\_\-t)0x07)
+\item 
+\hypertarget{group__CAN__time__quantum__in__bit__segment__2_ga3f5620b1d094dbd7d2fb8d16f4b187a9}{
+\#define {\bfseries IS\_\-CAN\_\-BS2}(BS2)~((BS2) $<$= CAN\_\-BS2\_\-8tq)}
+\label{group__CAN__time__quantum__in__bit__segment__2_ga3f5620b1d094dbd7d2fb8d16f4b187a9}
+
+\item 
+\hypertarget{group__CAN__clock__prescaler_gacde6b8be6fe083a6302fc183b5ac1055}{
+\#define {\bfseries IS\_\-CAN\_\-PRESCALER}(PRESCALER)~(((PRESCALER) $>$= 1) \&\& ((PRESCALER) $<$= 1024))}
+\label{group__CAN__clock__prescaler_gacde6b8be6fe083a6302fc183b5ac1055}
+
+\item 
+\hypertarget{group__CAN__filter__number_ga28d6c98a160d71059ed9a5973de2a4ef}{
+\#define {\bfseries IS\_\-CAN\_\-FILTER\_\-NUMBER}(NUMBER)~((NUMBER) $<$= 13)}
+\label{group__CAN__filter__number_ga28d6c98a160d71059ed9a5973de2a4ef}
+
+\item 
+\#define \hyperlink{group__CAN__filter__mode_ga8136e518fb31fd91079e4c7c4c19c94b}{CAN\_\-FilterMode\_\-IdMask}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__filter__mode_ga91e9144f71b15ac345ee89314711c158}{CAN\_\-FilterMode\_\-IdList}~((uint8\_\-t)0x01)
+\item 
+\#define {\bfseries IS\_\-CAN\_\-FILTER\_\-MODE}(MODE)
+\item 
+\#define \hyperlink{group__CAN__filter__scale_ga9e0493937e73bcf9a4127eef2f255a95}{CAN\_\-FilterScale\_\-16bit}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__filter__scale_gac63dfb0e11713c59268ee9f4aebab60e}{CAN\_\-FilterScale\_\-32bit}~((uint8\_\-t)0x01)
+\item 
+\#define {\bfseries IS\_\-CAN\_\-FILTER\_\-SCALE}(SCALE)
+\item 
+\#define \hyperlink{group__CAN__filter__FIFO_ga8249c27978ca94676530540b88a6be8f}{CAN\_\-Filter\_\-FIFO0}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__filter__FIFO_gaab8478c89a607c4b8baf68efc730e316}{CAN\_\-Filter\_\-FIFO1}~((uint8\_\-t)0x01)
+\item 
+\#define {\bfseries IS\_\-CAN\_\-FILTER\_\-FIFO}(FIFO)
+\item 
+\hypertarget{group__Start__bank__filter__for__slave__CAN_ga7fb463088ff4cd584bba47e3d0a4f469}{
+\#define {\bfseries IS\_\-CAN\_\-BANKNUMBER}(BANKNUMBER)~(((BANKNUMBER) $>$= 1) \&\& ((BANKNUMBER) $<$= 27))}
+\label{group__Start__bank__filter__for__slave__CAN_ga7fb463088ff4cd584bba47e3d0a4f469}
+
+\item 
+\hypertarget{group__CAN__Tx_ga218b3e1380c4d49163c91a1af904e44c}{
+\#define {\bfseries IS\_\-CAN\_\-TRANSMITMAILBOX}(TRANSMITMAILBOX)~((TRANSMITMAILBOX) $<$= ((uint8\_\-t)0x02))}
+\label{group__CAN__Tx_ga218b3e1380c4d49163c91a1af904e44c}
+
+\item 
+\hypertarget{group__CAN__Tx_gaf059e4383fa69dec6e18216b22a87f51}{
+\#define {\bfseries IS\_\-CAN\_\-STDID}(STDID)~((STDID) $<$= ((uint32\_\-t)0x7FF))}
+\label{group__CAN__Tx_gaf059e4383fa69dec6e18216b22a87f51}
+
+\item 
+\hypertarget{group__CAN__Tx_ga62dbc2163ad6751b3f921e717b00e9f2}{
+\#define {\bfseries IS\_\-CAN\_\-EXTID}(EXTID)~((EXTID) $<$= ((uint32\_\-t)0x1FFFFFFF))}
+\label{group__CAN__Tx_ga62dbc2163ad6751b3f921e717b00e9f2}
+
+\item 
+\hypertarget{group__CAN__Tx_ga6109469a6a2792b3e7c6be520ea50d36}{
+\#define {\bfseries IS\_\-CAN\_\-DLC}(DLC)~((DLC) $<$= ((uint8\_\-t)0x08))}
+\label{group__CAN__Tx_ga6109469a6a2792b3e7c6be520ea50d36}
+
+\item 
+\#define \hyperlink{group__CAN__identifier__type_ga151d9df8a6f361d0a3231593726b5a13}{CAN\_\-Id\_\-Standard}~((uint32\_\-t)0x00000000)
+\item 
+\#define \hyperlink{group__CAN__identifier__type_gaf6c5c0b43b968fed17fd90246912b1a7}{CAN\_\-Id\_\-Extended}~((uint32\_\-t)0x00000004)
+\item 
+\#define {\bfseries IS\_\-CAN\_\-IDTYPE}(IDTYPE)
+\item 
+\#define \hyperlink{group__CAN__remote__transmission__request_ga2407c3a8b2cd97bd651143aa959219f1}{CAN\_\-RTR\_\-Data}~((uint32\_\-t)0x00000000)
+\item 
+\#define \hyperlink{group__CAN__remote__transmission__request_ga42e95ddfb02d88c82de84058fb0fb349}{CAN\_\-RTR\_\-Remote}~((uint32\_\-t)0x00000002)
+\item 
+\hypertarget{group__CAN__remote__transmission__request_ga3379997ad4da6fc4d7975c52b891bdc0}{
+\#define {\bfseries IS\_\-CAN\_\-RTR}(RTR)~(((RTR) == CAN\_\-RTR\_\-Data) $|$$|$ ((RTR) == CAN\_\-RTR\_\-Remote))}
+\label{group__CAN__remote__transmission__request_ga3379997ad4da6fc4d7975c52b891bdc0}
+
+\item 
+\#define \hyperlink{group__CAN__transmit__constants_ga8d193002e76c04ec8caff6b110cd5983}{CAN\_\-TxStatus\_\-Failed}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__transmit__constants_ga0b401c61922b1449de9b486dcf475c97}{CAN\_\-TxStatus\_\-Ok}~((uint8\_\-t)0x01)
+\item 
+\#define \hyperlink{group__CAN__transmit__constants_ga9678a3a51379422868083608c7394409}{CAN\_\-TxStatus\_\-Pending}~((uint8\_\-t)0x02)
+\item 
+\#define \hyperlink{group__CAN__transmit__constants_ga2620e99debd51011d3569121f2e44690}{CAN\_\-TxStatus\_\-NoMailBox}~((uint8\_\-t)0x04)
+\item 
+\#define \hyperlink{group__CAN__receive__FIFO__number__constants_ga8f52eeefb86b2af5b7c3b4b75fa4d114}{CAN\_\-FIFO0}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__receive__FIFO__number__constants_gafbcf3f13dbf61030ab7a812595ba9850}{CAN\_\-FIFO1}~((uint8\_\-t)0x01)
+\item 
+\hypertarget{group__CAN__receive__FIFO__number__constants_gaeeb94bf58bd48b8928f964eaaa20a24a}{
+\#define {\bfseries IS\_\-CAN\_\-FIFO}(FIFO)~(((FIFO) == CAN\_\-FIFO0) $|$$|$ ((FIFO) == CAN\_\-FIFO1))}
+\label{group__CAN__receive__FIFO__number__constants_gaeeb94bf58bd48b8928f964eaaa20a24a}
+
+\item 
+\#define \hyperlink{group__CAN__sleep__constants_ga169500ab7169c4e9c7e9e4ea34b3e070}{CAN\_\-Sleep\_\-Failed}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__sleep__constants_gaf5c4e9d32d4faff9d0bf61e153ed7998}{CAN\_\-Sleep\_\-Ok}~((uint8\_\-t)0x01)
+\item 
+\#define \hyperlink{group__CAN__wake__up__constants_ga837fd7ad47fee78e43a186544e2b390b}{CAN\_\-WakeUp\_\-Failed}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__wake__up__constants_ga152e4935cf85bdfb803eb36b656cd690}{CAN\_\-WakeUp\_\-Ok}~((uint8\_\-t)0x01)
+\item 
+\#define \hyperlink{group__CAN__Error__Code__constants_ga025d891e9c5cec2cfecb2213b4f74a9e}{CAN\_\-ErrorCode\_\-NoErr}~((uint8\_\-t)0x00)
+\item 
+\#define \hyperlink{group__CAN__Error__Code__constants_gaa733d1c078472912c3bf60fbdc53734d}{CAN\_\-ErrorCode\_\-StuffErr}~((uint8\_\-t)0x10)
+\item 
+\#define \hyperlink{group__CAN__Error__Code__constants_ga1fe585558bb8d5c834b4266661392cb2}{CAN\_\-ErrorCode\_\-FormErr}~((uint8\_\-t)0x20)
+\item 
+\#define \hyperlink{group__CAN__Error__Code__constants_gad47e6af0116d1b6de85e29286c0b8607}{CAN\_\-ErrorCode\_\-ACKErr}~((uint8\_\-t)0x30)
+\item 
+\#define \hyperlink{group__CAN__Error__Code__constants_gaf800de7683f1d22194e1df8eb3b1c5bb}{CAN\_\-ErrorCode\_\-BitRecessiveErr}~((uint8\_\-t)0x40)
+\item 
+\#define \hyperlink{group__CAN__Error__Code__constants_gaa19708aa85d1a34f8f7f25a2bfe88b19}{CAN\_\-ErrorCode\_\-BitDominantErr}~((uint8\_\-t)0x50)
+\item 
+\#define \hyperlink{group__CAN__Error__Code__constants_gafa75157442dba7ba1a91036242b78e92}{CAN\_\-ErrorCode\_\-CRCErr}~((uint8\_\-t)0x60)
+\item 
+\#define \hyperlink{group__CAN__Error__Code__constants_ga927089dd74347b9fea7a7c59f3840a7c}{CAN\_\-ErrorCode\_\-SoftwareSetErr}~((uint8\_\-t)0x70)
+\item 
+\#define \hyperlink{group__CAN__flags_ga6df0579049eb471720ea103c5446298b}{CAN\_\-FLAG\_\-RQCP0}~((uint32\_\-t)0x38000001)
+\item 
+\#define \hyperlink{group__CAN__flags_gaba705586ebc3d961507436c03a2feaba}{CAN\_\-FLAG\_\-RQCP1}~((uint32\_\-t)0x38000100)
+\item 
+\#define \hyperlink{group__CAN__flags_ga9c20cd47e558135bd7ae71149583d487}{CAN\_\-FLAG\_\-RQCP2}~((uint32\_\-t)0x38010000)
+\item 
+\#define \hyperlink{group__CAN__flags_ga4b40574700edfe752433bb4e0d457c64}{CAN\_\-FLAG\_\-FMP0}~((uint32\_\-t)0x12000003)
+\item 
+\#define \hyperlink{group__CAN__flags_ga11648741ff43af1561ce7009698fb797}{CAN\_\-FLAG\_\-FF0}~((uint32\_\-t)0x32000008)
+\item 
+\#define \hyperlink{group__CAN__flags_ga2abd66b5e0032132673208decd2d01f2}{CAN\_\-FLAG\_\-FOV0}~((uint32\_\-t)0x32000010)
+\item 
+\#define \hyperlink{group__CAN__flags_ga5d4b7376954a059fbd74ed8d688f6657}{CAN\_\-FLAG\_\-FMP1}~((uint32\_\-t)0x14000003)
+\item 
+\#define \hyperlink{group__CAN__flags_ga0fa967743c5db04189bb2160aa48e371}{CAN\_\-FLAG\_\-FF1}~((uint32\_\-t)0x34000008)
+\item 
+\#define \hyperlink{group__CAN__flags_gac1af6e61b1285ddc4658c4bcc152719a}{CAN\_\-FLAG\_\-FOV1}~((uint32\_\-t)0x34000010)
+\item 
+\#define \hyperlink{group__CAN__flags_ga18c72dbe75cb80e8b5126c23c9120818}{CAN\_\-FLAG\_\-WKU}~((uint32\_\-t)0x31000008)
+\item 
+\#define \hyperlink{group__CAN__flags_gad087b5025a3d5ead2c32b06663821cf4}{CAN\_\-FLAG\_\-SLAK}~((uint32\_\-t)0x31000012)
+\item 
+\#define \hyperlink{group__CAN__flags_gae8906ba9c4031866c5096418ffa9bf71}{CAN\_\-FLAG\_\-EWG}~((uint32\_\-t)0x10F00001)
+\item 
+\#define \hyperlink{group__CAN__flags_ga61954e54995f638ed78281ad2b0cf43a}{CAN\_\-FLAG\_\-EPV}~((uint32\_\-t)0x10F00002)
+\item 
+\#define \hyperlink{group__CAN__flags_ga65f20612d0bf1692003882c0cdbadb1c}{CAN\_\-FLAG\_\-BOF}~((uint32\_\-t)0x10F00004)
+\item 
+\#define \hyperlink{group__CAN__flags_ga73a774fa4d391aec0ea6552bf9372917}{CAN\_\-FLAG\_\-LEC}~((uint32\_\-t)0x30F00070)
+\item 
+\#define {\bfseries IS\_\-CAN\_\-GET\_\-FLAG}(FLAG)
+\item 
+\#define {\bfseries IS\_\-CAN\_\-CLEAR\_\-FLAG}(FLAG)
+\item 
+\#define \hyperlink{group__CAN__interrupts_ga619e36230fa2eb089a7c1936b5004eb9}{CAN\_\-IT\_\-TME}~((uint32\_\-t)0x00000001)
+\item 
+\#define \hyperlink{group__CAN__interrupts_ga3fe6fbf53e9d692957e87ad329bcd362}{CAN\_\-IT\_\-FMP0}~((uint32\_\-t)0x00000002)
+\item 
+\#define \hyperlink{group__CAN__interrupts_gabf63043d9216de80ddc7ffe57b23ef67}{CAN\_\-IT\_\-FF0}~((uint32\_\-t)0x00000004)
+\item 
+\#define \hyperlink{group__CAN__interrupts_ga066a4317f95669e5b5931c9a759cf248}{CAN\_\-IT\_\-FOV0}~((uint32\_\-t)0x00000008)
+\item 
+\#define \hyperlink{group__CAN__interrupts_gaa0e101053fb203629e0e9a954213e71e}{CAN\_\-IT\_\-FMP1}~((uint32\_\-t)0x00000010)
+\item 
+\#define \hyperlink{group__CAN__interrupts_ga93b86d884ce0624b4b36c991fd75fc1c}{CAN\_\-IT\_\-FF1}~((uint32\_\-t)0x00000020)
+\item 
+\#define \hyperlink{group__CAN__interrupts_ga963301fdbede5f9a9665dc5b6210eaec}{CAN\_\-IT\_\-FOV1}~((uint32\_\-t)0x00000040)
+\item 
+\#define \hyperlink{group__CAN__interrupts_gac9c8767770d94de753dda9ad31f9af15}{CAN\_\-IT\_\-WKU}~((uint32\_\-t)0x00010000)
+\item 
+\#define \hyperlink{group__CAN__interrupts_ga639d4ab2777d9a2f8b7e67071b091059}{CAN\_\-IT\_\-SLK}~((uint32\_\-t)0x00020000)
+\item 
+\#define \hyperlink{group__CAN__interrupts_ga8a9f04ddf6ebe169d32b951a8ea135b3}{CAN\_\-IT\_\-EWG}~((uint32\_\-t)0x00000100)
+\item 
+\#define \hyperlink{group__CAN__interrupts_ga006b7b641d337a599ceac64b483e75dd}{CAN\_\-IT\_\-EPV}~((uint32\_\-t)0x00000200)
+\item 
+\#define \hyperlink{group__CAN__interrupts_gad63c39e6237aa07681a1f8ce2ff9e167}{CAN\_\-IT\_\-BOF}~((uint32\_\-t)0x00000400)
+\item 
+\#define \hyperlink{group__CAN__interrupts_gad670b6f001bf67f24e17d91ada50a61c}{CAN\_\-IT\_\-LEC}~((uint32\_\-t)0x00000800)
+\item 
+\#define \hyperlink{group__CAN__interrupts_ga65f1781c9165a2e9b5f77f1ed3990741}{CAN\_\-IT\_\-ERR}~((uint32\_\-t)0x00008000)
+\item 
+\hypertarget{group__CAN__interrupts_ga0c57058d6d14b2baa24a4895975b1371}{
+\#define {\bfseries CAN\_\-IT\_\-RQCP0}~CAN\_\-IT\_\-TME}
+\label{group__CAN__interrupts_ga0c57058d6d14b2baa24a4895975b1371}
+
+\item 
+\hypertarget{group__CAN__interrupts_ga42e5c8e89e0f06f3250916fcfb21dc22}{
+\#define {\bfseries CAN\_\-IT\_\-RQCP1}~CAN\_\-IT\_\-TME}
+\label{group__CAN__interrupts_ga42e5c8e89e0f06f3250916fcfb21dc22}
+
+\item 
+\hypertarget{group__CAN__interrupts_gacc634c3e29cdc9622081021dcda3127b}{
+\#define {\bfseries CAN\_\-IT\_\-RQCP2}~CAN\_\-IT\_\-TME}
+\label{group__CAN__interrupts_gacc634c3e29cdc9622081021dcda3127b}
+
+\item 
+\#define {\bfseries IS\_\-CAN\_\-IT}(IT)
+\item 
+\#define {\bfseries IS\_\-CAN\_\-CLEAR\_\-IT}(IT)
+\item 
+\hypertarget{group__CAN__Legacy_ga0539a9e5a898fcd71c4dcb7e341e4b86}{
+\#define {\bfseries CANINITFAILED}~CAN\_\-InitStatus\_\-Failed}
+\label{group__CAN__Legacy_ga0539a9e5a898fcd71c4dcb7e341e4b86}
+
+\item 
+\hypertarget{group__CAN__Legacy_ga14cba0b5b506be73e2f45c732f8e54cb}{
+\#define {\bfseries CANINITOK}~CAN\_\-InitStatus\_\-Success}
+\label{group__CAN__Legacy_ga14cba0b5b506be73e2f45c732f8e54cb}
+
+\item 
+\hypertarget{group__CAN__Legacy_ga1b3d041dff9fed4dad75ed2a4a0e27e0}{
+\#define {\bfseries CAN\_\-FilterFIFO0}~CAN\_\-Filter\_\-FIFO0}
+\label{group__CAN__Legacy_ga1b3d041dff9fed4dad75ed2a4a0e27e0}
+
+\item 
+\hypertarget{group__CAN__Legacy_gada8f9b3a9c88f36539aaeb457039e666}{
+\#define {\bfseries CAN\_\-FilterFIFO1}~CAN\_\-Filter\_\-FIFO1}
+\label{group__CAN__Legacy_gada8f9b3a9c88f36539aaeb457039e666}
+
+\item 
+\hypertarget{group__CAN__Legacy_ga284ca16658deb9d0c21f4ddc6db14833}{
+\#define {\bfseries CAN\_\-ID\_\-STD}~CAN\_\-Id\_\-Standard}
+\label{group__CAN__Legacy_ga284ca16658deb9d0c21f4ddc6db14833}
+
+\item 
+\hypertarget{group__CAN__Legacy_ga5f6fdd1dc3d312af1ac30e2eee15d6f0}{
+\#define {\bfseries CAN\_\-ID\_\-EXT}~CAN\_\-Id\_\-Extended}
+\label{group__CAN__Legacy_ga5f6fdd1dc3d312af1ac30e2eee15d6f0}
+
+\item 
+\hypertarget{group__CAN__Legacy_gab1e89074b4fcfebf81c323909625b0d0}{
+\#define {\bfseries CAN\_\-RTR\_\-DATA}~CAN\_\-RTR\_\-Data}
+\label{group__CAN__Legacy_gab1e89074b4fcfebf81c323909625b0d0}
+
+\item 
+\hypertarget{group__CAN__Legacy_gab15c649e3e497c6d1145bb98ff7f3f04}{
+\#define {\bfseries CAN\_\-RTR\_\-REMOTE}~CAN\_\-RTR\_\-Remote}
+\label{group__CAN__Legacy_gab15c649e3e497c6d1145bb98ff7f3f04}
+
+\item 
+\hypertarget{group__CAN__Legacy_gae315f7ee14af20ca8454be9e507873cd}{
+\#define {\bfseries CANTXFAILE}~CAN\_\-TxStatus\_\-Failed}
+\label{group__CAN__Legacy_gae315f7ee14af20ca8454be9e507873cd}
+
+\item 
+\hypertarget{group__CAN__Legacy_ga288ba42cf1de7572f2fe1378268c9452}{
+\#define {\bfseries CANTXOK}~CAN\_\-TxStatus\_\-Ok}
+\label{group__CAN__Legacy_ga288ba42cf1de7572f2fe1378268c9452}
+
+\item 
+\hypertarget{group__CAN__Legacy_ga76f43f4c54505b1f87b39b056ca38897}{
+\#define {\bfseries CANTXPENDING}~CAN\_\-TxStatus\_\-Pending}
+\label{group__CAN__Legacy_ga76f43f4c54505b1f87b39b056ca38897}
+
+\item 
+\hypertarget{group__CAN__Legacy_ga418f1fd7ca2e852b263fd07874fde0c6}{
+\#define {\bfseries CAN\_\-NO\_\-MB}~CAN\_\-TxStatus\_\-NoMailBox}
+\label{group__CAN__Legacy_ga418f1fd7ca2e852b263fd07874fde0c6}
+
+\item 
+\hypertarget{group__CAN__Legacy_ga4d5e8e0c57febb024b30e5f24866a117}{
+\#define {\bfseries CANSLEEPFAILED}~CAN\_\-Sleep\_\-Failed}
+\label{group__CAN__Legacy_ga4d5e8e0c57febb024b30e5f24866a117}
+
+\item 
+\hypertarget{group__CAN__Legacy_ga2f8d34f8f60a6c84d8e436d4d37708ab}{
+\#define {\bfseries CANSLEEPOK}~CAN\_\-Sleep\_\-Ok}
+\label{group__CAN__Legacy_ga2f8d34f8f60a6c84d8e436d4d37708ab}
+
+\item 
+\hypertarget{group__CAN__Legacy_ga0de3b0e2c544d9fa772b646e331e51b1}{
+\#define {\bfseries CANWAKEUPFAILED}~CAN\_\-WakeUp\_\-Failed}
+\label{group__CAN__Legacy_ga0de3b0e2c544d9fa772b646e331e51b1}
+
+\item 
+\hypertarget{group__CAN__Legacy_gafed6ab4dbb00c9d63f6a7cdf323f33ef}{
+\#define {\bfseries CANWAKEUPOK}~CAN\_\-WakeUp\_\-Ok}
+\label{group__CAN__Legacy_gafed6ab4dbb00c9d63f6a7cdf323f33ef}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga002b74cd69574a14b17ad445090245cd}{
+void {\bfseries CAN\_\-DeInit} (CAN\_\-TypeDef $\ast$CANx)}
+\label{group__CAN__Exported__Functions_ga002b74cd69574a14b17ad445090245cd}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga9023c35a9ab931ad4513fc5d19b4bd6c}{
+uint8\_\-t {\bfseries CAN\_\-Init} (CAN\_\-TypeDef $\ast$CANx, \hyperlink{structCAN__InitTypeDef}{CAN\_\-InitTypeDef} $\ast$CAN\_\-InitStruct)}
+\label{group__CAN__Exported__Functions_ga9023c35a9ab931ad4513fc5d19b4bd6c}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga39476830280340363c51041be6b12647}{
+void {\bfseries CAN\_\-FilterInit} (\hyperlink{structCAN__FilterInitTypeDef}{CAN\_\-FilterInitTypeDef} $\ast$CAN\_\-FilterInitStruct)}
+\label{group__CAN__Exported__Functions_ga39476830280340363c51041be6b12647}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_gad77ad810868ed111755fc9e8ae0c7646}{
+void {\bfseries CAN\_\-StructInit} (\hyperlink{structCAN__InitTypeDef}{CAN\_\-InitTypeDef} $\ast$CAN\_\-InitStruct)}
+\label{group__CAN__Exported__Functions_gad77ad810868ed111755fc9e8ae0c7646}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga109ff8960bc59f44b984c9646f17b3c0}{
+void {\bfseries CAN\_\-SlaveStartBank} (uint8\_\-t CAN\_\-BankNumber)}
+\label{group__CAN__Exported__Functions_ga109ff8960bc59f44b984c9646f17b3c0}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_gac0e2d33e08caf49d1f1251f0dcc20213}{
+void {\bfseries CAN\_\-DBGFreeze} (CAN\_\-TypeDef $\ast$CANx, FunctionalState NewState)}
+\label{group__CAN__Exported__Functions_gac0e2d33e08caf49d1f1251f0dcc20213}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga94740177bab153ca5b102d122f9a8cca}{
+void {\bfseries CAN\_\-TTComModeCmd} (CAN\_\-TypeDef $\ast$CANx, FunctionalState NewState)}
+\label{group__CAN__Exported__Functions_ga94740177bab153ca5b102d122f9a8cca}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_gaccfcb81f76f58400077c7b2d8641dd83}{
+uint8\_\-t {\bfseries CAN\_\-Transmit} (CAN\_\-TypeDef $\ast$CANx, \hyperlink{structCanTxMsg}{CanTxMsg} $\ast$TxMessage)}
+\label{group__CAN__Exported__Functions_gaccfcb81f76f58400077c7b2d8641dd83}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga68ab05a0a6cdfcc2b6f6b6b2c10848e2}{
+uint8\_\-t {\bfseries CAN\_\-TransmitStatus} (CAN\_\-TypeDef $\ast$CANx, uint8\_\-t TransmitMailbox)}
+\label{group__CAN__Exported__Functions_ga68ab05a0a6cdfcc2b6f6b6b2c10848e2}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga81106cdf5395a1947bfc87ec1685829e}{
+void {\bfseries CAN\_\-CancelTransmit} (CAN\_\-TypeDef $\ast$CANx, uint8\_\-t Mailbox)}
+\label{group__CAN__Exported__Functions_ga81106cdf5395a1947bfc87ec1685829e}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga351b90bb8a3bb0c846f85bbd56ef4dc8}{
+void {\bfseries CAN\_\-Receive} (CAN\_\-TypeDef $\ast$CANx, uint8\_\-t FIFONumber, \hyperlink{structCanRxMsg}{CanRxMsg} $\ast$RxMessage)}
+\label{group__CAN__Exported__Functions_ga351b90bb8a3bb0c846f85bbd56ef4dc8}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga1bc3b39471e579b4101624c33d27918b}{
+void {\bfseries CAN\_\-FIFORelease} (CAN\_\-TypeDef $\ast$CANx, uint8\_\-t FIFONumber)}
+\label{group__CAN__Exported__Functions_ga1bc3b39471e579b4101624c33d27918b}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga7100459a95ce1b3cfe8ab15e112029fe}{
+uint8\_\-t {\bfseries CAN\_\-MessagePending} (CAN\_\-TypeDef $\ast$CANx, uint8\_\-t FIFONumber)}
+\label{group__CAN__Exported__Functions_ga7100459a95ce1b3cfe8ab15e112029fe}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_gab2a3630e9e3024114eb117d14e514208}{
+uint8\_\-t {\bfseries CAN\_\-OperatingModeRequest} (CAN\_\-TypeDef $\ast$CANx, uint8\_\-t CAN\_\-OperatingMode)}
+\label{group__CAN__Exported__Functions_gab2a3630e9e3024114eb117d14e514208}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga640215e38765759d7eceb8a039046667}{
+uint8\_\-t {\bfseries CAN\_\-Sleep} (CAN\_\-TypeDef $\ast$CANx)}
+\label{group__CAN__Exported__Functions_ga640215e38765759d7eceb8a039046667}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga78cdfbf1884b9e33c552bcbca15bed10}{
+uint8\_\-t {\bfseries CAN\_\-WakeUp} (CAN\_\-TypeDef $\ast$CANx)}
+\label{group__CAN__Exported__Functions_ga78cdfbf1884b9e33c552bcbca15bed10}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_gaaee721a392b6b21bfd15dc160aeb6924}{
+uint8\_\-t {\bfseries CAN\_\-GetLastErrorCode} (CAN\_\-TypeDef $\ast$CANx)}
+\label{group__CAN__Exported__Functions_gaaee721a392b6b21bfd15dc160aeb6924}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga6903eecbec40eb1361d915ddde9a3274}{
+uint8\_\-t {\bfseries CAN\_\-GetReceiveErrorCounter} (CAN\_\-TypeDef $\ast$CANx)}
+\label{group__CAN__Exported__Functions_ga6903eecbec40eb1361d915ddde9a3274}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga85ee0c35bf7ca15d4e4c862eef534843}{
+uint8\_\-t {\bfseries CAN\_\-GetLSBTransmitErrorCounter} (CAN\_\-TypeDef $\ast$CANx)}
+\label{group__CAN__Exported__Functions_ga85ee0c35bf7ca15d4e4c862eef534843}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_gad1a8b2499a780b5bfa4accb3597b02f4}{
+void {\bfseries CAN\_\-ITConfig} (CAN\_\-TypeDef $\ast$CANx, uint32\_\-t CAN\_\-IT, FunctionalState NewState)}
+\label{group__CAN__Exported__Functions_gad1a8b2499a780b5bfa4accb3597b02f4}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga2faad96caf823ef463cc5b5b25c480bb}{
+FlagStatus {\bfseries CAN\_\-GetFlagStatus} (CAN\_\-TypeDef $\ast$CANx, uint32\_\-t CAN\_\-FLAG)}
+\label{group__CAN__Exported__Functions_ga2faad96caf823ef463cc5b5b25c480bb}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga2c01646d5d3a2d7045e8dd71f58f8742}{
+void {\bfseries CAN\_\-ClearFlag} (CAN\_\-TypeDef $\ast$CANx, uint32\_\-t CAN\_\-FLAG)}
+\label{group__CAN__Exported__Functions_ga2c01646d5d3a2d7045e8dd71f58f8742}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga9aca05b3013e1b3438f3559f80b33c82}{
+ITStatus {\bfseries CAN\_\-GetITStatus} (CAN\_\-TypeDef $\ast$CANx, uint32\_\-t CAN\_\-IT)}
+\label{group__CAN__Exported__Functions_ga9aca05b3013e1b3438f3559f80b33c82}
+
+\item 
+\hypertarget{group__CAN__Exported__Functions_ga30bf7ac0c1793f6622a4a1adbb7dbc8a}{
+void {\bfseries CAN\_\-ClearITPendingBit} (CAN\_\-TypeDef $\ast$CANx, uint32\_\-t CAN\_\-IT)}
+\label{group__CAN__Exported__Functions_ga30bf7ac0c1793f6622a4a1adbb7dbc8a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the functions prototypes for the CAN firmware library. \begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V3.5.0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11-\/March-\/2011 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+
+\subsubsection*{\begin{center}\copyright COPYRIGHT 2011 STMicroelectronics\end{center} }

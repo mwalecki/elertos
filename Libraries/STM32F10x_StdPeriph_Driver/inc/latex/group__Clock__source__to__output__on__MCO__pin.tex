@@ -1,0 +1,49 @@
+\hypertarget{group__Clock__source__to__output__on__MCO__pin}{
+\section{Clock\_\-source\_\-to\_\-output\_\-on\_\-MCO\_\-pin}
+\label{group__Clock__source__to__output__on__MCO__pin}\index{Clock\_\-source\_\-to\_\-output\_\-on\_\-MCO\_\-pin@{Clock\_\-source\_\-to\_\-output\_\-on\_\-MCO\_\-pin}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__Clock__source__to__output__on__MCO__pin_ga1f39ff9f5606d3ad56e221d253be17d3}{
+\#define {\bfseries RCC\_\-MCO\_\-NoClock}~((uint8\_\-t)0x00)}
+\label{group__Clock__source__to__output__on__MCO__pin_ga1f39ff9f5606d3ad56e221d253be17d3}
+
+\item 
+\hypertarget{group__Clock__source__to__output__on__MCO__pin_gab766ad89492ffe915de3438aaa96891b}{
+\#define {\bfseries RCC\_\-MCO\_\-SYSCLK}~((uint8\_\-t)0x04)}
+\label{group__Clock__source__to__output__on__MCO__pin_gab766ad89492ffe915de3438aaa96891b}
+
+\item 
+\hypertarget{group__Clock__source__to__output__on__MCO__pin_ga7206cdf03826781dc4fb1b094475d744}{
+\#define {\bfseries RCC\_\-MCO\_\-HSI}~((uint8\_\-t)0x05)}
+\label{group__Clock__source__to__output__on__MCO__pin_ga7206cdf03826781dc4fb1b094475d744}
+
+\item 
+\hypertarget{group__Clock__source__to__output__on__MCO__pin_ga8bd64bbefd2a725a0cfe2f2902dd9b0f}{
+\#define {\bfseries RCC\_\-MCO\_\-HSE}~((uint8\_\-t)0x06)}
+\label{group__Clock__source__to__output__on__MCO__pin_ga8bd64bbefd2a725a0cfe2f2902dd9b0f}
+
+\item 
+\hypertarget{group__Clock__source__to__output__on__MCO__pin_ga1ce4233675bd7bdcb0220ed10ee7d8be}{
+\#define {\bfseries RCC\_\-MCO\_\-PLLCLK\_\-Div2}~((uint8\_\-t)0x07)}
+\label{group__Clock__source__to__output__on__MCO__pin_ga1ce4233675bd7bdcb0220ed10ee7d8be}
+
+\item 
+\#define {\bfseries IS\_\-RCC\_\-MCO}(MCO)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__Clock__source__to__output__on__MCO__pin_ga0c2d4d6aa8881e01b8c06d8816284b73}{
+\index{Clock\_\-source\_\-to\_\-output\_\-on\_\-MCO\_\-pin@{Clock\_\-source\_\-to\_\-output\_\-on\_\-MCO\_\-pin}!IS\_\-RCC\_\-MCO@{IS\_\-RCC\_\-MCO}}
+\index{IS\_\-RCC\_\-MCO@{IS\_\-RCC\_\-MCO}!Clock_source_to_output_on_MCO_pin@{Clock\_\-source\_\-to\_\-output\_\-on\_\-MCO\_\-pin}}
+\subsubsection[{IS\_\-RCC\_\-MCO}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-RCC\_\-MCO(MCO)}}
+\label{group__Clock__source__to__output__on__MCO__pin_ga0c2d4d6aa8881e01b8c06d8816284b73}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((MCO) == RCC_MCO_NoClock) || ((MCO) == RCC_MCO_HSI) || \
+                          ((MCO) == RCC_MCO_SYSCLK)  || ((MCO) == RCC_MCO_HSE) ||
+       \
+                          ((MCO) == RCC_MCO_PLLCLK_Div2))
+\end{DoxyCode}

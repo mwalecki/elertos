@@ -1,0 +1,44 @@
+\hypertarget{group__SDIO__Wait__Interrupt__State}{
+\section{SDIO\_\-Wait\_\-Interrupt\_\-State}
+\label{group__SDIO__Wait__Interrupt__State}\index{SDIO\_\-Wait\_\-Interrupt\_\-State@{SDIO\_\-Wait\_\-Interrupt\_\-State}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__SDIO__Wait__Interrupt__State_ga266294e1ffd7a4b45e62bff753ca44b2}{SDIO\_\-Wait\_\-No}~((uint32\_\-t)0x00000000)
+\item 
+\#define \hyperlink{group__SDIO__Wait__Interrupt__State_ga3914bbe26a656c8e151272ccdc12c71c}{SDIO\_\-Wait\_\-IT}~((uint32\_\-t)0x00000100)
+\item 
+\#define \hyperlink{group__SDIO__Wait__Interrupt__State_ga2a4104023a7f8403ddd159ec3bbb8592}{SDIO\_\-Wait\_\-Pend}~((uint32\_\-t)0x00000200)
+\item 
+\#define {\bfseries IS\_\-SDIO\_\-WAIT}(WAIT)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__SDIO__Wait__Interrupt__State_ga7ee5c289c8e06a76b849808d15b03810}{
+\index{SDIO\_\-Wait\_\-Interrupt\_\-State@{SDIO\_\-Wait\_\-Interrupt\_\-State}!IS\_\-SDIO\_\-WAIT@{IS\_\-SDIO\_\-WAIT}}
+\index{IS\_\-SDIO\_\-WAIT@{IS\_\-SDIO\_\-WAIT}!SDIO_Wait_Interrupt_State@{SDIO\_\-Wait\_\-Interrupt\_\-State}}
+\subsubsection[{IS\_\-SDIO\_\-WAIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-SDIO\_\-WAIT(WAIT)}}
+\label{group__SDIO__Wait__Interrupt__State_ga7ee5c289c8e06a76b849808d15b03810}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((WAIT) == SDIO_Wait_No) || ((WAIT) == SDIO_Wait_IT) || \
+                            ((WAIT) == SDIO_Wait_Pend))
+\end{DoxyCode}
+\hypertarget{group__SDIO__Wait__Interrupt__State_ga3914bbe26a656c8e151272ccdc12c71c}{
+\index{SDIO\_\-Wait\_\-Interrupt\_\-State@{SDIO\_\-Wait\_\-Interrupt\_\-State}!SDIO\_\-Wait\_\-IT@{SDIO\_\-Wait\_\-IT}}
+\index{SDIO\_\-Wait\_\-IT@{SDIO\_\-Wait\_\-IT}!SDIO_Wait_Interrupt_State@{SDIO\_\-Wait\_\-Interrupt\_\-State}}
+\subsubsection[{SDIO\_\-Wait\_\-IT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-Wait\_\-IT~((uint32\_\-t)0x00000100)}}
+\label{group__SDIO__Wait__Interrupt__State_ga3914bbe26a656c8e151272ccdc12c71c}
+SDIO Wait Interrupt Request \hypertarget{group__SDIO__Wait__Interrupt__State_ga266294e1ffd7a4b45e62bff753ca44b2}{
+\index{SDIO\_\-Wait\_\-Interrupt\_\-State@{SDIO\_\-Wait\_\-Interrupt\_\-State}!SDIO\_\-Wait\_\-No@{SDIO\_\-Wait\_\-No}}
+\index{SDIO\_\-Wait\_\-No@{SDIO\_\-Wait\_\-No}!SDIO_Wait_Interrupt_State@{SDIO\_\-Wait\_\-Interrupt\_\-State}}
+\subsubsection[{SDIO\_\-Wait\_\-No}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-Wait\_\-No~((uint32\_\-t)0x00000000)}}
+\label{group__SDIO__Wait__Interrupt__State_ga266294e1ffd7a4b45e62bff753ca44b2}
+SDIO No Wait, TimeOut is enabled \hypertarget{group__SDIO__Wait__Interrupt__State_ga2a4104023a7f8403ddd159ec3bbb8592}{
+\index{SDIO\_\-Wait\_\-Interrupt\_\-State@{SDIO\_\-Wait\_\-Interrupt\_\-State}!SDIO\_\-Wait\_\-Pend@{SDIO\_\-Wait\_\-Pend}}
+\index{SDIO\_\-Wait\_\-Pend@{SDIO\_\-Wait\_\-Pend}!SDIO_Wait_Interrupt_State@{SDIO\_\-Wait\_\-Interrupt\_\-State}}
+\subsubsection[{SDIO\_\-Wait\_\-Pend}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDIO\_\-Wait\_\-Pend~((uint32\_\-t)0x00000200)}}
+\label{group__SDIO__Wait__Interrupt__State_ga2a4104023a7f8403ddd159ec3bbb8592}
+SDIO Wait End of transfer 

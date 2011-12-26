@@ -1,0 +1,38 @@
+\hypertarget{group__SDIO__Response__Type}{
+\section{SDIO\_\-Response\_\-Type}
+\label{group__SDIO__Response__Type}\index{SDIO\_\-Response\_\-Type@{SDIO\_\-Response\_\-Type}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__SDIO__Response__Type_ga308b8ef0e79ba451644dda923bb3ac41}{
+\#define {\bfseries SDIO\_\-Response\_\-No}~((uint32\_\-t)0x00000000)}
+\label{group__SDIO__Response__Type_ga308b8ef0e79ba451644dda923bb3ac41}
+
+\item 
+\hypertarget{group__SDIO__Response__Type_ga1f61768f90641648fd5c12e8d2f7e508}{
+\#define {\bfseries SDIO\_\-Response\_\-Short}~((uint32\_\-t)0x00000040)}
+\label{group__SDIO__Response__Type_ga1f61768f90641648fd5c12e8d2f7e508}
+
+\item 
+\hypertarget{group__SDIO__Response__Type_ga1a11a8750612b344214f846784046bb0}{
+\#define {\bfseries SDIO\_\-Response\_\-Long}~((uint32\_\-t)0x000000C0)}
+\label{group__SDIO__Response__Type_ga1a11a8750612b344214f846784046bb0}
+
+\item 
+\#define {\bfseries IS\_\-SDIO\_\-RESPONSE}(RESPONSE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__SDIO__Response__Type_gae4df2359c9b637694b9baa220c16e062}{
+\index{SDIO\_\-Response\_\-Type@{SDIO\_\-Response\_\-Type}!IS\_\-SDIO\_\-RESPONSE@{IS\_\-SDIO\_\-RESPONSE}}
+\index{IS\_\-SDIO\_\-RESPONSE@{IS\_\-SDIO\_\-RESPONSE}!SDIO_Response_Type@{SDIO\_\-Response\_\-Type}}
+\subsubsection[{IS\_\-SDIO\_\-RESPONSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-SDIO\_\-RESPONSE(RESPONSE)}}
+\label{group__SDIO__Response__Type_gae4df2359c9b637694b9baa220c16e062}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((RESPONSE) == SDIO_Response_No) || \
+                                    ((RESPONSE) == SDIO_Response_Short) || \
+                                    ((RESPONSE) == SDIO_Response_Long))
+\end{DoxyCode}

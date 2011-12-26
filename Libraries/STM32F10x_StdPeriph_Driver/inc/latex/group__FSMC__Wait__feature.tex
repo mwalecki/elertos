@@ -1,0 +1,32 @@
+\hypertarget{group__FSMC__Wait__feature}{
+\section{FSMC\_\-Wait\_\-feature}
+\label{group__FSMC__Wait__feature}\index{FSMC\_\-Wait\_\-feature@{FSMC\_\-Wait\_\-feature}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FSMC__Wait__feature_ga8a31f05576e66546fbbcdb06ff67da7d}{
+\#define {\bfseries FSMC\_\-Waitfeature\_\-Disable}~((uint32\_\-t)0x00000000)}
+\label{group__FSMC__Wait__feature_ga8a31f05576e66546fbbcdb06ff67da7d}
+
+\item 
+\hypertarget{group__FSMC__Wait__feature_ga3113366130dfbf6d116f1afb94af1726}{
+\#define {\bfseries FSMC\_\-Waitfeature\_\-Enable}~((uint32\_\-t)0x00000002)}
+\label{group__FSMC__Wait__feature_ga3113366130dfbf6d116f1afb94af1726}
+
+\item 
+\#define {\bfseries IS\_\-FSMC\_\-WAIT\_\-FEATURE}(FEATURE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__FSMC__Wait__feature_ga07c2585b517df2c7afbe3ba16c22f236}{
+\index{FSMC\_\-Wait\_\-feature@{FSMC\_\-Wait\_\-feature}!IS\_\-FSMC\_\-WAIT\_\-FEATURE@{IS\_\-FSMC\_\-WAIT\_\-FEATURE}}
+\index{IS\_\-FSMC\_\-WAIT\_\-FEATURE@{IS\_\-FSMC\_\-WAIT\_\-FEATURE}!FSMC_Wait_feature@{FSMC\_\-Wait\_\-feature}}
+\subsubsection[{IS\_\-FSMC\_\-WAIT\_\-FEATURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-FSMC\_\-WAIT\_\-FEATURE(FEATURE)}}
+\label{group__FSMC__Wait__feature_ga07c2585b517df2c7afbe3ba16c22f236}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((FEATURE) == FSMC_Waitfeature_Disable) || \
+                                       ((FEATURE) == FSMC_Waitfeature_Enable))
+\end{DoxyCode}

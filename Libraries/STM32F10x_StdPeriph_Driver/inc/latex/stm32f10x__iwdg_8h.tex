@@ -1,0 +1,133 @@
+\hypertarget{stm32f10x__iwdg_8h}{
+\section{stm32f10x\_\-iwdg.h File Reference}
+\label{stm32f10x__iwdg_8h}\index{stm32f10x\_\-iwdg.h@{stm32f10x\_\-iwdg.h}}
+}
+
+
+This file contains all the functions prototypes for the IWDG firmware library.  
+
+
+{\ttfamily \#include \char`\"{}stm32f10x.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__IWDG__WriteAccess_ga86f4b926f4351e19ea069f98c2e65f91}{
+\#define {\bfseries IWDG\_\-WriteAccess\_\-Enable}~((uint16\_\-t)0x5555)}
+\label{group__IWDG__WriteAccess_ga86f4b926f4351e19ea069f98c2e65f91}
+
+\item 
+\hypertarget{group__IWDG__WriteAccess_ga4b395cf5b2d7ab18fc71a5f779f758cc}{
+\#define {\bfseries IWDG\_\-WriteAccess\_\-Disable}~((uint16\_\-t)0x0000)}
+\label{group__IWDG__WriteAccess_ga4b395cf5b2d7ab18fc71a5f779f758cc}
+
+\item 
+\#define {\bfseries IS\_\-IWDG\_\-WRITE\_\-ACCESS}(ACCESS)
+\item 
+\hypertarget{group__IWDG__prescaler_ga82a058c196d5a9cd7ea2f2202b394ba0}{
+\#define {\bfseries IWDG\_\-Prescaler\_\-4}~((uint8\_\-t)0x00)}
+\label{group__IWDG__prescaler_ga82a058c196d5a9cd7ea2f2202b394ba0}
+
+\item 
+\hypertarget{group__IWDG__prescaler_ga59763b9a127c67adf5d11474188996a1}{
+\#define {\bfseries IWDG\_\-Prescaler\_\-8}~((uint8\_\-t)0x01)}
+\label{group__IWDG__prescaler_ga59763b9a127c67adf5d11474188996a1}
+
+\item 
+\hypertarget{group__IWDG__prescaler_gafa81d30511ff5ec74bb38ed71f5bb66e}{
+\#define {\bfseries IWDG\_\-Prescaler\_\-16}~((uint8\_\-t)0x02)}
+\label{group__IWDG__prescaler_gafa81d30511ff5ec74bb38ed71f5bb66e}
+
+\item 
+\hypertarget{group__IWDG__prescaler_gaa8b091b6e4102513b1e3a1c4eb6756ba}{
+\#define {\bfseries IWDG\_\-Prescaler\_\-32}~((uint8\_\-t)0x03)}
+\label{group__IWDG__prescaler_gaa8b091b6e4102513b1e3a1c4eb6756ba}
+
+\item 
+\hypertarget{group__IWDG__prescaler_ga7ea813c73ae0acb40acb60e7d3956910}{
+\#define {\bfseries IWDG\_\-Prescaler\_\-64}~((uint8\_\-t)0x04)}
+\label{group__IWDG__prescaler_ga7ea813c73ae0acb40acb60e7d3956910}
+
+\item 
+\hypertarget{group__IWDG__prescaler_gaea6bf96c2fd5a6f3b9574e7898096641}{
+\#define {\bfseries IWDG\_\-Prescaler\_\-128}~((uint8\_\-t)0x05)}
+\label{group__IWDG__prescaler_gaea6bf96c2fd5a6f3b9574e7898096641}
+
+\item 
+\hypertarget{group__IWDG__prescaler_ga7d6e918748185639049644c970db2b43}{
+\#define {\bfseries IWDG\_\-Prescaler\_\-256}~((uint8\_\-t)0x06)}
+\label{group__IWDG__prescaler_ga7d6e918748185639049644c970db2b43}
+
+\item 
+\#define {\bfseries IS\_\-IWDG\_\-PRESCALER}(PRESCALER)
+\item 
+\hypertarget{group__IWDG__Flag_gae20afcf399fad1534e79a8d30ea86c9c}{
+\#define {\bfseries IWDG\_\-FLAG\_\-PVU}~((uint16\_\-t)0x0001)}
+\label{group__IWDG__Flag_gae20afcf399fad1534e79a8d30ea86c9c}
+
+\item 
+\hypertarget{group__IWDG__Flag_ga3731bf2711c234ffe5b405fb6634ebca}{
+\#define {\bfseries IWDG\_\-FLAG\_\-RVU}~((uint16\_\-t)0x0002)}
+\label{group__IWDG__Flag_ga3731bf2711c234ffe5b405fb6634ebca}
+
+\item 
+\hypertarget{group__IWDG__Flag_ga5be9ae9ba267cf09a00523ef3e219293}{
+\#define {\bfseries IS\_\-IWDG\_\-FLAG}(FLAG)~(((FLAG) == IWDG\_\-FLAG\_\-PVU) $|$$|$ ((FLAG) == IWDG\_\-FLAG\_\-RVU))}
+\label{group__IWDG__Flag_ga5be9ae9ba267cf09a00523ef3e219293}
+
+\item 
+\hypertarget{group__IWDG__Flag_ga7c319e96bded8e3c38c6a42a1b335c68}{
+\#define {\bfseries IS\_\-IWDG\_\-RELOAD}(RELOAD)~((RELOAD) $<$= 0xFFF)}
+\label{group__IWDG__Flag_ga7c319e96bded8e3c38c6a42a1b335c68}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__IWDG__Exported__Functions_gae466681e5bdc11b353c508b89d75ca05}{
+void {\bfseries IWDG\_\-WriteAccessCmd} (uint16\_\-t IWDG\_\-WriteAccess)}
+\label{group__IWDG__Exported__Functions_gae466681e5bdc11b353c508b89d75ca05}
+
+\item 
+\hypertarget{group__IWDG__Exported__Functions_ga4fa7f1cd690533a35ad9e4729c0450a3}{
+void {\bfseries IWDG\_\-SetPrescaler} (uint8\_\-t IWDG\_\-Prescaler)}
+\label{group__IWDG__Exported__Functions_ga4fa7f1cd690533a35ad9e4729c0450a3}
+
+\item 
+\hypertarget{group__IWDG__Exported__Functions_gae2a14752a0431f23cb80cebf202ac365}{
+void {\bfseries IWDG\_\-SetReload} (uint16\_\-t Reload)}
+\label{group__IWDG__Exported__Functions_gae2a14752a0431f23cb80cebf202ac365}
+
+\item 
+\hypertarget{group__IWDG__Exported__Functions_ga7147ebabdc3fef97f532b171a4e70d49}{
+void {\bfseries IWDG\_\-ReloadCounter} (void)}
+\label{group__IWDG__Exported__Functions_ga7147ebabdc3fef97f532b171a4e70d49}
+
+\item 
+\hypertarget{group__IWDG__Exported__Functions_ga479b2921c86f8c67b819f5c4bea6bdb6}{
+void {\bfseries IWDG\_\-Enable} (void)}
+\label{group__IWDG__Exported__Functions_ga479b2921c86f8c67b819f5c4bea6bdb6}
+
+\item 
+\hypertarget{group__IWDG__Exported__Functions_ga37f050cfbedc0c15f9e0816c0b22011e}{
+FlagStatus {\bfseries IWDG\_\-GetFlagStatus} (uint16\_\-t IWDG\_\-FLAG)}
+\label{group__IWDG__Exported__Functions_ga37f050cfbedc0c15f9e0816c0b22011e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the functions prototypes for the IWDG firmware library. \begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V3.5.0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11-\/March-\/2011 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+
+\subsubsection*{\begin{center}\copyright COPYRIGHT 2011 STMicroelectronics\end{center} }

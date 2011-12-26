@@ -1,0 +1,38 @@
+\hypertarget{group__PLL__entry__clock__source}{
+\section{PLL\_\-entry\_\-clock\_\-source}
+\label{group__PLL__entry__clock__source}\index{PLL\_\-entry\_\-clock\_\-source@{PLL\_\-entry\_\-clock\_\-source}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__PLL__entry__clock__source_ga53194dd3e2986980b156a3e8e456df06}{
+\#define {\bfseries RCC\_\-PLLSource\_\-HSI\_\-Div2}~((uint32\_\-t)0x00000000)}
+\label{group__PLL__entry__clock__source_ga53194dd3e2986980b156a3e8e456df06}
+
+\item 
+\hypertarget{group__PLL__entry__clock__source_ga62f02bf60a89bdef0d3a8137da3f4c2d}{
+\#define {\bfseries RCC\_\-PLLSource\_\-HSE\_\-Div1}~((uint32\_\-t)0x00010000)}
+\label{group__PLL__entry__clock__source_ga62f02bf60a89bdef0d3a8137da3f4c2d}
+
+\item 
+\hypertarget{group__PLL__entry__clock__source_ga24863bc670737a2f5abce546a49e620c}{
+\#define {\bfseries RCC\_\-PLLSource\_\-HSE\_\-Div2}~((uint32\_\-t)0x00030000)}
+\label{group__PLL__entry__clock__source_ga24863bc670737a2f5abce546a49e620c}
+
+\item 
+\#define {\bfseries IS\_\-RCC\_\-PLL\_\-SOURCE}(SOURCE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__PLL__entry__clock__source_ga8a8a84a16989bb4e5aca1af65ccf9a1b}{
+\index{PLL\_\-entry\_\-clock\_\-source@{PLL\_\-entry\_\-clock\_\-source}!IS\_\-RCC\_\-PLL\_\-SOURCE@{IS\_\-RCC\_\-PLL\_\-SOURCE}}
+\index{IS\_\-RCC\_\-PLL\_\-SOURCE@{IS\_\-RCC\_\-PLL\_\-SOURCE}!PLL_entry_clock_source@{PLL\_\-entry\_\-clock\_\-source}}
+\subsubsection[{IS\_\-RCC\_\-PLL\_\-SOURCE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-RCC\_\-PLL\_\-SOURCE(SOURCE)}}
+\label{group__PLL__entry__clock__source_ga8a8a84a16989bb4e5aca1af65ccf9a1b}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((SOURCE) == RCC_PLLSource_HSI_Div2) || \
+                                   ((SOURCE) == RCC_PLLSource_HSE_Div1) || \
+                                   ((SOURCE) == RCC_PLLSource_HSE_Div2))
+\end{DoxyCode}

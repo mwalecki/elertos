@@ -1,0 +1,37 @@
+\hypertarget{group__LSE__configuration}{
+\section{LSE\_\-configuration}
+\label{group__LSE__configuration}\index{LSE\_\-configuration@{LSE\_\-configuration}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__LSE__configuration_ga6645c27708d0cad1a4ab61d2abb24c77}{
+\#define {\bfseries RCC\_\-LSE\_\-OFF}~((uint8\_\-t)0x00)}
+\label{group__LSE__configuration_ga6645c27708d0cad1a4ab61d2abb24c77}
+
+\item 
+\hypertarget{group__LSE__configuration_gac981ea636c2f215e4473901e0912f55a}{
+\#define {\bfseries RCC\_\-LSE\_\-ON}~((uint8\_\-t)0x01)}
+\label{group__LSE__configuration_gac981ea636c2f215e4473901e0912f55a}
+
+\item 
+\hypertarget{group__LSE__configuration_gac911af00bffa1bd1b1676f582a8a88e1}{
+\#define {\bfseries RCC\_\-LSE\_\-Bypass}~((uint8\_\-t)0x04)}
+\label{group__LSE__configuration_gac911af00bffa1bd1b1676f582a8a88e1}
+
+\item 
+\#define {\bfseries IS\_\-RCC\_\-LSE}(LSE)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__LSE__configuration_ga95d2678bf8f46e932e7cba75619a4d2c}{
+\index{LSE\_\-configuration@{LSE\_\-configuration}!IS\_\-RCC\_\-LSE@{IS\_\-RCC\_\-LSE}}
+\index{IS\_\-RCC\_\-LSE@{IS\_\-RCC\_\-LSE}!LSE_configuration@{LSE\_\-configuration}}
+\subsubsection[{IS\_\-RCC\_\-LSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IS\_\-RCC\_\-LSE(LSE)}}
+\label{group__LSE__configuration_ga95d2678bf8f46e932e7cba75619a4d2c}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((LSE) == RCC_LSE_OFF) || ((LSE) == RCC_LSE_ON) || \
+                         ((LSE) == RCC_LSE_Bypass))
+\end{DoxyCode}
