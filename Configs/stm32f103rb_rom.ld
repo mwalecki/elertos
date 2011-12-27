@@ -119,7 +119,7 @@ _ebss = . ; /* Used by the startup in order to initialize the .bss section */
     
 PROVIDE ( end = _ebss );
 PROVIDE ( _end = _ebss );
-PROVIDE ( __HEAP_START = _end ); 
+PROVIDE ( __HEAP_START = _ebss ); 
 
 /*
 * This is the user stack section

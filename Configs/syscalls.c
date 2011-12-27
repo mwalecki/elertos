@@ -3,7 +3,7 @@
 /* for caddr_t (typedef char * caddr_t;) */
 #include <sys/types.h>
 
-extern int  __HEAP_START;
+extern int  _ebss;
 
 caddr_t _sbrk ( int incr )
 {
@@ -11,7 +11,7 @@ caddr_t _sbrk ( int incr )
   unsigned char *prev_heap;
 
   if (heap == NULL) {
-    heap = (unsigned char *)&__HEAP_START;
+    heap = (unsigned char *)&_ebss;
   }
   prev_heap = heap;
   /* check removed to show basic approach */

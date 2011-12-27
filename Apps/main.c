@@ -109,6 +109,7 @@
 #include "clock.h"
 #include "misc.h"
 #include "task.h"
+#include "InOut.h"
 
 
 /* The time between cycles of the 'check' functionality (defined within the
@@ -144,15 +145,13 @@ static void prvSetupHardware( void );
 int main( void )
 {
 #ifdef DEBUG
-  debug();
+	debug();
 #endif
-
+	/* Setup Hardware */
 	prvSetupHardware();
 
-	/* Start the standard demo tasks.  These are just here to exercise the
-	kernel port and provide examples of how the FreeRTOS API can be used. */
-
-	/* Create the uIP task.  The WEB server runs in this task. */
+	/* Start Status LED Task */
+	xTaskCreate( vInOutStatusLEDTask, ( signed char * ) "LED", configMINIMAL_STACK_SIZE * 2, NULL, tskIDLE_PRIORITY+1, NULL );
 
     /* Start the scheduler. */
 	vTaskStartScheduler();
@@ -177,8 +176,8 @@ static void prvSetupHardware( void )
 	/* Configure HCLK clock as SysTick clock source. */
 	SysTick_CLKSourceConfig( SysTick_CLKSource_HCLK );
 
-	/* Initialise the IO used for the LED outputs. */
-	//vParTestInitialise();
+	/* Initialise the IOs */
+	vInOutInitialize();
 }
 /*-----------------------------------------------------------*/
 
