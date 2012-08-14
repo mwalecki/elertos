@@ -71,11 +71,11 @@ void	vInOutLED1_TOGGLE(void)	{if(prvLED1_isON()) vInOutLED1_OFF(); else vInOutLE
 void vInOutStatusLEDTask(void *pvParameters)
 {
 	portTickType xLastWakeTime;
-	const portTickType xFrequency = 500;
+	const portTickType xTimeIncrement_ms = 500;
 	xLastWakeTime=xTaskGetTickCount();
 	    while(1)
 	    {
 	    	vInOutLED1_TOGGLE();
-	        vTaskDelayUntil(&xLastWakeTime,xFrequency);
+	        vTaskDelayUntil(&xLastWakeTime,xTimeIncrement_ms);
 	    }
 }

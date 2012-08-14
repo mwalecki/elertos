@@ -110,6 +110,7 @@
 #include "misc.h"
 #include "task.h"
 #include "InOut.h"
+#include "LCD.h"
 
 
 /* The time between cycles of the 'check' functionality (defined within the
@@ -153,6 +154,9 @@ int main( void )
 	/* Start Status LED Task */
 	xTaskCreate( vInOutStatusLEDTask, ( signed char * ) "LED", configMINIMAL_STACK_SIZE * 2, NULL, tskIDLE_PRIORITY+1, NULL );
 
+	/* Start Status LCD Task */
+	xTaskCreate( vLCDTask, ( signed char * ) "LCD", 256, NULL, 2 | portPRIVILEGE_BIT, NULL );
+
     /* Start the scheduler. */
 	vTaskStartScheduler();
 
@@ -178,6 +182,9 @@ static void prvSetupHardware( void )
 
 	/* Initialise the IOs */
 	vInOutInitialize();
+
+	/* Initialise LCD */
+	//GLCD_Initialize();
 }
 /*-----------------------------------------------------------*/
 
