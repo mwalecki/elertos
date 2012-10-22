@@ -111,6 +111,8 @@
 #include "LCD.h"
 #include "usb.h"
 #include "DMA/adc.h"
+#include "DMA/nfv2.h"
+#include "nfv2_config.h"
 
 /* The time between cycles of the 'check' functionality (defined within the
  tick hook. */

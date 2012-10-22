@@ -1,5 +1,5 @@
 #include "adc.h"
-//#include "nfv2.h"
+#include "nfv2.h"
 
 #define ADC1_DR_Address    ((uint32_t)0x4001244C)
 #define ADC_DMA_TransferCompleteInterrupt
