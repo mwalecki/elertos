@@ -1,11 +1,16 @@
 #include "LCD.h"
 #include "KS0108/KS0108.h"
 #include "stdio.h"
+#include "DMA/adc.h"
+
+extern ADC_St				ADC;
 
 void vLCDTask(void *pvParameters)
 {
 	char tempBuf[50];
+	char tempBuf2[50];
 	sprintf(tempBuf,"+version %11s+", __DATE__);
+	sprintf(tempBuf2,"+test 5V: %d+", ADC.milivolt[1]);
 
 	GLCD_Initialize();
 	GLCD_ClearScreen();
