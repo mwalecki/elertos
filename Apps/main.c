@@ -111,6 +111,7 @@
 #include "task.h"
 #include "InOut.h"
 #include "LCD.h"
+#include "usb.h"
 
 
 /* The time between cycles of the 'check' functionality (defined within the
@@ -185,6 +186,9 @@ static void prvSetupHardware( void )
 
 	/* Initialise LCD */
 	//GLCD_Initialize();
+
+	/* Initialise USB */
+	USB_Config();
 }
 /*-----------------------------------------------------------*/
 
