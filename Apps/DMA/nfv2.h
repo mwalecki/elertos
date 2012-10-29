@@ -7,7 +7,7 @@ extern "C" {
 
 #include <inttypes.h>			    
 #include "nfv2_config.h"
-#include "mycrc.h"
+//#include "mycrc.h"
 
 /*
 * Command codes

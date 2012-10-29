@@ -137,7 +137,7 @@ unsigned long ulRunTimeStatsClock = 0;
 
 /* DMA configs */
 ADC_St ADC;
-NF_STRUCT_ComBuf NFComBuf;
+//NF_STRUCT_ComBuf NFComBuf;
 /* * */
 
 /*-----------------------------------------------------------*/

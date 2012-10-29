@@ -111,7 +111,7 @@ void ADCwithDMA_Config(void){
 	ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;
 	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
 	// number of ADC channels that will be converted using the sequencer
-	ADC_InitStructure.ADC_NbrOfChannel = 12;
+	ADC_InitStructure.ADC_NbrOfChannel = 11;
 	ADC_Init(ADC1, &ADC_InitStructure);
 	/* ADC1 regular channels configuration */ 
 	ADC_RegularChannelConfig(ADC1, ADC_Channel_10, 1, ADC_SampleTime_71Cycles5); //INP1
@@ -145,10 +145,10 @@ void ADCwithDMA_Config(void){
 	/* Start ADC1 Software Conversion */ 
 	ADC_SoftwareStartConvCmd(ADC1, ENABLE);
 
-	ADC.uVoltsPerUnit = 8134;
-	ADC.unitsOffset = 54;
-	ADC.logicZeroMax_mV = 6000;
-	ADC.logicOneMin_mV = 18000;
+	ADC.uVoltsPerUnit = 24000;
+	ADC.unitsOffset = 0;
+	ADC.logicZeroMax_mV = 0;
+	ADC.logicOneMin_mV = 1768;
 }
 
 void DMA1_Channel1_IRQHandler(void)
@@ -159,17 +159,18 @@ void DMA1_Channel1_IRQHandler(void)
 	DMA_ClearITPendingBit(DMA1_IT_TC1);
 	for(i=0; i<ADC_Channels; i++){
 		raw = ADC.raw[i] - ADC.unitsOffset;
-		if(raw < 0)
-			raw = 0;
-		ADC.milivolt[i] = raw * ADC.uVoltsPerUnit / 1000;
-		NFComBuf.ReadAnalogInputs.data[i] = ADC.milivolt[i];
-
+		//if(raw < 0)
+		//	raw = 0;
+		ADC.milivolt[i] = raw * 24060 / 1756;
+		//NFComBuf.ReadAnalogInputs.data[i] = ADC.milivolt[i];
+/*
 		if(ADC.milivolt[i] <= ADC.logicZeroMax_mV)
 			ADC.digital[i/8] &= ~(1 << (i%8));
 		else if(ADC.milivolt[i] >= ADC.logicOneMin_mV)
 			ADC.digital[i/8] |= (1 << (i%8));
+*/
 	}
-	NFComBuf.ReadDigitalInputs.data[0] = ADC.digital[0];
+	//NFComBuf.ReadDigitalInputs.data[0] = ADC.digital[0];
 }
 
 
