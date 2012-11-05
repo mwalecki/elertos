@@ -33,17 +33,17 @@ void printChannelInfo(int channel) {
 	char tempBuf2[5];
 
 	// channel number
-	GLCD_GoTo(((channel%2)*11 + 1)*6, 1+channel/2);
+	GLCD_GoTo((channel < 6) ? 6 : 12*6, channel%6+1);
 	itoa(channel,tempBuf);
 	GLCD_WriteString(tempBuf);
 
 	// voltage
-	GLCD_GoTo(((channel%2)*11 + 4)*6, 1+channel/2);
+	GLCD_GoTo((channel < 6) ? 3*6 : 15*6, channel%6+1);
 	itoa(milivolt,tempBuf2);
 	GLCD_WriteString(tempBuf2);
 
 	if(ADC.overTreshold[channel] == 1) {
-		GLCD_GoTo(((channel%2)*11 + 0)*6, 1+channel/2);
+		GLCD_GoTo((channel < 6) ? 0 : 11*6, channel%6+1);
 		GLCD_WriteString("!");
 	}
 }
