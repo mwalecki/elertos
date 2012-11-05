@@ -1,52 +1,7 @@
 #include "adc.h"
-#include "nfv2.h"
 
 #define ADC1_DR_Address    ((uint32_t)0x4001244C)
 #define ADC_DMA_TransferCompleteInterrupt
-
-extern ADC_St				ADC;
-extern NF_STRUCT_ComBuf 	NFComBuf;
-
-void ADC_Config(void)
-{
-  ADC_InitTypeDef  ADC_InitStructure;
-  /* PCLK2 is the APB2 clock */
-  /* ADCCLK = PCLK2/6 = 72/6 = 12MHz*/
-  RCC_ADCCLKConfig(RCC_PCLK2_Div6);
-
-  /* Enable ADC1 clock so that we can talk to it */
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
-  /* Put everything back to power-on defaults */
-  ADC_DeInit(ADC1);
-
-  /* ADC1 Configuration ------------------------------------------------------*/
-  /* ADC1 and ADC2 operate independantly */
-  ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;
-  /* Disable the scan conversion so we do one at a time */
-  ADC_InitStructure.ADC_ScanConvMode = DISABLE;
-  /* Don't do contimuous conversions - do them on demand */
-  ADC_InitStructure.ADC_ContinuousConvMode = DISABLE;
-  /* Start conversin by software, not an external trigger */
-  ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;
-  /* Conversions are 12 bit - put them in the lower 12 bits of the result */
-  ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
-  /* Say how many channels would be used by the sequencer */
-  ADC_InitStructure.ADC_NbrOfChannel = 1;
-
-  /* Now do the setup */
-  ADC_Init(ADC1, &ADC_InitStructure);
-  /* Enable ADC1 */
-  ADC_Cmd(ADC1, ENABLE);
-
-  /* Enable ADC1 reset calibaration register */
-  ADC_ResetCalibration(ADC1);
-  /* Check the end of ADC1 reset calibration register */
-  while(ADC_GetResetCalibrationStatus(ADC1));
-  /* Start ADC1 calibaration */
-  ADC_StartCalibration(ADC1);
-  /* Check the end of ADC1 calibration */
-  while(ADC_GetCalibrationStatus(ADC1));
-}
 
 void ADCwithDMA_Config(void){
 	ADC_InitTypeDef ADC_InitStructure;
@@ -55,6 +10,11 @@ void ADCwithDMA_Config(void){
 		NVIC_InitTypeDef NVIC_InitStructure;
 	#endif //ADC_DMA_TransferCompleteInterrupt
 	
+	ADC.uVoltsPerUnit = 13702; // 24060000 / 1756;
+	ADC.unitsOffset = 0;
+	//	ADC.logicZeroMax_mV = 0;
+	//	ADC.logicOneMin_mV = 1756;
+
 	//DMA 
     RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE); 
 	
@@ -74,7 +34,7 @@ void ADCwithDMA_Config(void){
 	// Data direction: Peripheral is source
 	DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;
 	// Data Buffer Size
-	DMA_InitStructure.DMA_BufferSize = 11;
+	DMA_InitStructure.DMA_BufferSize = ADC_Channels;
 	// Do not increment Peripheral Address Register
 	DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
 	// Do increment destination memory pointer
@@ -111,7 +71,7 @@ void ADCwithDMA_Config(void){
 	ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;
 	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
 	// number of ADC channels that will be converted using the sequencer
-	ADC_InitStructure.ADC_NbrOfChannel = 11;
+	ADC_InitStructure.ADC_NbrOfChannel = ADC_Channels;
 	ADC_Init(ADC1, &ADC_InitStructure);
 	/* ADC1 regular channels configuration */ 
 	ADC_RegularChannelConfig(ADC1, ADC_Channel_10, 1, ADC_SampleTime_71Cycles5); //INP1
@@ -144,11 +104,6 @@ void ADCwithDMA_Config(void){
 	
 	/* Start ADC1 Software Conversion */ 
 	ADC_SoftwareStartConvCmd(ADC1, ENABLE);
-
-	ADC.uVoltsPerUnit = 24000;
-	ADC.unitsOffset = 0;
-	ADC.logicZeroMax_mV = 0;
-	ADC.logicOneMin_mV = 1768;
 }
 
 void DMA1_Channel1_IRQHandler(void)
@@ -156,21 +111,23 @@ void DMA1_Channel1_IRQHandler(void)
 	uint8_t i;
 	s16 raw;
 
-	DMA_ClearITPendingBit(DMA1_IT_TC1);
 	for(i=0; i<ADC_Channels; i++){
 		raw = ADC.raw[i] - ADC.unitsOffset;
-		//if(raw < 0)
-		//	raw = 0;
-		ADC.milivolt[i] = raw * 24060 / 1756;
-		//NFComBuf.ReadAnalogInputs.data[i] = ADC.milivolt[i];
-/*
+		if(raw < 0)
+			raw = 0;
+
+		ADC.milivolt[i] = raw * ADC.uVoltsPerUnit / 1000;
+		ADC.volt[i] = ADC.milivolt[i] / 1000;
+
+		/*
 		if(ADC.milivolt[i] <= ADC.logicZeroMax_mV)
 			ADC.digital[i/8] &= ~(1 << (i%8));
 		else if(ADC.milivolt[i] >= ADC.logicOneMin_mV)
 			ADC.digital[i/8] |= (1 << (i%8));
-*/
+		 */
 	}
-	//NFComBuf.ReadDigitalInputs.data[0] = ADC.digital[0];
+
+	DMA_ClearITPendingBit(DMA1_IT_TC1);
 }
 
 

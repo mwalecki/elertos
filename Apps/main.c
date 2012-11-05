@@ -109,10 +109,10 @@
 #include "task.h"
 #include "InOut.h"
 #include "LCD.h"
+#include "checkValues.h"
 #include "usb.h"
+#include "semphr.h"
 #include "DMA/adc.h"
-#include "DMA/nfv2.h"
-#include "nfv2_config.h"
 
 /* The time between cycles of the 'check' functionality (defined within the
  tick hook. */
@@ -136,7 +136,8 @@
 unsigned long ulRunTimeStatsClock = 0;
 
 /* DMA configs */
-ADC_St ADC;
+//xSemaphoreHandle xADC = NULL;
+
 //NF_STRUCT_ComBuf NFComBuf;
 /* * */
 
@@ -146,6 +147,7 @@ ADC_St ADC;
  * Configure the hardware for the demo.
  */
 static void prvSetupHardware(void);
+void checkTaskSetup(void);
 
 /*-----------------------------------------------------------*/
 
@@ -165,9 +167,9 @@ int main(void) {
 			2 | portPRIVILEGE_BIT, NULL);
 
 	/* Start Check Task */
-	// TODO: sprawdzic paramtery
-	//xTaskCreate( vCheckTask, ( signed char * ) "LCD", 256, NULL,
-	//		2 | portPRIVILEGE_BIT, NULL);
+	checkTaskSetup();
+	xTaskCreate( vCheckTask, ( signed char * ) "Check", 256, NULL,
+			2 | portPRIVILEGE_BIT, NULL);
 
 	/* Start the scheduler. */
 	vTaskStartScheduler();
@@ -177,6 +179,18 @@ int main(void) {
 	for (;;)
 		;
 }
+
+/*-----------------------------------------------------------*/
+
+void checkTaskSetup(void) {
+	int i;
+	for (i = 0; i < ADC_Channels; i++) {
+		ADC.mvMinTreshold[i] = 4000;
+		ADC.mvMaxTreshold[i] = 24500;
+		ADC.overTreshold[i] = FALSE;
+	}
+}
+
 /*-----------------------------------------------------------*/
 
 static void prvSetupHardware(void) {
