@@ -6,9 +6,6 @@
 void ADCwithDMA_Config(void){
 	ADC_InitTypeDef ADC_InitStructure;
 	DMA_InitTypeDef DMA_InitStructure;	   
-	#ifdef ADC_DMA_TransferCompleteInterrupt  
-		NVIC_InitTypeDef NVIC_InitStructure;
-	#endif //ADC_DMA_TransferCompleteInterrupt
 	
 	ADC.uVoltsPerUnit = 13702; // 24060000 / 1756;
 	ADC.unitsOffset = 0;
@@ -117,7 +114,7 @@ void DMA1_Channel1_IRQHandler(void)
 			raw = 0;
 
 		ADC.milivolt[i] = raw * ADC.uVoltsPerUnit / 1000;
-		ADC.volt[i] = ADC.milivolt[i] / 1000;
+		//ADC.volt[i] = ADC.milivolt[i] / 1000;
 
 		/*
 		if(ADC.milivolt[i] <= ADC.logicZeroMax_mV)

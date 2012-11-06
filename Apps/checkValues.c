@@ -5,6 +5,7 @@
 
 void vCheckTask(void *pvParameters)
 {
+	NVIC_InitStructure.NVIC_IRQChannelCmd = DISABLE;
 	int i;
 	for(i = 0; i < ADC_Channels; i++) {
 		if(ADC.milivolt[i] > ADC.mvMaxTreshold[i]) {
@@ -15,6 +16,7 @@ void vCheckTask(void *pvParameters)
 			ADC.overTreshold[i] = 0;
 		}
 	}
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 
 	while(1)
 	{

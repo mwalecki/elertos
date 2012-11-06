@@ -13,6 +13,7 @@
 void vLCDTask(void *pvParameters);
 void printChannelInfo(int channel);
 void itoa(int n, char s[]);
+void toVolt(int milivolt, char s[]);
 void reverse(char s[]);
 
 #endif

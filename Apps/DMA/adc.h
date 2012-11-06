@@ -9,7 +9,7 @@
 typedef struct{
 	vu16 raw[ADC_Channels];
 	vu16 milivolt[ADC_Channels];
-	vu16 volt[ADC_Channels];
+//	vu16 volt[ADC_Channels];
 	vu16 mvMaxTreshold[ADC_Channels];
 	vu16 mvMinTreshold[ADC_Channels];
 	vu8 overTreshold[ADC_Channels];
@@ -21,6 +21,7 @@ typedef struct{
 } ADC_St;
 
 ADC_St ADC;
+NVIC_InitTypeDef NVIC_InitStructure;
 
 void ADC_Config(void);
 void ADCwithDMA_Config(void);

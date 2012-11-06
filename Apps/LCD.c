@@ -39,7 +39,7 @@ void printChannelInfo(int channel) {
 
 	// voltage
 	GLCD_GoTo((channel < 6) ? 3*6 : 15*6, channel%6+1);
-	itoa(milivolt,tempBuf2);
+	toVolt(milivolt,tempBuf2);
 	GLCD_WriteString(tempBuf2);
 
 	if(ADC.overTreshold[channel] == 1) {
@@ -73,3 +73,35 @@ void itoa(int n, char s[])
     s[i] = '\0';
     reverse(s);
 }
+
+void toVolt(int milivolt, char s[])
+{
+    int i;
+    int n = milivolt;
+    char tmp[12];
+
+    itoa(milivolt, tmp);
+    reverse(tmp);
+
+    while(strlen(tmp) < 4) {
+    	tmp[strlen(tmp)] = '0';
+    	tmp[strlen(tmp)+1] = '\0';
+    }
+
+    //TODO: robić zeby działało
+
+	i = 0;
+    do {    /* generate digits in reverse order */
+    	if(i == 3) {
+    		s[i++] = ',';
+    	}
+    	if(i >= 2) {
+    		s[i] = tmp[i];   /* get next digit */
+    		i++;
+    	}
+    } while ((n /= 10) > 0);     /* delete it */
+
+    s[i] = '\0';
+    reverse(s);
+}
+
