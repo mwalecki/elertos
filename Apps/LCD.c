@@ -7,10 +7,9 @@
 
 void vLCDTask(void *pvParameters) {
 	GLCD_Initialize();
+	GLCD_ClearScreen();
 
 	while (1) {
-		GLCD_ClearScreen();
-
 		GLCD_GoTo(0, 0);
 		GLCD_WriteString("+--Voltage Control--+");
 		GLCD_GoTo(0, 7);
@@ -86,20 +85,23 @@ void toVolt(int milivolt, char s[]) {
 			s[3] = tmp[2];
 			s[4] = '\0';
 		} else if (i == 4) {
-			s[0] = tmp[0];
-			s[1] = '.';
-			s[2] = tmp[1];
-			s[3] = '\0';
+			s[0] = ' ';
+			s[1] = tmp[0];
+			s[2] = '.';
+			s[3] = tmp[1];
+			s[4] = '\0';
 		} else {
-			s[0] = '0';
-			s[1] = '.';
-			s[2] = tmp[0];
-			s[3] = '\0';
+			s[0] = ' ';
+			s[1] = '0';
+			s[2] = '.';
+			s[3] = tmp[0];
+			s[4] = '\0';
 		}
 	} else {
-		s[0] = '0';
-		s[1] = '.';
-		s[2] = '0';
-		s[3] = '\0';
+		s[0] = ' ';
+		s[1] = '0';
+		s[2] = '.';
+		s[3] = '0';
+		s[4] = '\0';
 	}
 }
