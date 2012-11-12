@@ -3,26 +3,24 @@
 #include "stdio.h"
 #include "DMA/adc.h"
 
-void vCheckTask(void *pvParameters)
-{
-	NVIC_InitStructure.NVIC_IRQChannelCmd = DISABLE;
-	int i;
-	for(i = 0; i < ADC_Channels; i++) {
-		if(ADC.milivolt[i] > ADC.mvMaxTreshold[i]) {
-			ADC.overTreshold[i] = 1;
-		} else if(ADC.milivolt[i] < ADC.mvMinTreshold[i]) {
-			ADC.overTreshold[i] = 1;
-		} else {
-			ADC.overTreshold[i] = 0;
+void vCheckTask(void *pvParameters) {
+	while (1) {
+		NVIC_InitStructure.NVIC_IRQChannelCmd = DISABLE;
+		int i;
+		for (i = 0; i < ADC_Channels; i++) {
+			if (ADC.milivolt[i] > ADC.mvMaxTreshold[i]) {
+				ADC.overTreshold[i] = 1;
+			} else if (ADC.milivolt[i] < ADC.mvMinTreshold[i]) {
+				ADC.overTreshold[i] = 1;
+			} else {
+				ADC.overTreshold[i] = 0;
+			}
 		}
-	}
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+		NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 
-	while(1)
-	{
 		portTickType xLastWakeTime;
 		const portTickType xTimeIncrement_ms = 500;
-		xLastWakeTime=xTaskGetTickCount();
-        vTaskDelayUntil(&xLastWakeTime,xTimeIncrement_ms);
+		xLastWakeTime = xTaskGetTickCount();
+		vTaskDelayUntil(&xLastWakeTime, xTimeIncrement_ms);
 	}
 }
