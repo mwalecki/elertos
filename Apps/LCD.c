@@ -30,7 +30,7 @@ void vLCDTask(void *pvParameters) {
 void printChannelInfo(int channel) {
 	vu16 milivolt = ADC.milivolt[channel];
 	char tempBuf[2];
-	char tempBuf2[5];
+	char tempBuf2[6];
 
 	// channel number
 	GLCD_GoTo((channel < 6) ? 6 : 12 * 6, channel % 6 + 1);
@@ -42,9 +42,12 @@ void printChannelInfo(int channel) {
 	toVolt(milivolt, tempBuf2);
 	GLCD_WriteString(tempBuf2);
 
+	// warning
+	GLCD_GoTo((channel < 6) ? 0 : 11 * 6, channel % 6 + 1);
 	if (ADC.overTreshold[channel] == 1) {
-		GLCD_GoTo((channel < 6) ? 0 : 11 * 6, channel % 6 + 1);
 		GLCD_WriteString("!");
+	} else {
+		GLCD_WriteString(" ");
 	}
 }
 
@@ -83,25 +86,23 @@ void toVolt(int milivolt, char s[]) {
 			s[1] = tmp[1];
 			s[2] = '.';
 			s[3] = tmp[2];
-			s[4] = '\0';
 		} else if (i == 4) {
 			s[0] = ' ';
 			s[1] = tmp[0];
 			s[2] = '.';
 			s[3] = tmp[1];
-			s[4] = '\0';
 		} else {
 			s[0] = ' ';
 			s[1] = '0';
 			s[2] = '.';
 			s[3] = tmp[0];
-			s[4] = '\0';
 		}
 	} else {
 		s[0] = ' ';
 		s[1] = '0';
 		s[2] = '.';
 		s[3] = '0';
-		s[4] = '\0';
 	}
+	s[4] = 'V';
+	s[5] = '\0';
 }
